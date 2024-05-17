@@ -1,0 +1,260 @@
+
+**** 02/06/23 11:43:29 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "firts_attempt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 0.1u SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source GABI_HW6
+C_C1         N00456 N00362  1n  TC=0,0 
+C_C2         N00358 N00362  1n  TC=0,0 
+R_R1         0 N00362  10k TC=0,0 
+R_R2         N00340 N00358  10k TC=0,0 
+R_R3         N00340 N00323  30k TC=0,0 
+R_R4         N00323 0  10k TC=0,0 
+V_V1         N00456 0  
++PULSE 1v 0V 2u 1u 1u 20u 30
+E_U1         N00340 0 VALUE {LIMIT(V(N00362,N00323)*1E6,-15V,+15V)}
+
+**** RESUMING firts_attempt.cir ****
+.END
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  122.5E-06.
+         Time step =  727.6E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    E_U1      
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00323)   -3.7139 (N00340)  -14.8560 (N00358)    -.9300 (N00362)   -3.7140     
+
+(N00456)    1.0000 
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 0.001
+**** Param: TMAX = 1e-07
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 1
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+Convergence problem in transient analysis at Time =  122.5E-06
+         Time step =  727.6E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    E_U1      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00323)   -3.7139 (N00340)  -14.8560 (N00358)    -.9300 (N00362)   -3.7140     
+
+(N00456)    1.0000 
+
+Resuming Simulation with the following settings
+ITL4 = 354
+ABSTOL = 1.41e-09
+
+Convergence problem in transient analysis at Time =  122.5E-06
+         Time step =  727.6E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    E_U1      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00323)   -3.7139 (N00340)  -14.8560 (N00358)    -.9300 (N00362)   -3.7140     
+
+(N00456)    1.0000 
+
+Resuming Simulation with the following settings
+ITL4 = 1000
+ABSTOL = 2e-06
+
+Convergence problem in transient analysis at Time =  122.5E-06
+         Time step =  727.6E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    E_U1      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00323)   -3.7139 (N00340)  -14.8560 (N00358)    -.9300 (N00362)   -3.7140     
+
+(N00456)    1.0000 
+
+Resuming Simulation with the following settings
+ABSTOL = 0.001
+
+Convergence problem in transient analysis at Time =  122.5E-06
+         Time step =  727.6E-21, minimum allowable step size =  1.000E-18
+
+  These devices failed to converge:
+    E_U1      
+Discontinuing simulation due to convergence problem
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00323)   -3.7139 (N00340)  -14.8560 (N00358)    -.9300 (N00362)   -3.7140     
+
+(N00456)    1.0000 
+
+Resuming could not converge the circuit, restarting it now
+
+  These voltages failed to converge:
+
+    V(N00340)                 =    -14.86V  \    -14.86V
+    V(N00323)                 =    -3.714V  \    -3.714V
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =    1.764mA  \    1.764mA
+
+  These devices failed to converge:
+    E_U1      
+
+ERROR(ORPSIM-16550): Floating point computation failed during matrix solution. Possible solutions: 1)Ensure that all device parameters are in valid range. 2)Try using .options LIMIT
+
+INTERNAL ERROR -- Invalid Number, Divide
+
+ABORTING SIMULATION
+**** 02/06/23 11:43:29 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           6
+  External (NCNODS)                 =           6
+  Total (NUMNOD)                    =           6
+
+Total device count (NUMEL)          =           8
+  Capacitors (C)                    =           2
+  VCVS (E)                          =           1
+  Resistors (R)                     =           4
+  Voltage Sources (V)               =           1
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =           8
+  Initial no. elements (NTTAR)      =          19
+  No. elements w/ fillin (NTTBR)    =          22
+  No. fillins (IFILL)               =           3
+  No. overflows (NTTOV)             =           6
+  No. LU operations (IOPS)          =          47
+  Percent sparsity (PERSPA)         =      65.625
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =        1381
+  No. rejected time points (NUMRTP) =          89
+  No. iterations (NUMNIT)           =       26297
+
+Size of Probe file                  =      282067
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               2
+  Readin                            =        0.00
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .02
+  License check-out time            =       82.63
+  Total job time (using Solver 1)   =       16.09
+

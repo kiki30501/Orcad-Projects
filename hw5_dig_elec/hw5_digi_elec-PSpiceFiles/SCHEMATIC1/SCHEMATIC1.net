@@ -1,0 +1,9 @@
+* source HW5_DIGI_ELEC
+C_C1         0 VO  1p  TC=0,0 
+M_M1         VIN VDD VO 0 nmos_q4a_2           
+V_Vin         VIN 0 5Vdc
+V_VDD         VDD 0 5Vdc
+M_M2         VIN2 VDD VO2 0 nmos_q4a_2           
+C_C2         0 VO2  1p  TC=0,0 
+V_V1         VIN2 0  
++PULSE 0 5 0 10p 10p 200n 220n

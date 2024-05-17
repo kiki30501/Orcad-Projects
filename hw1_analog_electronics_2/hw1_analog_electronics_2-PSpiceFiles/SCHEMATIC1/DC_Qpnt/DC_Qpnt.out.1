@@ -1,0 +1,60 @@
+
+**** 11/16/22 18:31:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-DC_Qpnt"  [ D:\Orcad Projects\hw1_analog_electronics_2\hw1_analog_electronics_2-PSpiceFiles\SCHEMATIC1\DC_Qp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC_Qpnt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../hw1_analog_electronics_2-pspicefiles/hw1_analog_electronics_2.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HW1_ANALOG_ELECTRONICS_2
+Q_Q1         N00088 N00350 N00391 Qbreakn 
+Q_Q2         N00367 N00308 N00088 Qbreakn 
+R_R1         N00308 VCC1  47k TC=0,0 
+R_R2         0 N00308  82k TC=0,0 
+R_R3         0 N00350  10k TC=0,0 
+R_R4         N00350 VCC1  47k TC=0,0 
+R_R5         0 N00391  1k TC=0,0 
+R_R6         N00367 VCC1  1k TC=0,0 
+V_V1         VCC1 0 12V
+
+**** RESUMING DC_Qpnt.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file "D:\Orcad Projects\hw1_analog_electronics_2\hw1_analog_electronics_2-pspicefiles\hw1_analog_electronics_2.lib" has changed since index file hw1_analog_electronics_2.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Wed Nov 16 18:30:19 2022 to Wed Nov 16 18:31:15 2022.
+
+INFO(ORPSIM-15422): Making new index file hw1_analog_electronics_2.ind for library file hw1_analog_electronics_2.lib.
+
+Index has 1 entries from 1 file(s).
+
+**** FROM LIBRARY ../../../hw1_analog_electronics_2-pspicefiles/hw1_analog_electronics_2.lib ****
+.model Qbreakn NPN (BF=100 VBE=0.7)
+---------------------------$
+ERROR -- 'VBE' is not a model parameter name
+

@@ -1,0 +1,18 @@
+[2022-08-03T00:59:15.894+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseStateHandler::CDSPulseStateHandler] [DEBUG] - Creating CDSPulseStateHandler.
+[2022-08-03T00:59:15.895+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManager::startSync] [DEBUG] - Param received is conf explore
+[2022-08-03T00:59:15.895+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManager::startSync] [DEBUG] - Handle start server synchronously.
+[2022-08-03T00:59:15.895+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManager::startSync] [DEBUG] - Sending server start event to health state handler.
+[2022-08-03T00:59:15.895+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [PulseStartEvent::PulseStartEvent] [DEBUG] - Creating pulse start event.
+[2022-08-03T00:59:15.896+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [PulseStateNoServer::handleEvent] [DEBUG] - Start event received.
+[2022-08-03T00:59:15.896+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::getInitJsonFileLocation] [DEBUG] - Creating json file pathC:/Users/sixsi/AppData/Local/Temp\pulse_stage_sixsi_8952\sjson
+[2022-08-03T00:59:15.896+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::launchInitTranslateServer] [DEBUG] - Launching Init Translate Server.
+[2022-08-03T00:59:15.896+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::launchInitTranslateServer] [DEBUG] - Init translate server command is C:\Cadence\SPB_17.4\tools/pcbdw/bin\translate.bat -parent "8952" -parentlocation "C:/Users/sixsi/AppData/Local/Temp\pulse_stage_sixsi_8952\sjson" -appname "orcad" -conf "explore"
+[2022-08-03T00:59:16.416+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPortFileReaderThread::checkFileCreated] [DEBUG] - Checking for server json file from launch.
+[2022-08-03T00:59:20.458+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPortFileReaderThread::readPort] [DEBUG] - Reading server json file from launch.
+[2022-08-03T00:59:20.458+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPortFileReaderThread::readPort] [DEBUG] - Reading data from server json file.
+[2022-08-03T00:59:20.458+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPortFileReaderThread::readPort] [DEBUG] - Signaling server json file from launch as read.
+[2022-08-03T00:59:20.458+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::updateData] [DEBUG] - Port file reading finished.
+[2022-08-03T00:59:20.459+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::updateData] [DEBUG] - Server started successfully.
+[2022-08-03T00:59:20.459+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManagerImpl::updateData] [ERROR] - Pulse health checkup system could not be initialized for server http://127.0.0.1:7200
+[2022-08-03T00:59:20.459+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseStateHandler::setCurrentState] [DEBUG] - Setting state as started
+[2022-08-03T00:59:20.459+0300] [8952] [3996] [sixsi] [Capture.exe] [192.168.1.173] [Reshef_Desktop] [CDSPulseManager::getDataValue] [DEBUG] - value is: http://127.0.0.1:7200

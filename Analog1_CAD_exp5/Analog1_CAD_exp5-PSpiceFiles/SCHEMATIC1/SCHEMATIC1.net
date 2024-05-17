@@ -1,0 +1,25 @@
+* source ANALOG1_CAD_EXP5
+V_V1         VDD_5 0 5Vdc
+V_V2         VSS_-5 0 -5Vdc
+V_V3         VCC_12 0 12Vdc
+R_RsigB         VIB N00581  50 TC=0,0 
+R_RG2         0 N00585  70k TC=0,0 
+R_RG1         N00585 VCC_12  100k TC=0,0 
+R_RSB         0 N00645  1.5k TC=0,0 
+R_RDB         N00617 VCC_12  1k TC=0,0 
+R_RLB         0 VOB  10k TC=0,0 
+C_C1         N00581 N00585  1u  TC=0,0 
+C_C2         N00617 VOB  1u  TC=0,0 
+X_M1         N00617 N00585 N00645 BS170/PLP
+V_Vsin         VIB 0  AC {Vin_B}
++SIN 0 {Vin_B} 10k 0 0 0
+V_Vsig         VIA 0  AC {Vin_A}
++SIN 0 {Vin_A} 10k 0 0 0
+R_RsigA         VIA N01555  50 TC=0,0 
+R_RSA         VSS_-5 N01563  1k TC=0,0 
+R_RDA         N01568 VDD_5  1k TC=0,0 
+R_RLA         0 VOA  1k TC=0,0 
+C_C4         N01555 N01563  1u  TC=0,0 
+C_C5         N01568 VOA  1u  TC=0,0 
+X_M2         N01568 0 N01563 BS170/PLP
+.PARAM  vin_a=1m vin_b=1m

@@ -1,0 +1,225 @@
+
+**** 04/07/23 18:08:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Vtime"  [ d:\orcad projects\lab_analod2_exp3\lab_analod2_exp3-pspicefiles\schematic1\vtime.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Vtime.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOD2_EXP3
+R_R1         0 N00285  1k TC=0,0 
+R_R2         N00285 N00302  6k TC=0,0 
+R_R3         N00386 N00248  977 TC=0,0 
+R_R4         N00248 N00273  8.8k TC=0,0 
+X_U3         0 N00248 VCCP VCCN N00273 uA741
+X_U4         N00620 N00285 VCCP VCCN N00302 uA741
+V_V5         N00386 0  AC 47.5m
++SIN 0 47.5m 1k 0 0 0
+V_V6         N00620 0  AC 1
++SIN 0 1 1k 0 0 0
+R_R5         N02113 N02123  318.3 TC=0,0 
+X_U5         N02239 N02113 VCCP VCCN N02123 uA741
+V_V7         N02239 0 DC 0Vdc AC 1Vac 
+C_C1         0 N02113  0.1u  TC=0,0 
+V_V9         0 VCCN 12V
+V_V8         VCCP 0 12V
+
+**** RESUMING Vtime.cir ****
+.END
+
+**** 04/07/23 18:08:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Vtime"  [ d:\orcad projects\lab_analod2_exp3\lab_analod2_exp3-pspicefiles\schematic1\vtime.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.dx         X_U3.dy         X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U5.dx         X_U5.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 04/07/23 18:08:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Vtime"  [ d:\orcad projects\lab_analod2_exp3\lab_analod2_exp3-pspicefiles\schematic1\vtime.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.qx         X_U4.qx         X_U5.qx         
+               NPN             NPN             NPN             
+       LEVEL    1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75         
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+**** 04/07/23 18:08:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Vtime"  [ d:\orcad projects\lab_analod2_exp3\lab_analod2_exp3-pspicefiles\schematic1\vtime.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VCCN)  -12.0000  ( VCCP)   12.0000  (N00248) 19.25E-06 (N00273) 894.5E-06     
+
+(N00285) 19.25E-06 (N00302) 613.3E-06 (N00386)    0.0000 (N00620)    0.0000     
+
+(N02113) 19.25E-06 (N02123) 44.64E-06 (N02239)    0.0000 (X_U3.6)-86.01E-09     
+
+(X_U3.7) 899.5E-06 (X_U3.8) 899.5E-06 (X_U3.9)    0.0000 (X_U4.6)-59.57E-09     
+
+(X_U4.7) 618.3E-06 (X_U4.8) 618.3E-06 (X_U4.9)    0.0000 (X_U5.6)-5.699E-09     
+
+(X_U5.7) 48.63E-06 (X_U5.8) 48.63E-06 (X_U5.9)    0.0000 (X_U3.10)    -.6077    
+
+(X_U3.11)   11.9600                   (X_U3.12)   11.9600                       
+
+(X_U3.13)    -.5938                   (X_U3.14)    -.5938                       
+
+(X_U3.53)   11.0000                   (X_U3.54)  -11.0000                       
+
+(X_U3.90) 99.46E-06                   (X_U3.91)   40.0000                       
+
+(X_U3.92)  -40.0000                   (X_U3.99)    0.0000                       
+
+(X_U4.10)    -.6077                   (X_U4.11)   11.9600                       
+
+(X_U4.12)   11.9600                   (X_U4.13)    -.5938                       
+
+(X_U4.14)    -.5938                   (X_U4.53)   11.0000                       
+
+(X_U4.54)  -11.0000                   (X_U4.90) 99.01E-06                       
+
+(X_U4.91)   40.0000                   (X_U4.92)  -40.0000                       
+
+(X_U4.99)    0.0000                   (X_U5.10)    -.6077                       
+
+(X_U5.11)   11.9600                   (X_U5.12)   11.9600                       
+
+(X_U5.13)    -.5938                   (X_U5.14)    -.5938                       
+
+(X_U5.53)   11.0000                   (X_U5.54)  -11.0000                       
+
+(X_U5.90) 79.76E-06                   (X_U5.91)   40.0000                       
+
+(X_U5.92)  -40.0000                   (X_U5.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5         1.970E-08
+    V_V6        -7.973E-08
+    V_V7        -7.973E-08
+    V_V9        -4.010E-03
+    V_V8        -4.010E-03
+    X_U3.vb     -8.601E-13
+    X_U3.vc      1.100E-11
+    X_U3.ve      1.251E-11
+    X_U3.vlim    9.946E-08
+    X_U3.vlp    -4.000E-11
+    X_U3.vln    -4.000E-11
+    X_U4.vb     -5.957E-13
+    X_U4.vc      1.100E-11
+    X_U4.ve      1.251E-11
+    X_U4.vlim    9.901E-08
+    X_U4.vlp    -4.000E-11
+    X_U4.vln    -4.000E-11
+    X_U5.vb     -5.699E-14
+    X_U5.vc      1.100E-11
+    X_U5.ve      1.251E-11
+    X_U5.vlim    7.976E-08
+    X_U5.vlp    -4.000E-11
+    X_U5.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   9.62E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/07/23 18:08:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Vtime"  [ d:\orcad projects\lab_analod2_exp3\lab_analod2_exp3-pspicefiles\schematic1\vtime.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

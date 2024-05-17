@@ -1,0 +1,53 @@
+
+**** 05/22/23 00:11:48 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-dc_freq_sweep"  [ D:\Orcad Projects\digi_elec_final9\digi_elec_final9-PSpiceFiles\SCHEMATIC1\dc_freq_sweep.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "dc_freq_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.1 0 1u 
+.STEP LIN PARAM {Period} 0.1 4.9 0.3 
+----------------$
+ERROR(ORPSIM-16060): Invalid global param name
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGI_ELEC_FINAL9
+V_V1         VIN 0  
++PULSE 0 5 1m 0 0 {PW} {Period}
+C_C1         0 VB  100n  TC=0,0 
+C_C2         0 N00458  50n  TC=0,0 
+R_R1         VA VB  25k TC=0,0 
+R_R2         N00804 +5V  200 TC=0,0 
+R_R3         N00458 N00804  15k TC=0,0 
+R_R4         0 VOUT  1k TC=0,0 
+X_U2A         VIN VOUT VA $G_CD4000_VDD $G_CD4000_VSS CD4030A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+V_V2         +5V 0 5V
+X_U3         0 N00458 VOUT +5V VB N00458 N00804 +5V 555C
+.PARAM  period=1m pw={period/2}
+
+**** RESUMING dc_freq_sweep.cir ****
+.END
+

@@ -1,0 +1,10 @@
+* source HW1_ANALOG_ELECTRONICS_2
+Q_Q1         N00088 N00350 N00391 Qbreakn 
+Q_Q2         N00367 N00308 N00088 Qbreakn 
+R_R1         N00308 VCC1  47k TC=0,0 
+R_R2         0 N00308  82k TC=0,0 
+R_R3         0 N00350  10k TC=0,0 
+R_R4         N00350 VCC1  47k TC=0,0 
+R_R5         0 N00391  1k TC=0,0 
+R_R6         N00367 VCC1  1k TC=0,0 
+V_V1         VCC1 0 12V

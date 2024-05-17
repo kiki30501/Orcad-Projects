@@ -1,0 +1,508 @@
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Bode_plot.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 10Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PREP6_ANALOG2
+X_U1A         N00887 N00760 +15V -15V LPFO LM324
+R_R1         LPFI N01053  10k TC=0,0 
+R_R2         N01053 N00887  10k TC=0,0 
+R_R3         0 N00760  10k TC=0,0 
+R_R4         N00760 LPFO  1.5k TC=0,0 
+C_C1         N01053 LPFO  .01u  TC=0,0 
+C_C2         0 N00887  .01u  TC=0,0 
+V_V1         +15V 0 15V
+V_V2         0 -15V 15V
+V_V3         LPFI 0  AC 1
++SIN 0 5 1k 0 0 0
+X_U1B         N01790 N01816 +15V -15V HPFO LM324
+V_V4         HPFI 0  AC 1
++SIN 0 5 1k 0 0 0
+R_R5         N01690 HPFO  10k TC=0,0 
+R_R6         N01816 HPFO  1k TC=0,0 
+R_R7         0 N01816  27k TC=0,0 
+R_R8         0 N01790  10k TC=0,0 
+C_C3         N01690 N01790  .01u  TC=0,0 
+C_C4         HPFI N01690  .01u  TC=0,0 
+X_U2A         N07907 A +15V -15V A LM324
+X_U2B         B N08871 +15V -15V VOUT LM324
+X_U2C         N08562 B +15V -15V B LM324
+X_U2D         A N07650 +15V -15V N07650 LM324
+R_R9         0 N08871  10k TC=0,0 
+R_R10         N08871 VOUT  220? TC=0,0 
+R_R11         VIN N07835  15k TC=0,0 
+R_R12         N07835 N07907  15k TC=0,0 
+C_C5         N07907 0  1n  TC=0,0 
+C_C6         N07835 A  1n  TC=0,0 
+C_C7         N07650 N08566  1n  TC=0,0 
+C_C8         N08566 N08562  1n  TC=0,0 
+R_R15         N08566 B  17.2k TC=0,0 
+R_R16         0 N08562  17.2k TC=0,0 
+V_V5         VIN 0  AC 1
++SIN 0 1 10k 0 0 0
+V_V6         N11470 0  AC 1
++SIN 0 1 1k 0 0 0
+R_R18         N11358 N11490  {MYR} TC=0,0 
+C_C10         0 N11490  1n  TC=0,0 
+C_C9         N11358 N11370  1n  TC=0,0 
+X_U3A         N11490 N11370 +15V -15V N11370 LM324
+R_R17         N11470 N11358  {MYR} TC=0,0 
+C_C11         N12135 VOUT_4TH  1n  TC=0,0 
+C_C12         0 N12267  1n  TC=0,0 
+R_R21         N12297 VOUT_4TH  10k TC=0,0 
+R_R19         N11370 N12135  {MYR} TC=0,0 
+R_R22         0 N12297  10k TC=0,0 
+R_R20         N12135 N12267  {MYR} TC=0,0 
+X_U3B         N12267 N12297 +15V -15V VOUT_4TH LM324
+V_V7         +30V 0 30V
+.PARAM  myr=20k
+
+**** RESUMING Bode_plot.cir ****
+.END
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        X_U1B.dx        X_U1B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2A.dx        X_U2A.dy        X_U2B.dx        X_U2B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U2C.dx        X_U2C.dy        X_U2D.dx        X_U2D.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3A.dx        X_U3A.dy        X_U3B.dx        X_U3B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        X_U1B.qx        X_U2A.qx        X_U2B.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+               X_U2C.qx        X_U2D.qx        X_U3A.qx        X_U3B.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2A.sw2       X_U2A.sw1       X_U2A.sw3       X_U2A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2B.sw2       X_U2B.sw1       X_U2B.sw3       X_U2B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2C.sw2       X_U2C.sw1       X_U2C.sw3       X_U2C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2D.sw2       X_U2D.sw1       X_U2D.sw3       X_U2D.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U3A.sw2       X_U3A.sw1       X_U3A.sw3       X_U3A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U3B.sw2       X_U3B.sw1       X_U3B.sw3       X_U3B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)     .0011  (    B) 576.6E-06  (  VIN)    0.0000  ( +15V)   15.0000      
+
+( +30V)   30.0000  ( -15V)  -15.0000  ( HPFI)    0.0000  ( HPFO) 219.1E-06      
+
+( LPFI)    0.0000  ( LPFO) 739.7E-06  ( VOUT) 382.5E-06  (N00760) 701.8E-06     
+
+(N00887) 894.6E-06 (N01053) 447.3E-06 (N01690) 219.1E-06 (N01790) 447.3E-06     
+
+(N01816) 254.7E-06 (N07650) 956.1E-06 (N07835) 671.0E-06 (N07907)     .0013     
+
+(N08562) 769.4E-06 (N08566) 576.6E-06 (N08871) 383.9E-06 (N11358) 894.6E-06     
+
+(N11370)     .0016 (N11470)    0.0000 (N11490)     .0018 (N12135)     .0025     
+
+(N12267)     .0034 (N12297)     .0032 (X_U1A.6)-140.1E-09                       
+
+(X_U1A.7) 740.9E-06                   (X_U1A.8) 740.9E-06                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)   15.0000                       
+
+(X_U1A.b)-1.525E-06                   (X_U1B.6)-41.07E-09                       
+
+(X_U1B.7) 217.4E-06                   (X_U1B.8) 217.4E-06                       
+
+(X_U1B.9)    0.0000                   (X_U1B.a)   15.0000                       
+
+(X_U1B.b)-1.652E-06                   (X_U2A.6)-215.6E-09                       
+
+(X_U2A.7)     .0011                   (X_U2A.8)     .0011                       
+
+(X_U2A.9)    0.0000                   (X_U2A.a)   15.0000                       
+
+(X_U2A.b)-2.987E-06                   (X_U2B.6)-72.35E-09                       
+
+(X_U2B.7) 382.1E-06                   (X_U2B.8) 382.1E-06                       
+
+(X_U2B.9)    0.0000                   (X_U2B.a)   15.0000                       
+
+(X_U2B.b)-1.500E-06                   (X_U2C.6)-107.7E-09                       
+
+(X_U2C.7) 572.1E-06                   (X_U2C.8) 572.1E-06                       
+
+(X_U2C.9)    0.0000                   (X_U2C.a)   15.0000                       
+
+(X_U2C.b)-2.987E-06                   (X_U2D.6)-179.9E-09                       
+
+(X_U2D.7) 953.8E-06                   (X_U2D.8) 953.8E-06                       
+
+(X_U2D.9)    0.0000                   (X_U2D.a)   15.0000                       
+
+(X_U2D.b)-1.764E-06                   (X_U3A.6)-299.9E-09                       
+
+(X_U3A.7)     .0016                   (X_U3A.8)     .0016                       
+
+(X_U3A.9)    0.0000                   (X_U3A.a)   15.0000                       
+
+(X_U3A.b)-2.987E-06                   (X_U3B.6)-1.123E-06                       
+
+(X_U3B.7)     .0059                   (X_U3B.8)     .0059                       
+
+(X_U3B.9)    0.0000                   (X_U3B.a)   15.0000                       
+
+(X_U3B.b)-1.774E-06                   (VOUT_4TH)     .0059                      
+
+(X_U1A.10)     .6085                  (X_U1A.11)  -14.9600                      
+
+(X_U1A.12)  -14.9600                  (X_U1A.13)     .5946                      
+
+(X_U1A.14)     .5946                  (X_U1A.53)   13.5000                      
+
+(X_U1A.54)  -14.1780                  (X_U1A.90) 25.23E-06                      
+
+(X_U1A.91)   40.0000                  (X_U1A.92)  -40.0000                      
+
+(X_U1A.99)    0.0000                  (X_U1B.10)     .6080                      
+
+(X_U1B.11)  -14.9600                  (X_U1B.12)  -14.9600                      
+
+(X_U1B.13)     .5941                  (X_U1B.14)     .5942                      
+
+(X_U1B.53)   13.5000                  (X_U1B.54)  -14.1780                      
+
+(X_U1B.90)-35.52E-06                  (X_U1B.91)   40.0000                      
+
+(X_U1B.92)  -40.0000                  (X_U1B.99)    0.0000                      
+
+(X_U2A.10)     .6089                  (X_U2A.11)  -14.9600                      
+
+(X_U2A.12)  -14.9600                  (X_U2A.13)     .5950                      
+
+(X_U2A.14)     .5951                  (X_U2A.53)   13.5000                      
+
+(X_U2A.54)  -14.1780                  (X_U2A.90)-89.68E-06                      
+
+(X_U2A.91)   40.0000                  (X_U2A.92)  -40.0000                      
+
+(X_U2A.99)    0.0000                  (X_U2B.10)     .6082                      
+
+(X_U2B.11)  -14.9600                  (X_U2B.12)  -14.9600                      
+
+(X_U2B.13)     .5942                  (X_U2B.14)     .5943                      
+
+(X_U2B.53)   13.5000                  (X_U2B.54)  -14.1780                      
+
+(X_U2B.90)-6.556E-06                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U2C.10)     .6083                  (X_U2C.11)  -14.9600                      
+
+(X_U2C.12)  -14.9600                  (X_U2C.13)     .5944                      
+
+(X_U2C.14)     .5945                  (X_U2C.53)   13.5000                      
+
+(X_U2C.54)  -14.1780                  (X_U2C.90)-89.68E-06                      
+
+(X_U2C.91)   40.0000                  (X_U2C.92)  -40.0000                      
+
+(X_U2C.99)    0.0000                  (X_U2D.10)     .6087                      
+
+(X_U2D.11)  -14.9600                  (X_U2D.12)  -14.9600                      
+
+(X_U2D.13)     .5948                  (X_U2D.14)     .5949                      
+
+(X_U2D.53)   13.5000                  (X_U2D.54)  -14.1780                      
+
+(X_U2D.90)-44.95E-06                  (X_U2D.91)   40.0000                      
+
+(X_U2D.92)  -40.0000                  (X_U2D.99)    0.0000                      
+
+(X_U3A.10)     .6094                  (X_U3A.11)  -14.9600                      
+
+(X_U3A.12)  -14.9600                  (X_U3A.13)     .5955                      
+
+(X_U3A.14)     .5955                  (X_U3A.53)   13.5000                      
+
+(X_U3A.54)  -14.1780                  (X_U3A.90)-89.68E-06                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U3B.10)     .6110                      
+
+(X_U3B.11)  -14.9600                  (X_U3B.12)  -14.9600                      
+
+(X_U3B.13)     .5971                  (X_U3B.14)     .5971                      
+
+(X_U3B.53)   13.5000                  (X_U3B.54)  -14.1780                      
+
+(X_U3B.90) 274.2E-06                  (X_U3B.91)   40.0000                      
+
+(X_U3B.92)  -40.0000                  (X_U3B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.656E-02
+    V_V2        -2.656E-02
+    V_V3         4.473E-08
+    V_V4         0.000E+00
+    V_V5         4.473E-08
+    V_V6         4.473E-08
+    V_V7         0.000E+00
+    X_U1A.vb    -1.401E-12
+    X_U1A.vc     1.350E-11
+    X_U1A.ve     1.612E-11
+    X_U1A.vlim   2.523E-08
+    X_U1A.vlp   -4.000E-11
+    X_U1A.vln   -4.000E-11
+    X_U1B.vb    -4.107E-13
+    X_U1B.vc     1.350E-11
+    X_U1B.ve     1.612E-11
+    X_U1B.vlim  -3.552E-08
+    X_U1B.vlp   -4.000E-11
+    X_U1B.vln   -4.000E-11
+    X_U2A.vb    -2.156E-12
+    X_U2A.vc     1.350E-11
+    X_U2A.ve     1.612E-11
+    X_U2A.vlim  -8.968E-08
+    X_U2A.vlp   -4.000E-11
+    X_U2A.vln   -4.000E-11
+    X_U2B.vb    -7.235E-13
+    X_U2B.vc     1.350E-11
+    X_U2B.ve     1.612E-11
+    X_U2B.vlim  -6.556E-09
+    X_U2B.vlp   -4.000E-11
+    X_U2B.vln   -4.000E-11
+    X_U2C.vb    -1.077E-12
+    X_U2C.vc     1.350E-11
+    X_U2C.ve     1.612E-11
+    X_U2C.vlim  -8.968E-08
+    X_U2C.vlp   -4.000E-11
+    X_U2C.vln   -4.000E-11
+    X_U2D.vb    -1.799E-12
+    X_U2D.vc     1.350E-11
+    X_U2D.ve     1.612E-11
+    X_U2D.vlim  -4.495E-08
+    X_U2D.vlp   -4.000E-11
+    X_U2D.vln   -4.000E-11
+    X_U3A.vb    -2.999E-12
+    X_U3A.vc     1.350E-11
+    X_U3A.ve     1.612E-11
+    X_U3A.vlim  -8.968E-08
+    X_U3A.vlp   -4.000E-11
+    X_U3A.vln   -4.000E-11
+    X_U3B.vb    -1.123E-11
+    X_U3B.vc     1.349E-11
+    X_U3B.ve     1.613E-11
+    X_U3B.vlim   2.742E-07
+    X_U3B.vlp   -4.000E-11
+    X_U3B.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   7.97E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/15/23 23:56:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Bode_plot"  [ d:\orcad projects\prep6_analog2\prep6_analog2-pspicefiles\schematic1\bode_plot.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.25
+  Total job time (using Solver 1)   =         .38
+

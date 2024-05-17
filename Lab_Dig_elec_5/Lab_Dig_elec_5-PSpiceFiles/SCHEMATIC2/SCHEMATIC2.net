@@ -1,0 +1,11 @@
+* source LAB_DIG_ELEC_5
+R_Ron         N08361 +5V  10k TC=0,0 
+D_D1         N08361 N10764 D1N4148 
+C_C4         0 N08417  10n  TC=0,0 
+X_U3         0 CAP OUT +5V N08417 CAP N08361 +5V 555C
+C_C3         0 CAP  4.7n  TC=0,0 
+R_RL         0 OUT  10k TC=0,0 
+D_D2         N10757 N08361 D1N4148 
+V_V1         +5V 0 5V
+X_R2         N10764 N10771 N10757 POT PARAMS: SET=1 VALUE=100k
+R_R3         CAP N10771  10k TC=0,0 

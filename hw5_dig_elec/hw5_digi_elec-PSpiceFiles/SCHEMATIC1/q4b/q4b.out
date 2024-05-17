@@ -1,0 +1,140 @@
+
+**** 08/10/22 19:27:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q4b"  [ D:\Orcad Projects\hw5_dig_elec\hw5_digi_elec-PSpiceFiles\SCHEMATIC1\q4b.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "q4b.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../hw5_digi_elec-pspicefiles/hw5_digi_elec.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 440n 0 0.1n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HW5_DIGI_ELEC
+C_C1         0 VO  1p  TC=0,0 
+M_M1         VIN VDD VO 0 nmos_q4a_2           
+V_Vin         VIN 0 5Vdc
+V_VDD         VDD 0 5Vdc
+M_M2         VIN2 VDD VO2 0 nmos_q4a_2           
+C_C2         0 VO2  1p  TC=0,0 
+V_V1         VIN2 0  
++PULSE 0 5 0 10p 10p 200n 220n
+
+**** RESUMING q4b.cir ****
+.END
+
+**** 08/10/22 19:27:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q4b"  [ D:\Orcad Projects\hw5_dig_elec\hw5_digi_elec-PSpiceFiles\SCHEMATIC1\q4b.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nmos_q4a_2      
+               NMOS            
+       LEVEL    1            
+           L    5.000000E-06 
+           W   20.000000E-06 
+         VTO    1            
+          KP   50.000000E-06 
+       GAMMA     .5          
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 08/10/22 19:27:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q4b"  [ D:\Orcad Projects\hw5_dig_elec\hw5_digi_elec-PSpiceFiles\SCHEMATIC1\q4b.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VO)    3.3885  (  VDD)    5.0000  (  VIN)    5.0000  (  VO2)-474.1E-30      
+
+( VIN2)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin       -8.409E-12
+    V_VDD        0.000E+00
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   4.20E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/10/22 19:27:17 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q4b"  [ D:\Orcad Projects\hw5_dig_elec\hw5_digi_elec-PSpiceFiles\SCHEMATIC1\q4b.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

@@ -1,0 +1,47 @@
+
+**** 02/14/23 20:34:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-HEHE"  [ D:\Orcad Projects\Diode_cap_calc\Diode_cap_calc-PSpiceFiles\SCHEMATIC1\HEHE.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "HEHE.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../diode_cap_calc-pspicefiles/diode_cap_calc.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIODE_CAP_CALC
+D_D1         N00148 0 Dbreak 
+C_C1         N00141 N00148  1u  TC=0,0 
+V_V1         N00141 0  AC 170
++SIN 0 170 60 0 0 0
+
+**** RESUMING HEHE.cir ****
+.END
+
+**** FROM LIBRARY ../../../diode_cap_calc-pspicefiles/diode_cap_calc.lib ****
+.model Dbreak D Is=1e-14 Cjo=.1pF Rs=.1 Vf=3V
+----------------------------------------$
+ERROR -- 'Vf' is not a model parameter name
+

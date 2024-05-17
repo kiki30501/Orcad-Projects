@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC2-hehehehe"  [ d:\orcad projects\lab10comm\lab10comm-PSpiceFiles\SCHEMATIC2\hehehehe.sim ] 
+
+** Creating circuit file "hehehehe.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 10u 
+.STEP LIN PARAM freqtest 380 1500 300 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+.END

@@ -1,0 +1,18 @@
+* source LAB10COMM
+R_R18         N10409 N10541  33k TC=0,0 
+R_R17         AMPLIFIED N10409  33k TC=0,0 
+C_C3         N10541 0  10n  TC=0,0 
+R_R19         0 VOUT  1Meg TC=0,0 
+V_V4         0 NEG 10V
+R_R20         N10561 AMPLIFIED  10k TC=0,0 
+V_V3         POS 0 10V
+R_R15         PWM N10561  10k TC=0,0 
+V_V1         SAWTOOTH 0  
++PULSE -4 0 0 199.9u 1n 199.9u 200u
+V_V2         VM 0  AC 1
++SIN -2 1 {freqtest} 0 0 0
+C_C4         N10409 VOUT  10n  TC=0,0 
+X_U1B         VM SAWTOOTH POS 0 PWM LM324
+X_U2A         0 N10561 POS NEG AMPLIFIED LM324
+X_U2B         N10541 VOUT POS NEG VOUT LM324
+.PARAM  freqtest=380

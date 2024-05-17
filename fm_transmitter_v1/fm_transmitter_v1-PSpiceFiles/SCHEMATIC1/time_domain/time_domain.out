@@ -1,0 +1,154 @@
+
+**** 10/11/23 18:44:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\Orcad Projects\fm_transmitter_v1\fm_transmitter_v1-PSpiceFiles\SCHEMATIC1\time_domain.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time_domain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FM_TRANSMITTER_V1
+Q_Q1         N00682 N00613 N00560 Q2N3904
+Q_Q2         VOUT N00689 N00759 Q2N3904
+C_C1         N00432 N00613  0.1u  TC=0,0 
+C_C3         N00682 N00689  0.1u  TC=0,0 
+C_C4         N00689 VCC1  0.01u  TC=0,0 
+C_C5         N00759 VOUT  4.7p  TC=0,0 
+R_R1         N00432 VCC1  10k TC=0,0 
+R_R2         0 N00560  100 TC=0,0 
+R_R3         N00682 VCC1  10k TC=0,0 
+R_R4         0 N00759  1k TC=0,0 
+R_R5         N00689 VCC1  10k TC=0,0 
+R_R6         N00613 VCC1  1meg TC=0,0 
+R_R7         0 N00613  100k TC=0,0 
+V_V1         VCC1 0 9V
+C_C7         VOUT VCC1 {4p*0.5+.001p}
+L_L1         VOUT VCC1  0.1u  
+V_V2         N00432 0  AC 1k
++SIN 0 5mV 1k 0 0 0
+R_RL         0 VOUT  5meg TC=0,0 
+
+**** RESUMING time_domain.cir ****
+.END
+
+**** 10/11/23 18:44:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\Orcad Projects\fm_transmitter_v1\fm_transmitter_v1-PSpiceFiles\SCHEMATIC1\time_domain.sim
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 10/11/23 18:44:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\Orcad Projects\fm_transmitter_v1\fm_transmitter_v1-PSpiceFiles\SCHEMATIC1\time_domain.sim
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VCC1)    9.0000  ( VOUT)    9.0000  (N00432)    0.0000 (N00560)     .0220     
+
+(N00613)     .6459 (N00682)    6.8217 (N00689)    8.5163 (N00759)    7.7949 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.923E-03
+    V_V2         9.000E-04
+
+    TOTAL POWER DISSIPATION   8.03E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/11/23 18:44:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\Orcad Projects\fm_transmitter_v1\fm_transmitter_v1-PSpiceFiles\SCHEMATIC1\time_domain.sim
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .39
+

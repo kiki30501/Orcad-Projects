@@ -1,0 +1,587 @@
+
+**** 03/31/23 17:04:45 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim123"  [ d:\orcad projects\lab_dig_elec_5\lab_dig_elec_5-PSpiceFiles\SCHEMATIC1\Sim123.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Sim123.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_DIG_ELEC_5
+R_R1         5VSRC N00866  1.82k TC=0,0 
+C_C1         N00462 0  10n  TC=0,0 
+C_C2         0 N00866  1u  TC=0,0 
+V_V2         TRIG 0  
++PULSE 5 0 0 1n 1n 25u 2.5m
+X_U2         0 TRIG OUT1 5VSRC N00462 N00866 N00866 5VSRC TLC555/TI
+R_R2         0 OUT1  10k TC=0,0 
+V_V1         +5V 0 5V
+C_C4         0 N05275  0.01n  TC=0,0 
+R_RL         0 OUT2  10k TC=0,0 
+C_C3         0 N05263  0.1u  TC=0,0 
+X_U3         0 N05263 OUT2 +5V N05275 N05263 N06887 +5V 555C
+D_D1         N06887 N05263 D1N4148 
+D_D2         N07637 N06887 D1N4148 
+R_Roff         N05263 N07637  4k TC=0,0 
+R_Ron         N06887 +5V  1.2k TC=0,0 
+V_V3         5VSRC 0 5V
+
+**** RESUMING Sim123.cir ****
+.END
+
+**** 03/31/23 17:04:45 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim123"  [ d:\orcad projects\lab_dig_elec_5\lab_dig_elec_5-PSpiceFiles\SCHEMATIC1\Sim123.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U2.DMOD       X_U2.DMOD1      X_U3.DIODE      
+          IS    2.682000E-09   10.000000E-15    1.000000E-09   10.000000E-15 
+           N    1.836                                                        
+         ISR    1.565000E-09                                                 
+         IKF     .04417                                                      
+          BV  100                                                            
+         IBV  100.000000E-06                                                 
+          RS     .5664          1.000000E-06    1.000000E-06     .01         
+          TT   11.540000E-09                                                 
+         CJO    4.000000E-12                                                 
+          VJ     .5                                                          
+           M     .3333                                                       
+
+
+**** 03/31/23 17:04:45 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim123"  [ d:\orcad projects\lab_dig_elec_5\lab_dig_elec_5-PSpiceFiles\SCHEMATIC1\Sim123.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JNEMOD     
+               NJF             
+         VTO   -2.5          
+        BETA    5.120000E-06 
+
+
+**** 03/31/23 17:04:45 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Sim123"  [ d:\orcad projects\lab_dig_elec_5\lab_dig_elec_5-PSpiceFiles\SCHEMATIC1\Sim123.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.MOSMOD     X_U3.PCHAN555   X_U3.NCHAN555   
+               NMOS            PMOS            NMOS            
+       LEVEL    1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    1               -.2              .2          
+          KP    1              20.000000E-06   20.000000E-06 
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0               0               0            
+          RD    5                                            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               1.000000E-12    1.000000E-12 
+        CGDO    0               1.000000E-12    1.000000E-12 
+        CGBO    0               1.000000E-12    1.000000E-12 
+         TOX    0               0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+               X_U3.PCHAN555_OUT 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    -.2          
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD  200.000000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO    1.000000E-12 
+        CGDO    1.000000E-12 
+        CGBO    1.000000E-12 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  999.6E-12.
+         Time step =  761.8E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT1)                   =    48.33mV  \    48.87mV
+    V(X_U2.18)                =     2.509V  \     2.461V
+    V(X_U2.22)                =     1.943V  \     1.894V
+    V(X_U2.23)                =     1.960V  \     1.911V
+    V(X_U2.24)                =    -8.901V  \     39.53V
+    V(X_U2.25)                =    -8.901V  \     39.53V
+
+  These supply currents failed to converge:
+
+    I(X_U2.E4)                =    16.61uA  \    16.94uA
+    I(X_U2.E5)                =  -966.47pA  \   -1.112nA
+    I(X_U3.E_EMIR)            =   -73.67mA  \   -76.56mA
+    I(X_U3.E_EVAL)            =   -7.860mA  \   -9.415mA
+    I(V_V1)                   =   -4.194mA  \   -4.177mA
+
+  These devices failed to converge:
+    X_U2.D10  X_U2.D13  X_U2.D14  X_U2.D16  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +5V)    5.0000  ( OUT1)     .0483  ( OUT2)    4.8469  ( TRIG)     .0019      
+
+(5VSRC)    5.0000  (N00462) 6.664E-06 (N00866) 2.746E-06 (N05263) 3.835E-06     
+
+(N05275)     .0033 (N06887)     .0882 (N07637)     .0834 (X_U2.9) 3.332E-06     
+
+(X_U3.1)    4.8495 (X_U3.2)     .0017 (X_U3.3)   16.6140 (X_U3.4)    4.2000     
+
+(X_U3.5)    -.3472 (X_U3.6)  -33.2650 (X_U3.7)    4.2000 (X_U3.8)    -.5075     
+
+(X_U3.9)-4.835E-06 (X_U2.10)    -.0039                   (X_U2.11)     .0255    
+
+(X_U2.12)     .5894                   (X_U2.13)    1.9322                       
+
+(X_U2.14)    1.9488                   (X_U2.15)    2.5000                       
+
+(X_U2.16) 1910.6000                   (X_U2.17) 1910.6000                       
+
+(X_U2.18)    2.5089                   (X_U2.19) 3800.0000                       
+
+(X_U2.20) 3800.0000                   (X_U2.21)    2.4981                       
+
+(X_U2.22)    1.9432                   (X_U2.23)    1.9598                       
+
+(X_U2.24)   -8.9011                   (X_U2.25)   -8.9011                       
+
+(X_U2.26)    4.3486                   (X_U2.27)    4.2000                       
+
+(X_U2.28)     .8500                   (X_U2.29)     .0062                       
+
+(X_U2.30)    1.2000                   (X_U3.10)    5.0000                       
+
+(X_U3.11)    4.9200                   (X_U3.12) 92.71E-06                       
+
+(X_U3.13)    4.8495                   (X_U3.14)    5.0000                       
+
+(X_U3.15)    5.0001                   (X_U3.16)    5.0000                       
+
+(X_U3.17)    5.0000                   (X_U3.18) 37.23E-06                       
+
+(X_U3.19)-2.159E-06                   (X_U3.20)    4.9977                       
+
+(X_U3.21)     .2925                   (X_U3.22)-433.1E-06                       
+
+(X_U3.23)     .4528                   (X_U3.24)     .0931                       
+
+(X_U3.25)-22.41E-09                   (X_U3.VDD)    5.0000                  
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 0.005
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  999.6E-12.
+         Time step =  190.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT1)                   =    -2.058V  \    48.87mV
+    V(X_U2.18)                =     2.502V  \     2.494V
+    V(X_U2.22)                =     1.936V  \     1.928V
+    V(X_U2.23)                =     1.953V  \     1.945V
+    V(X_U2.24)                =    -1.708V  \     5.676V
+    V(X_U2.25)                =    -1.708V  \     5.676V
+
+  These supply currents failed to converge:
+
+    I(X_U2.E4)                =    16.66uA  \    16.71uA
+    I(X_U2.E5)                =  -988.05pA  \   -1.010nA
+    I(X_U2.VD1)               =    6.268pA  \    4.161pA
+
+  These devices failed to converge:
+    X_U2.D10  X_U2.D13  X_U2.D14  X_U2.D16  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +5V)    5.0000  ( OUT1)   -2.0577  ( OUT2)    4.8469  ( TRIG)     .0019      
+
+(5VSRC)    5.0000  (N00462) 6.664E-06 (N00866) 2.746E-06 (N05263) 3.835E-06     
+
+(N05275)     .0033 (N06887)     .0882 (N07637)     .0834 (X_U2.9) 3.332E-06     
+
+(X_U3.1)    4.8495 (X_U3.2)     .0017 (X_U3.3)   16.6140 (X_U3.4)    4.2000     
+
+(X_U3.5)    -.3472 (X_U3.6)  -33.2650 (X_U3.7)    4.2000 (X_U3.8)    -.5075     
+
+(X_U3.9)-4.977E-06 (X_U2.10)    -.0039                   (X_U2.11)     .0255    
+
+(X_U2.12)     .5894                   (X_U2.13)    1.9322                       
+
+(X_U2.14)    1.9488                   (X_U2.15)    2.5000                       
+
+(X_U2.16) 1910.6000                   (X_U2.17) 1910.6000                       
+
+(X_U2.18)    2.5017                   (X_U2.19) 3800.0000                       
+
+(X_U2.20) 3800.0000                   (X_U2.21)    2.4981                       
+
+(X_U2.22)    1.9359                   (X_U2.23)    1.9525                       
+
+(X_U2.24)   -1.7078                   (X_U2.25)   -1.7078                       
+
+(X_U2.26)    4.3486                   (X_U2.27)    4.2000                       
+
+(X_U2.28)     .8500                   (X_U2.29)     .0062                       
+
+(X_U2.30)    1.2000                   (X_U3.10)    5.0000                       
+
+(X_U3.11)    4.9200                   (X_U3.12) 92.66E-06                       
+
+(X_U3.13)    4.8495                   (X_U3.14)    5.0000                       
+
+(X_U3.15)    5.0001                   (X_U3.16)    5.0000                       
+
+(X_U3.17)    5.0000                   (X_U3.18) 37.23E-06                       
+
+(X_U3.19)-2.184E-06                   (X_U3.20)    4.9977                       
+
+(X_U3.21)     .2925                   (X_U3.22)-433.2E-06                       
+
+(X_U3.23)     .4528                   (X_U3.24)     .0931                       
+
+(X_U3.25)-61.86E-09                   (X_U3.VDD)    5.0000                  
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 0.005
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  999.6E-12.
+         Time step =  190.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT1)                   =    -2.058V  \    48.87mV
+    V(X_U2.18)                =     2.502V  \     2.494V
+    V(X_U2.22)                =     1.936V  \     1.928V
+    V(X_U2.23)                =     1.953V  \     1.945V
+    V(X_U2.24)                =    -1.708V  \     5.676V
+    V(X_U2.25)                =    -1.708V  \     5.676V
+
+  These supply currents failed to converge:
+
+    I(X_U2.E4)                =    16.66uA  \    16.71uA
+    I(X_U2.E5)                =  -988.05pA  \   -1.010nA
+    I(X_U2.VD1)               =    6.268pA  \    4.161pA
+
+  These devices failed to converge:
+    X_U2.D10  X_U2.D13  X_U2.D14  X_U2.D16  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +5V)    5.0000  ( OUT1)   -2.0577  ( OUT2)    4.8469  ( TRIG)     .0019      
+
+(5VSRC)    5.0000  (N00462) 6.664E-06 (N00866) 2.746E-06 (N05263) 3.835E-06     
+
+(N05275)     .0033 (N06887)     .0882 (N07637)     .0834 (X_U2.9) 3.332E-06     
+
+(X_U3.1)    4.8495 (X_U3.2)     .0017 (X_U3.3)   16.6140 (X_U3.4)    4.2000     
+
+(X_U3.5)    -.3472 (X_U3.6)  -33.2650 (X_U3.7)    4.2000 (X_U3.8)    -.5075     
+
+(X_U3.9)-4.977E-06 (X_U2.10)    -.0039                   (X_U2.11)     .0255    
+
+(X_U2.12)     .5894                   (X_U2.13)    1.9322                       
+
+(X_U2.14)    1.9488                   (X_U2.15)    2.5000                       
+
+(X_U2.16) 1910.6000                   (X_U2.17) 1910.6000                       
+
+(X_U2.18)    2.5017                   (X_U2.19) 3800.0000                       
+
+(X_U2.20) 3800.0000                   (X_U2.21)    2.4981                       
+
+(X_U2.22)    1.9359                   (X_U2.23)    1.9525                       
+
+(X_U2.24)   -1.7078                   (X_U2.25)   -1.7078                       
+
+(X_U2.26)    4.3486                   (X_U2.27)    4.2000                       
+
+(X_U2.28)     .8500                   (X_U2.29)     .0062                       
+
+(X_U2.30)    1.2000                   (X_U3.10)    5.0000                       
+
+(X_U3.11)    4.9200                   (X_U3.12) 92.66E-06                       
+
+(X_U3.13)    4.8495                   (X_U3.14)    5.0000                       
+
+(X_U3.15)    5.0001                   (X_U3.16)    5.0000                       
+
+(X_U3.17)    5.0000                   (X_U3.18) 37.23E-06                       
+
+(X_U3.19)-2.184E-06                   (X_U3.20)    4.9977                       
+
+(X_U3.21)     .2925                   (X_U3.22)-433.2E-06                       
+
+(X_U3.23)     .4528                   (X_U3.24)     .0931                       
+
+(X_U3.25)-61.86E-09                   (X_U3.VDD)    5.0000                  
+
+
+**** Interrupt ****
+**** Param: RELTOL = 0.001
+**** Param: ABSTOL = 1e-12
+**** Param: VNTOL = 1e-06
+**** Param: GMIN = 1e-12
+**** Param: TSTOP = 0.005
+**** Param: TMAX = 0
+**** Param: ITL1 = 150
+**** Param: ITL2 = 20
+**** Param: ITL4 = 100
+**** Param: AutoConverge = 0
+**** Param: AutoConverge.ITL1 = 1000
+**** Param: AutoConverge.ITL2 = 1000
+**** Param: AutoConverge.ITL4 = 1000
+**** Param: AutoConverge.RELTOL = 0.05
+**** Param: AutoConverge.ABSTOL = 0.001
+**** Param: AutoConverge.VNTOL = 0.001
+**** Param: AutoConverge.PIVTOL = 1e-10
+**** Param: ADVCONV = 1
+**** Param: Current_Simulation = 3
+**** Param: METHOD = 0
+**** Param: TRTOL = 7
+**** Param: STEPGMIN = 0
+**** Param: GMINSTEPS = 0
+**** Param: ITL6 = 0
+**** Param: NOSTEPDEP = 0
+**** Param: PTRANSTEP = 0
+**** Param: GMINSRC = 0
+**** Param: PSEUDOTRAN = 0
+**** Param: NOSTEPSRC = 0
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  999.6E-12.
+         Time step =  190.5E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(OUT1)                   =    -2.058V  \    48.87mV
+    V(X_U2.18)                =     2.502V  \     2.494V
+    V(X_U2.22)                =     1.936V  \     1.928V
+    V(X_U2.23)                =     1.953V  \     1.945V
+    V(X_U2.24)                =    -1.708V  \     5.676V
+    V(X_U2.25)                =    -1.708V  \     5.676V
+
+  These supply currents failed to converge:
+
+    I(X_U2.E4)                =    16.66uA  \    16.71uA
+    I(X_U2.E5)                =  -988.05pA  \   -1.010nA
+    I(X_U2.VD1)               =    6.268pA  \    4.161pA
+
+  These devices failed to converge:
+    X_U2.D10  X_U2.D13  X_U2.D14  X_U2.D16  
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  +5V)    5.0000  ( OUT1)   -2.0577  ( OUT2)    4.8469  ( TRIG)     .0019      
+
+(5VSRC)    5.0000  (N00462) 6.664E-06 (N00866) 2.746E-06 (N05263) 3.835E-06     
+
+(N05275)     .0033 (N06887)     .0882 (N07637)     .0834 (X_U2.9) 3.332E-06     
+
+(X_U3.1)    4.8495 (X_U3.2)     .0017 (X_U3.3)   16.6140 (X_U3.4)    4.2000     
+
+(X_U3.5)    -.3472 (X_U3.6)  -33.2650 (X_U3.7)    4.2000 (X_U3.8)    -.5075     
+
+(X_U3.9)-4.977E-06 (X_U2.10)    -.0039                   (X_U2.11)     .0255    
+
+(X_U2.12)     .5894                   (X_U2.13)    1.9322                       
+
+(X_U2.14)    1.9488                   (X_U2.15)    2.5000                       
+
+(X_U2.16) 1910.6000                   (X_U2.17) 1910.6000                       
+
+(X_U2.18)    2.5017                   (X_U2.19) 3800.0000                       
+
+(X_U2.20) 3800.0000                   (X_U2.21)    2.4981                       
+
+(X_U2.22)    1.9359                   (X_U2.23)    1.9525                       
+
+(X_U2.24)   -1.7078                   (X_U2.25)   -1.7078                       
+
+(X_U2.26)    4.3486                   (X_U2.27)    4.2000                       
+
+(X_U2.28)     .8500                   (X_U2.29)     .0062                       
+
+(X_U2.30)    1.2000                   (X_U3.10)    5.0000                       
+
+(X_U3.11)    4.9200                   (X_U3.12) 92.66E-06                       
+
+(X_U3.13)    4.8495                   (X_U3.14)    5.0000                       
+
+(X_U3.15)    5.0001                   (X_U3.16)    5.0000                       
+
+(X_U3.17)    5.0000                   (X_U3.18) 37.23E-06                       
+
+(X_U3.19)-2.184E-06                   (X_U3.20)    4.9977                       
+
+(X_U3.21)     .2925                   (X_U3.22)-433.2E-06                       
+
+(X_U3.23)     .4528                   (X_U3.24)     .0931                       
+
+(X_U3.25)-61.86E-09                   (X_U3.VDD)    5.0000                  
+
+
+**** Interrupt ****

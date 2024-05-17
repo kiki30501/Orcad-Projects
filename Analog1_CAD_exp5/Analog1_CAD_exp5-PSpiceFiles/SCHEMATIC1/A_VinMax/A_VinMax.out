@@ -1,0 +1,195 @@
+
+**** 12/10/22 17:42:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-pspicefiles\schematic1\a_vinmax.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "A_VinMax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.5m 0 1u 
+.STEP PARAM Vin_A LIST 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG1_CAD_EXP5
+V_V1         VDD_5 0 5Vdc
+V_V2         VSS_-5 0 -5Vdc
+V_V3         VCC_12 0 12Vdc
+R_RsigB         VIB N00581  50 TC=0,0 
+R_RG2         0 N00585  70k TC=0,0 
+R_RG1         N00585 VCC_12  100k TC=0,0 
+R_RSB         0 N00645  1.5k TC=0,0 
+R_RDB         N00617 VCC_12  1k TC=0,0 
+R_RLB         0 VOB  10k TC=0,0 
+C_C1         N00581 N00585  1u  TC=0,0 
+C_C2         N00617 VOB  1u  TC=0,0 
+X_M1         N00617 N00585 N00645 BS170/PLP
+V_Vsin         VIB 0  AC {Vin_B}
++SIN 0 {Vin_B} 10k 0 0 0
+V_Vsig         VIA 0  AC {Vin_A}
++SIN 0 {Vin_A} 10k 0 0 0
+R_RsigA         VIA N01555  50 TC=0,0 
+R_RSA         VSS_-5 N01563  1k TC=0,0 
+R_RDA         N01568 VDD_5  1k TC=0,0 
+R_RLA         0 VOA  1k TC=0,0 
+C_C4         N01555 N01563  1u  TC=0,0 
+C_C5         N01568 VOA  1u  TC=0,0 
+X_M2         N01568 0 N01563 BS170/PLP
+.PARAM  vin_a=1m vin_b=1m
+
+**** RESUMING A_VinMax.cir ****
+.END
+
+**** 12/10/22 17:42:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-pspicefiles\schematic1\a_vinmax.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.Dbody      X_M2.Dbody      
+          IS  125.000000E-15  125.000000E-15 
+           N    1.023           1.023        
+         IKF   18.01           18.01         
+          BV   60              60            
+         IBV   10.000000E-06   10.000000E-06 
+          RS    1.281           1.281        
+          TT  161.600000E-09  161.600000E-09 
+         CJO   46.300000E-12   46.300000E-12 
+          VJ     .4519           .4519       
+           M     .3423           .3423       
+
+
+**** 12/10/22 17:42:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-pspicefiles\schematic1\a_vinmax.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MOST1      X_M1.MOST2      X_M2.MOST1      X_M2.MOST2      
+               NMOS            NMOS            NMOS            NMOS            
+       LEVEL    3               1               3               1            
+           L    2.000000E-06    2.000000E-06    2.000000E-06    2.000000E-06 
+           W    9.700000E-03    9.700000E-03    9.700000E-03    9.700000E-03 
+         VTO    2              -4.73            2              -4.73         
+          KP   20.780000E-06   20.780000E-06   20.780000E-06   20.780000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA    0               0               0               0            
+          RD    1.186                           1.186                        
+          RS     .02             .02             .02             .02         
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX  100.000000E-09    0             100.000000E-09    0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+**** 12/10/22 17:42:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-pspicefiles\schematic1\a_vinmax.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM VIN_A =    1.0000E-03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIA)    0.0000  (  VIB)    0.0000  (  VOA)    0.0000  (  VOB)    0.0000      
+
+(VDD_5)    5.0000  (N00581)    0.0000 (N00585)    4.9412 (N00617)   10.1660     
+
+(N00645)    2.7504 (N01555)    0.0000 (N01563)   -2.2343 (N01568)    2.2343     
+
+(VCC_12)   12.0000 (VSS_-5)   -5.0000 (X_M1.4)    9.6712 (X_M2.4)    2.2343 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.766E-03
+    V_V2         2.766E-03
+    V_V3        -1.904E-03
+    V_Vsin       0.000E+00
+    V_Vsig       0.000E+00
+
+    TOTAL POWER DISSIPATION   5.05E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/10/22 17:42:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-pspicefiles\schematic1\a_vinmax.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM VIN_A =    1.0000E-03
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       14.45
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,10 @@
+* source LAB_DIG_ELEC_5
+V_V1         +5V 0 5V
+R_RL         OUT5 +5V  1k TC=0,0 
+R_R3         N14310 +5V  5k TC=0,0 
+X_U3         0 CAP7 OUT5 +5V MOD CAP7 N16576 +5V 555C
+R_R4         CAP7 N14310  500 TC=0,0 
+C_C3         0 N14310  20n  TC=0,0 
+V_V2         MOD 0  
++PULSE 4.7 0.3 1n 0.5m 0.5m 1n 1m
+R_R5         N16576 N14310  100 TC=0,0 

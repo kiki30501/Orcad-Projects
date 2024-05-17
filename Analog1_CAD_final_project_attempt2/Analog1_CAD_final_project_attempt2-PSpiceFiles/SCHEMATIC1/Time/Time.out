@@ -1,0 +1,159 @@
+
+**** 01/10/23 14:47:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Orcad Projects\Analog1_CAD_final_project_attempt2\Analog1_CAD_final_project_attempt2-PSpiceFiles
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG1_CAD_FINAL_PROJECT_ATTEMPT2
+V_V1         VCC 0 12Vdc
+R_R1         N00149 VCC  30k TC=0,0 
+X_M1         VCC N00149 0 BS170/PLP
+X_M2         N00149 N00149 0 BS170/PLP
+
+**** RESUMING Time.cir ****
+.END
+
+**** 01/10/23 14:47:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Orcad Projects\Analog1_CAD_final_project_attempt2\Analog1_CAD_final_project_attempt2-PSpiceFiles
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.Dbody      X_M2.Dbody      
+          IS  125.000000E-15  125.000000E-15 
+           N    1.023           1.023        
+         IKF   18.01           18.01         
+          BV   60              60            
+         IBV   10.000000E-06   10.000000E-06 
+          RS    1.281           1.281        
+          TT  161.600000E-09  161.600000E-09 
+         CJO   46.300000E-12   46.300000E-12 
+          VJ     .4519           .4519       
+           M     .3423           .3423       
+
+
+**** 01/10/23 14:47:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Orcad Projects\Analog1_CAD_final_project_attempt2\Analog1_CAD_final_project_attempt2-PSpiceFiles
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MOST1      X_M1.MOST2      X_M2.MOST1      X_M2.MOST2      
+               NMOS            NMOS            NMOS            NMOS            
+       LEVEL    3               1               3               1            
+           L    2.000000E-06    2.000000E-06    2.000000E-06    2.000000E-06 
+           W    9.700000E-03    9.700000E-03    9.700000E-03    9.700000E-03 
+         VTO    2              -4.73            2              -4.73         
+          KP   20.780000E-06   20.780000E-06   20.780000E-06   20.780000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA    0               0               0               0            
+          RD    1.186                           1.186                        
+          RS     .02             .02             .02             .02         
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX  100.000000E-09    0             100.000000E-09    0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+**** 01/10/23 14:47:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Orcad Projects\Analog1_CAD_final_project_attempt2\Analog1_CAD_final_project_attempt2-PSpiceFiles
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  (N00149)    2.0810 (X_M1.4)    6.8110 (X_M2.4)    2.0810 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.613E-04
+
+    TOTAL POWER DISSIPATION   7.94E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/10/23 14:47:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Time"  [ D:\Orcad Projects\Analog1_CAD_final_project_attempt2\Analog1_CAD_final_project_attempt2-PSpiceFiles
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

@@ -1,0 +1,24 @@
+* source DIGITAL_ELECTRONICS_HW4_Q6
+M_M1         VO N00188 0 0 Mbreakn           
+M_M2         VO N00188 N00177 N00177 Mbreakp           
+V_V1         N00188 0 0Vdc
+V_V2         N00177 0 5V
+M_M4         VO1 N01766 0 0 Mbreakn           
+M_M8         N01932 N01766 0 0 Mbreakn           
+M_M9         VO2 N01766 N01784 N01694 MbreakP           
+V_V3         N01694 0 5V
+V_V4         N01766 0 0Vdc
+M_M10         VO2 N01766 N01932 0 MbreakN           
+M_M6         N01784 N01766 N01694 N01694 Mbreakp           
+M_M3         VO1 N01766 N01694 N01694 Mbreakp           
+M_M15         VO4 N04880 N05030 0 MbreakN           
+M_M16         N05030 N04880 0 0 Mbreakn           
+M_M13         VO4 N04880 N04894 N04812 MbreakP           
+M_M12         N04894 N04880 N04812 N04812 Mbreakp           
+V_V5         N04812 0 5V
+M_M14         VO3 N04880 0 0 Mbreakn           
+M_M11         VO3 N04880 N04812 N04812 Mbreakp           
+V_V6         N04880 0  
++PULSE 0 5 5n 1p 1p 20n 40n
+C_C1         0 VO3  1p  TC=0,0 
+C_C2         0 VO4  1p  TC=0,0 

@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-DC_Qpnt"  [ D:\Orcad Projects\hw1_analog_electronics_2\hw1_analog_electronics_2-PSpiceFiles\SCHEMATIC1\DC_Qpnt.sim ] 
+
+** Creating circuit file "DC_Qpnt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../hw1_analog_electronics_2-pspicefiles/hw1_analog_electronics_2.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

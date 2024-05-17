@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-B_VinMax"  [ d:\orcad projects\analog1_cad_exp5\analog1_cad_exp5-PSpiceFiles\SCHEMATIC1\B_VinMax.sim ] 
+
+** Creating circuit file "B_VinMax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.5m 0 1u 
+.STEP PARAM Vin_B LIST 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

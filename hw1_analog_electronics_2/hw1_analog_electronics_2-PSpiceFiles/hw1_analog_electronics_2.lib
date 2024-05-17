@@ -1,0 +1,4 @@
+* PSpice Model Editor - Version 17.4.0
+*$
+.model Qbreakn NPN (BF=100 VJE=0.7)
+*$

@@ -1,0 +1,11 @@
+* source GABI_HW6
+C_C1         N00456 N00362  1n  TC=0,0 
+C_C2         N00358 N00362  1n  TC=0,0 
+R_R1         0 N00362  10k TC=0,0 
+R_R2         N00340 N00358  10k TC=0,0 
+R_R3         N00340 N00323  60k TC=0,0 
+R_R4         N00323 0  10k TC=0,0 
+V_V1         N00456 0  
++PULSE 1v 0V 2u 1u 1u 20u 30
+X_U1         N00362 N00323 0 N03818 N00340 uA741
+V_V2         0 N03818 12Vdc

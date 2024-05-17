@@ -1,0 +1,173 @@
+
+**** 12/24/22 12:22:51 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC_Check"  [ D:\Orcad Projects\Analog1_CAD_exp7\Analog1_CAD_exp7-PSpiceFiles\SCHEMATIC1\VDC_Check.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "VDC_Check.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0.01m 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG1_CAD_EXP7
+R_Re1         N00265 N00272  {Re} TC=0,0 
+R_Re2         N00272 N00276  {Re} TC=0,0 
+R_R3         0 N00222  100k TC=0,0 
+R_R4         0 N00348  100k TC=0,0 
+R_Rc         VOUT1 +12V  {Rc} TC=0,0 
+Q_Q1         +12V N00222 N00265 Q2N3904
+Q_Q2         VOUT1 N00348 N00276 Q2N3904
+C_C1         VIN N00222  1u  TC=0,0 
+C_C2         N00348 VIN  1u  TC=0,0 
+V_V1         +12V 0 12V
+V_V2         -12V 0 -12V
+V_V3         VIN 0  AC 50m
++SIN 0 {Vamp} 10k 0 0 0
+R_R6         0 N01409  100k TC=0,0 
+R_Re4         N01493 N01453  {Re} TC=0,0 
+C_C4         N01409 VIN  1u  TC=0,0 
+R_Re3         N01449 N01493  {Re} TC=0,0 
+C_C3         VIN N01397  1u  TC=0,0 
+R_Rc1         VOUT2 +12V  {Rc} TC=0,0 
+Q_Q3         +12V N01397 N01449 Q2N3904
+Q_Q4         VOUT2 N01409 N01453 Q2N3904
+R_R7         0 N01397  100k TC=0,0 
+R_Rt1         -12V N00272  {Rt} TC=0,0 
+R_R8         -12V N02322  4.7k TC=0,0 
+R_R9         -12V N02326  10k TC=0,0 
+R_R10         0 N02326  10k TC=0,0 
+Q_Q5         N01493 N02326 N02322 Q2N3904
+.PARAM  rc=1k rt=10k vamp=50m re=0.1k vmode=0
+
+**** RESUMING VDC_Check.cir ****
+.END
+
+**** 12/24/22 12:22:51 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC_Check"  [ D:\Orcad Projects\Analog1_CAD_exp7\Analog1_CAD_exp7-PSpiceFiles\SCHEMATIC1\VDC_Check.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/24/22 12:22:51 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC_Check"  [ D:\Orcad Projects\Analog1_CAD_exp7\Analog1_CAD_exp7-PSpiceFiles\SCHEMATIC1\VDC_Check.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( +12V)   12.0000  ( -12V)  -12.0000  (VOUT1)   11.4600      
+
+(VOUT2)   11.4460  (N00222)    -.3881 (N00265)   -1.0339 (N00272)   -1.0886     
+
+(N00276)   -1.0342 (N00348)    -.3884 (N01397)    -.3964 (N01409)    -.3967     
+
+(N01449)   -1.0429 (N01453)   -1.0432 (N01493)   -1.0989 (N02322)   -6.7063     
+
+(N02326)   -6.0392 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.194E-03
+    V_V2         2.814E-03
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   6.01E-02  WATTS
+
+
+**** Interrupt ****
+
+
+          JOB CONCLUDED
+
+**** 12/24/22 12:22:51 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC_Check"  [ D:\Orcad Projects\Analog1_CAD_exp7\Analog1_CAD_exp7-PSpiceFiles\SCHEMATIC1\VDC_Check.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       29.27
+  Total job time (using Solver 1)   =        3.44
+

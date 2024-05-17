@@ -1,0 +1,957 @@
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "freq_domain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 50 20k
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGI_ELEC_FINAL9_V2
+X_U3         0 N03040 VOUT +5V VB N03040 N03080 +5V 555C
+V_V1         VIN 0  
++PULSE 0 5 1m 0 0 0.5*{period} {period}
+R_R3         N03040 N03080  15k TC=0,0 
+C_C1         0 VB  100n  TC=0,0 
+R_R1         VA VB  25k TC=0,0 
+R_R4         0 VOUT  1k TC=0,0 
+X_U2A         VIN VOUT VA $G_CD4000_VDD $G_CD4000_VSS CD4030A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+V_V2         +5V 0 5V
+R_R2         N03080 +5V  200 TC=0,0 
+C_C2         0 N03040  50n  TC=0,0 
+V_V3         N03707 0 {period}
+E_GAIN1         {PW} 0 VALUE {0.5 * V(N03707)}
+R_R5         0 {PW}  1k TC=0,0 
+.PARAM  period=1m
+
+**** RESUMING freq_domain.cir ****
+.END
+
+INFO(ORPSIM-16573): AC analysis does not support expression evaluation at each frequency. ABM devices with non-linear operations will be evaluated only at bias point.
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node VIN
+*
+* Moving X_U2A.U1:IN1 from analog node VIN to new digital node VIN$AtoD
+X$VIN_AtoD1
++ VIN
++ VIN$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VA
+*
+* Moving X_U2A.U1:OUT1 from analog node VA to new digital node VA$DtoA
+X$VA_DtoA1
++ VA$DtoA
++ VA
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VOUT
+*
+* Moving X_U2A.U1:IN2 from analog node VOUT to new digital node VOUT$AtoD
+X$VOUT_AtoD1
++ VOUT
++ VOUT$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$CD4000_PWR 0 CD4000_PWR
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DIODE      D74CLMP         
+          IS   10.000000E-15    1.000000E-15 
+          RS     .01            2            
+         CJO                    2.000000E-12 
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JNEMOD     
+               NJF             
+         VTO   -2.5          
+        BETA    5.120000E-06 
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.PCHAN555   X_U3.NCHAN555   
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.2              .2          
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    1.000000E-12    1.000000E-12 
+        CGDO    1.000000E-12    1.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+               X_U3.PCHAN555_OUT 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    -.2          
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD  200.000000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO    1.000000E-12 
+        CGDO    1.000000E-12 
+        CGBO    1.000000E-12 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DIN4000A        
+      S0NAME 0               
+       S0TSW   15.000000E-09 
+       S0RLO    1            
+       S0RHI   80.000000E+03 
+      S1NAME 1               
+       S1TSW   15.000000E-09 
+       S1RLO   40.000000E+03 
+       S1RHI    1            
+      S2NAME X               
+       S2TSW   15.000000E-09 
+       S2RLO  800            
+       S2RHI  800            
+      S3NAME R               
+       S3TSW   15.000000E-09 
+       S3RLO  800            
+       S3RHI  800            
+      S4NAME F               
+       S4TSW   15.000000E-09 
+       S4RLO  800            
+       S4RHI  800            
+      S5NAME Z               
+       S5TSW   15.000000E-09 
+       S5RLO    1.000000E+06 
+       S5RHI    1.000000E+06 
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DO4000A         
+    TIMESTEP  100.000000E-12 
+      S0NAME X               
+       S0VHI     .5          
+       S0VLO    -.5          
+      S1NAME 0               
+       S1VHI    -.5          
+       S1VLO   -3            
+      S2NAME R               
+       S2VHI     .05         
+       S2VLO    -.5          
+      S3NAME R               
+       S3VHI     .5          
+       S3VLO    -.05         
+      S4NAME X               
+       S4VHI     .5          
+       S4VLO    -.5          
+      S5NAME 1               
+       S5VHI    3            
+       S5VLO     .5          
+      S6NAME F               
+       S6VHI     .5          
+       S6VLO    -.05         
+      S7NAME F               
+       S7VHI     .05         
+       S7VLO    -.5          
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_CD4030A       
+      TPLHMN   40.000000E-09 
+      TPLHTY  100.000000E-09 
+      TPLHMX  300.000000E-09 
+      TPHLMN   40.000000E-09 
+      TPHLTY  100.000000E-09 
+      TPHLMX  300.000000E-09 
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_4000A        
+        DRVL    1.649000E+03 
+        DRVH    1.649000E+03 
+       AtoD1 AtoD_4000A      
+       AtoD2 AtoD_4000A_NX   
+       AtoD3 AtoD_4000A      
+       AtoD4 AtoD_4000A_NX   
+       DtoA1 DtoA_4000A      
+       DtoA2 DtoA_4000A      
+       DtoA3 DtoA_4000A      
+       DtoA4 DtoA_4000A      
+    DIGPOWER CD4000_PWR      
+      TSWHL1    7.070000E-09 
+      TSWHL2    6.940000E-09 
+      TSWHL3    9.330000E-09 
+      TSWHL4    9.180000E-09 
+      TSWLH1    8.580000E-09 
+      TSWLH2    8.370000E-09 
+      TSWLH3   10.730000E-09 
+      TSWLH4   10.590000E-09 
+       TPWRT  100.000000E+03 
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V1.
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA)     .0583  (   VB)     .7133  (  +5V)    5.0000  (  VIN)    0.0000      
+
+( VOUT) 3.847E-06  ( {PW}) 500.0E-06  (N03040)     .4948 (N03080)     .4948     
+
+(N03707)     .0010 (X_U3.1)    5.0000 (X_U3.2)     .3567 (X_U3.3)-1381.4000     
+
+(X_U3.4)    4.2000 (X_U3.5)    -.6039 (X_U3.6)-2185.2000 (X_U3.7)    4.2000     
+
+(X_U3.8)    -.6158 (X_U3.9)    5.0000 (X_U3.10) 347.9E-12                       
+
+(X_U3.11)    5.0000                   (X_U3.12) 104.4E-12                       
+
+(X_U3.13)    5.0000                   (X_U3.14)    5.0000                       
+
+(X_U3.15)    5.0000                   (X_U3.16)    5.0000                       
+
+(X_U3.17) 104.4E-12                   (X_U3.18) 417.5E-12                       
+
+(X_U3.19) 208.8E-12                   (X_U3.20)    5.0000                       
+
+(X_U3.21)     .1842                   (X_U3.22)    4.8000                       
+
+(X_U3.23)     .1961                   (X_U3.24)    5.0000                       
+
+(X_U3.25) 104.4E-12                   (X_U3.VDD)    5.0000                      
+
+($G_CD4000_VDD)    5.0000             ($G_CD4000_VSS)    0.0000                 
+
+(X$VIN_AtoD1.NORM)   -1.2500          (X$VA_DtoA1.DRVGND)     .0582             
+
+(X$VA_DtoA1.DRVPWR)    4.9491         (X$VOUT_AtoD1.NORM)   -1.2500             
+
+(X$VA_DtoA1.X1.DRVN)     .0015        (X$VA_DtoA1.X1.DRVP)     .0012            
+
+(X$VIN_AtoD1.XNORM.THRESHOLD)    1.5000                                         
+
+(X$VOUT_AtoD1.XNORM.THRESHOLD)    1.5000                 
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+( VA$DtoA) : 0     (VOUT$AtoD) : 0    (VIN$AtoD) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.001E-08
+    V_V2        -2.261E-02
+    V_V3         0.000E+00
+    X_U3.V_U6_V2  -1.382E-04
+    X_U3.V_U7_V2  -2.186E-04
+    X$CD4000_PWR.VVDD  -6.623E-05
+    X$CD4000_PWR.VVSS   2.110E-05
+
+    TOTAL POWER DISSIPATION   1.14E-01  WATTS
+
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X$VA_DtoA1.X1.GPWR      X$VA_DtoA1.X1.GGND    
+I-SOURCE     6.113E-05               8.733E-05            
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_GAIN1     X_U3.E_EMIR             X_U3.E_EVAL           
+V-SOURCE     5.000E-04   5.000E+00               5.000E+00            
+I-SOURCE    -5.000E-07  -6.493E-11               0.000E+00            
+
+NAME         X_U3.E_U6_E1CMP         X_U3.E_U6_E1          
+V-SOURCE    -1.381E+03               4.200E+00            
+I-SOURCE     1.382E-04              -4.014E-12            
+
+NAME         X_U3.E_U7_E1CMP         X_U3.E_U7_E1          
+V-SOURCE    -2.185E+03               4.200E+00            
+I-SOURCE     2.185E-04              -4.026E-12            
+
+NAME         X$VIN_AtoD1.XNORM.EVt   X$VIN_AtoD1.XNORM.EN  
+V-SOURCE     1.500E+00              -1.250E+00            
+I-SOURCE    -1.500E-05               1.250E-05            
+
+NAME         X$VA_DtoA1.X1.EDRVP     X$VA_DtoA1.X1.EDRVN   
+V-SOURCE     1.200E-03               1.500E-03            
+I-SOURCE    -1.200E-06              -1.500E-06            
+
+NAME         X$VOUT_AtoD1.XNORM.EVt              X$VOUT_AtoD1.XNORM.EN 
+V-SOURCE     1.500E+00                          -1.250E+00            
+I-SOURCE    -1.500E-05                           1.250E-05            
+
+
+**** DIODES
+
+
+NAME         X_U3.D_U6_D2CLMP        X_U3.D_U6_D1CLMP      
+MODEL        X_U3.DIODE              X_U3.DIODE            
+ID          -4.01E-12                1.38E-04             
+VD          -4.00E+00                6.04E-01             
+REQ          1.00E+12                1.87E+02             
+CAP          0.00E+00                0.00E+00             
+
+NAME         X_U3.D_U7_D2CLMP        X_U3.D_U7_D1CLMP      
+MODEL        X_U3.DIODE              X_U3.DIODE            
+ID          -4.03E-12                2.19E-04             
+VD          -4.02E+00                6.16E-01             
+REQ          1.00E+12                1.18E+02             
+CAP          0.00E+00                0.00E+00             
+
+NAME         X$VIN_AtoD1.D1          X$VIN_AtoD1.D2        
+MODEL        D74CLMP                 D74CLMP               
+ID           0.00E+00               -5.00E-12             
+VD           0.00E+00               -5.00E+00             
+REQ          9.63E+11                1.00E+12             
+CAP          2.00E-12                8.17E-13             
+
+NAME         X$VOUT_AtoD1.D1         X$VOUT_AtoD1.D2       
+MODEL        D74CLMP                 D74CLMP               
+ID          -4.00E-18               -5.00E-12             
+VD          -3.85E-06               -5.00E+00             
+REQ          9.63E+11                1.00E+12             
+CAP          2.00E-12                8.17E-13             
+
+
+**** JFETS
+
+
+NAME         X_U3.J_J1             
+MODEL        X_U3.JNEMOD           
+ID           3.20E-05             
+VGS          0.00E+00             
+VDS          5.00E+00             
+GM           2.56E-05             
+GDS          0.00E+00             
+CGS          0.00E+00             
+CGD          0.00E+00             
+
+
+**** MOSFETS
+
+
+NAME         X_U3.M_M1               X_U3.M_U2_U1_M4       
+MODEL        X_U3.NCHAN555           X_U3.NCHAN555         
+ID           2.25E-02                5.01E-12             
+VGS          5.00E+00                3.85E-06             
+VDS          4.95E-01                5.00E+00             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01                2.00E-01             
+VDSAT        4.80E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           4.95E-03                0.00E+00             
+GDS          4.31E-02                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                1.00E-15             
+CGDOV        1.00E-15                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U1_M3         X_U3.M_U2_U1_M6       
+MODEL        X_U3.NCHAN555           X_U3.NCHAN555         
+ID           5.01E-12                5.01E-12             
+VGS          1.04E-10                5.00E+00             
+VDS          5.00E+00                3.48E-10             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01                2.00E-01             
+VDSAT        0.00E+00                4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                1.04E-12             
+GDS          0.00E+00                1.44E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                3.00E-16             
+CGDOV        1.00E-15                3.00E-16             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U1_M8         X_U3.M_U2_U1_M1       
+MODEL        X_U3.NCHAN555           X_U3.PCHAN555         
+ID           5.01E-12               -1.00E-11             
+VGS          3.48E-10               -5.00E+00             
+VDS          5.00E+00               -2.09E-10             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01               -2.00E-01             
+VDSAT        0.00E+00               -4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                2.09E-12             
+GDS          0.00E+00                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        2.50E-16                1.00E-15             
+CGDOV        2.50E-16                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U1_M2         X_U3.M_U2_U1_M5       
+MODEL        X_U3.PCHAN555           X_U3.PCHAN555         
+ID          -1.00E-11               -5.01E-12             
+VGS         -5.00E+00               -4.18E-10             
+VDS         -2.09E-10               -5.00E+00             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01               -2.00E-01             
+VDSAT       -4.80E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           2.09E-12                0.00E+00             
+GDS          4.80E-02                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                3.00E-16             
+CGDOV        1.00E-15                3.00E-16             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U1_M7         X_U3.M_U2_U2_M4       
+MODEL        X_U3.PCHAN555_OUT       X_U3.NCHAN555         
+ID          -5.01E-12                1.45E-22             
+VGS         -5.00E+00                4.18E-10             
+VDS         -2.98E-10                1.04E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01                2.00E-01             
+VDSAT       -4.80E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           1.04E-12                0.00E+00             
+GDS          1.68E-02                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          2.00E-10                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        3.50E-16                1.00E-15             
+CGDOV        3.50E-16                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U2_M3         X_U3.M_U2_U2_M6       
+MODEL        X_U3.NCHAN555           X_U3.NCHAN555         
+ID           5.01E-12                5.01E-12             
+VGS          5.00E+00                1.04E-10             
+VDS          1.04E-10                5.00E+00             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01                2.00E-01             
+VDSAT        4.80E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           1.04E-12                0.00E+00             
+GDS          4.80E-02                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                3.00E-16             
+CGDOV        1.00E-15                3.00E-16             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U2_M8         X_U3.M_U2_U2_M1       
+MODEL        X_U3.NCHAN555           X_U3.PCHAN555         
+ID           4.62E-08               -5.01E-12             
+VGS          5.00E+00               -5.00E+00             
+VDS          3.85E-06               -1.04E-10             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01               -2.00E-01             
+VDSAT        4.80E+00               -4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           9.62E-09                1.04E-12             
+GDS          1.20E-02                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        2.50E-16                1.00E-15             
+CGDOV        2.50E-16                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U2_M2         X_U3.M_U2_U2_M5       
+MODEL        X_U3.PCHAN555           X_U3.PCHAN555         
+ID          -5.01E-12               -5.01E-12             
+VGS         -1.94E-10               -5.00E+00             
+VDS         -5.00E+00               -3.48E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01               -2.00E-01             
+VDSAT        0.00E+00               -4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                1.04E-12             
+GDS          0.00E+00                1.44E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                3.00E-16             
+CGDOV        1.00E-15                3.00E-16             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U2_M7         X_U3.M_U2_U3_M1       
+MODEL        X_U3.PCHAN555_OUT       X_U3.PCHAN555         
+ID          -5.01E-12               -5.01E-12             
+VGS         -3.48E-10               -5.00E+00             
+VDS         -5.00E+00               -1.04E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01               -2.00E-01             
+VDSAT        0.00E+00               -4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                1.04E-12             
+GDS          0.00E+00                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          7.43E-11                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        3.50E-16                1.00E-15             
+CGDOV        3.50E-16                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U3_M2         X_U3.M_U2_U3_M3       
+MODEL        X_U3.PCHAN555           X_U3.NCHAN555         
+ID          -5.01E-12                5.01E-12             
+VGS         -5.43E-08                5.00E+00             
+VDS         -5.00E+00                1.04E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01                2.00E-01             
+VDSAT        0.00E+00                4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                1.04E-12             
+GDS          0.00E+00                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                1.00E-15             
+CGDOV        1.00E-15                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U3_M4         X_U3.M_U2_U4_M1       
+MODEL        X_U3.NCHAN555           X_U3.PCHAN555         
+ID           1.45E-22               -5.01E-12             
+VGS          1.04E-10               -5.21E-08             
+VDS          1.04E-10               -5.00E+00             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01               -2.00E-01             
+VDSAT        0.00E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                0.00E+00             
+GDS          0.00E+00                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                2.00E-18             
+CGDOV        1.00E-15                2.00E-18             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U4_M2         X_U3.M_U2_U4_M3       
+MODEL        X_U3.PCHAN555           X_U3.NCHAN555         
+ID          -5.01E-12                1.00E-11             
+VGS          0.00E+00                5.00E+00             
+VDS         -5.00E+00                2.09E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01                2.00E-01             
+VDSAT        0.00E+00                4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                2.09E-12             
+GDS          0.00E+00                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        2.00E-18                1.00E-15             
+CGDOV        2.00E-18                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U4_M4         X_U3.M_U2_U5_M1       
+MODEL        X_U3.NCHAN555           X_U3.PCHAN555         
+ID           1.00E-11               -7.22E-20             
+VGS          5.00E+00               -5.44E-08             
+VDS          2.09E-10               -5.21E-08             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01               -2.00E-01             
+VDSAT        4.80E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           2.09E-12                0.00E+00             
+GDS          4.80E-02                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                2.00E-18             
+CGDOV        1.00E-15                2.00E-18             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U5_M2         X_U3.M_U2_U5_M3       
+MODEL        X_U3.PCHAN555           X_U3.NCHAN555         
+ID          -4.81E-12                4.81E-12             
+VGS         -4.82E+00                2.00E-01             
+VDS         -5.21E-08                2.00E-01             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01                2.00E-01             
+VDSAT       -4.62E+00                3.03E-05             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           1.04E-12                3.03E-07             
+GDS          9.23E-05                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        2.00E-18                1.00E-15             
+CGDOV        2.00E-18                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U5_M4         X_U3.M_U2_U6_M2       
+MODEL        X_U3.NCHAN555           X_U3.NCHAN555         
+ID           4.81E-12                5.01E-12             
+VGS          1.84E-01                1.96E-01             
+VDS          4.80E+00                5.00E+00             
+VBS          0.00E+00                0.00E+00             
+VTH          2.00E-01                2.00E-01             
+VDSAT        0.00E+00                0.00E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           0.00E+00                0.00E+00             
+GDS          0.00E+00                0.00E+00             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        1.00E-15                1.00E-15             
+CGDOV        1.00E-15                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U6_M3         X_U3.M_U2_U7_M2       
+MODEL        X_U3.PCHAN555           X_U3.NCHAN555         
+ID          -5.01E-12                5.01E-12             
+VGS         -4.80E+00                5.00E+00             
+VDS         -5.44E-08                1.04E-10             
+VBS          0.00E+00                0.00E+00             
+VTH         -2.00E-01                2.00E-01             
+VDSAT       -4.60E+00                4.80E+00             
+Lin0/Sat1   -1.00E+00               -1.00E+00             
+if          -1.00E+00               -1.00E+00             
+ir          -1.00E+00               -1.00E+00             
+TAU         -1.00E+00               -1.00E+00             
+GM           1.09E-12                1.04E-12             
+GDS          9.21E-05                4.80E-02             
+GMB          0.00E+00                0.00E+00             
+CBD          0.00E+00                0.00E+00             
+CBS          0.00E+00                0.00E+00             
+CGSOV        2.00E-18                1.00E-15             
+CGDOV        2.00E-18                1.00E-15             
+CGBOV        2.00E-18                2.00E-18             
+CGS          0.00E+00                0.00E+00             
+CGD          0.00E+00                0.00E+00             
+CGB          0.00E+00                0.00E+00             
+
+NAME         X_U3.M_U2_U7_M3       
+MODEL        X_U3.PCHAN555         
+ID          -5.01E-12             
+VGS          0.00E+00             
+VDS         -5.00E+00             
+VBS          0.00E+00             
+VTH         -2.00E-01             
+VDSAT        0.00E+00             
+Lin0/Sat1   -1.00E+00             
+if          -1.00E+00             
+ir          -1.00E+00             
+TAU         -1.00E+00             
+GM           0.00E+00             
+GDS          0.00E+00             
+GMB          0.00E+00             
+CBD          0.00E+00             
+CBS          0.00E+00             
+CGSOV        2.00E-18             
+CGDOV        2.00E-18             
+CGBOV        2.00E-18             
+CGS          0.00E+00             
+CGD          0.00E+00             
+CGB          0.00E+00             
+WARNING(ORPSIM-15193): No AC sources -- AC Sweep ignored
+
+
+          JOB CONCLUDED
+
+**** 05/22/23 00:35:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_domain"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-PSpiceFiles\SCHEMATIC1\freq_domain
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .28
+

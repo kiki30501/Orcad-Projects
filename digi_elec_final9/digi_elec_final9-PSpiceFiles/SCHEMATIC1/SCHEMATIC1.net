@@ -1,0 +1,14 @@
+* source DIGI_ELEC_FINAL9
+V_V1         VIN 0  
++PULSE 0 5 1m 0 0 {PW} {Period}
+C_C1         0 VB  100n  TC=0,0 
+C_C2         0 N00458  50n  TC=0,0 
+R_R1         VA VB  25k TC=0,0 
+R_R2         N00804 +5V  200 TC=0,0 
+R_R3         N00458 N00804  15k TC=0,0 
+R_R4         0 VOUT  1k TC=0,0 
+X_U2A         VIN VOUT VA $G_CD4000_VDD $G_CD4000_VSS CD4030A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+V_V2         +5V 0 5V
+X_U3         0 N00458 VOUT +5V VB N00458 N00804 +5V 555C
+.PARAM  period=1m pw={period/2}

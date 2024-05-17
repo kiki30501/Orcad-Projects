@@ -1,0 +1,10 @@
+* source LAB_DIG_ELEC_5
+X_U3         0 VCLK OUT +5V MOD_SIG CAP CAP +5V 555C
+R_RL         +5V OUT  10k TC=0,0 
+C_C3         0 CAP  10n  TC=0,0 
+V_V1         +5V 0 5V
+R_R3         CAP +5V  10k TC=0,0 
+V_V2         VCLK 0  
++PULSE 5 0 0 1n 1n 12.5u 25u
+V_V3         MOD_SIG 0  AC 1
++SIN 1 1 3k 0 0 0

@@ -1,0 +1,10 @@
+* source LAB_DIG_ELEC_5
+V_V1         +5V 0 5V
+C_C4         0 N05275  10n  TC=0,0 
+R_RL         0 OUT2  10k TC=0,0 
+C_C3         0 CAP  0.1u  TC=0,0 
+X_U3         0 CAP OUT2 +5V N05275 CAP N06887 +5V 555C
+D_D1         N06887 CAP D1N4148 
+D_D2         N07637 N06887 D1N4148 
+R_Roff         CAP N07637  4.1k TC=0,0 
+R_Ron         N06887 +5V  1.05k TC=0,0 

@@ -1,0 +1,30 @@
+* source FM_TRANSMITTER_V1
+Q_Q1         N00682 N00613 N00560 Q2N3904
+Q_Q2         VOUT N00689 N00759 Q2N3904
+C_C1         N00432 N00613  0.1u  TC=0,0 
+C_C3         N00682 N00689  0.1u  TC=0,0 
+C_C4         N00689 VCC1  0.01u  TC=0,0 
+C_C5         N00759 VOUT  4.7p  TC=0,0 
+R_R1         N00432 VCC1  10k TC=0,0 
+R_R2         0 N00560  100 TC=0,0 
+R_R3         N00682 VCC1  10k TC=0,0 
+R_R4         0 N00759  1k TC=0,0 
+R_R5         N00689 VCC1  10k TC=0,0 
+R_R6         N00613 VCC1  1meg TC=0,0 
+R_R7         0 N00613  100k TC=0,0 
+V_V1         VCC1 0 9V
+C_C7         VOUT VCC1 {4p*0.5+.001p}
+L_L1         VOUT VCC1  0.1u  
+V_V2         N00432 0  AC 1k
++SIN 0 5mV 1k 0 0 0
+R_RL         0 VOUT  5meg TC=0,0 
+X_Q3         N02653 N02704 N02690 awbbc547 PARAMS:                             
++                
+R_R8         N02704 VCC1  47k TC=0,0 
+R_R9         0 N02690  1k TC=0,0 
+C_C8         0 N02704  102p  TC=0,0 
+C_C9         N02653 N02690  5.6p  TC=0,0 
+C_C10         N02838 N02653  1n  TC=0,0 
+C_C11         N02653 VCC1 {6.45p*0.5+.001p}
+L_L2         N02653 VCC1  1u  
+R_RL1         0 N02838  5meg TC=0,0 

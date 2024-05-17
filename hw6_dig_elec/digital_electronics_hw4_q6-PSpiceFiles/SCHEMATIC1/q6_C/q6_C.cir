@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-q6_C"  [ D:\Orcad Projects\hw6_dig_elec\digital_electronics_hw4_q6-PSpiceFiles\SCHEMATIC1\q6_C.sim ] 
+
+** Creating circuit file "q6_C.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../digital_electronics_hw4_q6-pspicefiles/digital_electronics_hw4_q6.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 150n 0 10p 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

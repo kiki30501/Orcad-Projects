@@ -1,0 +1,191 @@
+
+**** 03/19/23 19:23:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Rin_compare"  [ D:\Orcad Projects\Lab_analod2_exp3\Lab_analod2_exp3-PSpiceFiles\SCHEMATIC1\Rin_compare.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Rin_compare.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOD2_EXP3
+R_R1         0 N00285  10k TC=0,0 
+R_R2         N00285 N00302  10k TC=0,0 
+R_R3         N00386 N00248  1k TC=0,0 
+R_R4         N00248 N00273  9k TC=0,0 
+V_V1         N00386 0 1v
+V_V2         N00620 0 1v
+X_U3         0 N00248 VCCP VCCN N00273 uA741
+X_U4         N00620 N00285 VCCP VCCN N00302 uA741
+V_V3         VCCP 0 12V
+V_V4         0 VCCN 12V
+
+**** RESUMING Rin_compare.cir ****
+.END
+
+**** 03/19/23 19:23:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Rin_compare"  [ D:\Orcad Projects\Lab_analod2_exp3\Lab_analod2_exp3-PSpiceFiles\SCHEMATIC1\Rin_compare.sim ]
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.dx         X_U3.dy         X_U4.dx         X_U4.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 03/19/23 19:23:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Rin_compare"  [ D:\Orcad Projects\Lab_analod2_exp3\Lab_analod2_exp3-PSpiceFiles\SCHEMATIC1\Rin_compare.sim ]
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.qx         X_U4.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 03/19/23 19:23:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Rin_compare"  [ D:\Orcad Projects\Lab_analod2_exp3\Lab_analod2_exp3-PSpiceFiles\SCHEMATIC1\Rin_compare.sim ]
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VCCN)  -12.0000  ( VCCP)   12.0000  (N00248) 65.09E-06 (N00273)   -8.9986     
+
+(N00285)    1.0000 (N00302)    2.0008 (N00386)    1.0000 (N00620)    1.0000     
+
+(X_U3.6) 862.5E-06 (X_U3.7)   -9.0486 (X_U3.8)   -9.0486 (X_U3.9)    0.0000     
+
+(X_U4.6)-190.0E-06 (X_U4.7)    2.0058 (X_U4.8)    2.0058 (X_U4.9)    0.0000     
+
+(X_U3.10)    -.6076                   (X_U3.11)   11.9600                       
+
+(X_U3.12)   11.9600                   (X_U3.13)    -.5938                       
+
+(X_U3.14)    -.5938                   (X_U3.53)   11.0000                       
+
+(X_U3.54)  -11.0000                   (X_U3.90)    -.9999                       
+
+(X_U3.91)   40.0000                   (X_U3.92)  -40.0000                       
+
+(X_U3.99)    0.0000                   (X_U4.10)     .3921                       
+
+(X_U4.11)   11.9600                   (X_U4.12)   11.9600                       
+
+(X_U4.13)     .4061                   (X_U4.14)     .4061                       
+
+(X_U4.53)   11.0000                   (X_U4.54)  -11.0000                       
+
+(X_U4.90)     .1001                   (X_U4.91)   40.0000                       
+
+(X_U4.92)  -40.0000                   (X_U4.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -9.999E-04
+    V_V2        -8.017E-08
+    V_V3        -2.673E-03
+    V_V4        -2.673E-03
+    X_U3.vb      8.625E-09
+    X_U3.vc      2.000E-11
+    X_U3.ve      3.508E-12
+    X_U3.vlim   -9.999E-04
+    X_U3.vlp    -4.100E-11
+    X_U3.vln    -3.900E-11
+    X_U4.vb     -1.900E-09
+    X_U4.vc      9.000E-12
+    X_U4.ve      1.451E-11
+    X_U4.vlim    1.001E-04
+    X_U4.vlp    -3.990E-11
+    X_U4.vln    -4.010E-11
+
+    TOTAL POWER DISSIPATION   6.52E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/19/23 19:23:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Rin_compare"  [ D:\Orcad Projects\Lab_analod2_exp3\Lab_analod2_exp3-PSpiceFiles\SCHEMATIC1\Rin_compare.sim ]
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

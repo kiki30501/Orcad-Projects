@@ -1,0 +1,594 @@
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "freq_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 70m 60m 0.1u 
+.STEP PARAM period LIST 1.05m 1.025m 1m 0.9m 0.8m 0.7m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGI_ELEC_FINAL9_V2
+X_U3         0 N03040 VOUT +5V VB N03040 N03080 +5V 555C
+V_V1         VIN 0  
++PULSE 0 5 1m 0 0 {0.5*{period}} {period}
+R_R3         N03040 N03080  15k TC=0,0 
+C_C1         0 VB  100n  TC=0,0 
+R_R1         VA VB  25k TC=0,0 
+R_R4         0 VOUT  1k TC=0,0 
+X_U2A         VIN VOUT VA $G_CD4000_VDD $G_CD4000_VSS CD4030A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+V_V2         +5V 0 5V
+R_R2         N03080 +5V  200 TC=0,0 
+C_C2         0 N03040  50n  TC=0,0 
+.PARAM  period=1m
+
+**** RESUMING freq_sweep.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node VIN
+*
+* Moving X_U2A.U1:IN1 from analog node VIN to new digital node VIN$AtoD
+X$VIN_AtoD1
++ VIN
++ VIN$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VA
+*
+* Moving X_U2A.U1:OUT1 from analog node VA to new digital node VA$DtoA
+X$VA_DtoA1
++ VA$DtoA
++ VA
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface for node VOUT
+*
+* Moving X_U2A.U1:IN2 from analog node VOUT to new digital node VOUT$AtoD
+X$VOUT_AtoD1
++ VOUT
++ VOUT$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$CD4000_PWR 0 CD4000_PWR
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DIODE      D74CLMP         
+          IS   10.000000E-15    1.000000E-15 
+          RS     .01            2            
+         CJO                    2.000000E-12 
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JNEMOD     
+               NJF             
+         VTO   -2.5          
+        BETA    5.120000E-06 
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.PCHAN555   X_U3.NCHAN555   
+               PMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.2              .2          
+          KP   20.000000E-06   20.000000E-06 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    1.000000E-12    1.000000E-12 
+        CGDO    1.000000E-12    1.000000E-12 
+        CGBO    1.000000E-12    1.000000E-12 
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+               X_U3.PCHAN555_OUT 
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    -.2          
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD  200.000000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO    1.000000E-12 
+        CGDO    1.000000E-12 
+        CGBO    1.000000E-12 
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DIN4000A        
+      S0NAME 0               
+       S0TSW   15.000000E-09 
+       S0RLO    1            
+       S0RHI   80.000000E+03 
+      S1NAME 1               
+       S1TSW   15.000000E-09 
+       S1RLO   40.000000E+03 
+       S1RHI    1            
+      S2NAME X               
+       S2TSW   15.000000E-09 
+       S2RLO  800            
+       S2RHI  800            
+      S3NAME R               
+       S3TSW   15.000000E-09 
+       S3RLO  800            
+       S3RHI  800            
+      S4NAME F               
+       S4TSW   15.000000E-09 
+       S4RLO  800            
+       S4RHI  800            
+      S5NAME Z               
+       S5TSW   15.000000E-09 
+       S5RLO    1.000000E+06 
+       S5RHI    1.000000E+06 
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DO4000A         
+    TIMESTEP  100.000000E-12 
+      S0NAME X               
+       S0VHI     .5          
+       S0VLO    -.5          
+      S1NAME 0               
+       S1VHI    -.5          
+       S1VLO   -3            
+      S2NAME R               
+       S2VHI     .05         
+       S2VLO    -.5          
+      S3NAME R               
+       S3VHI     .5          
+       S3VLO    -.05         
+      S4NAME X               
+       S4VHI     .5          
+       S4VLO    -.5          
+      S5NAME 1               
+       S5VHI    3            
+       S5VLO     .5          
+      S6NAME F               
+       S6VHI     .5          
+       S6VLO    -.05         
+      S7NAME F               
+       S7VHI     .05         
+       S7VLO    -.5          
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_CD4030A       
+      TPLHMN   40.000000E-09 
+      TPLHTY  100.000000E-09 
+      TPLHMX  300.000000E-09 
+      TPHLMN   40.000000E-09 
+      TPHLTY  100.000000E-09 
+      TPHLMX  300.000000E-09 
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_4000A        
+        DRVL    1.649000E+03 
+        DRVH    1.649000E+03 
+       AtoD1 AtoD_4000A      
+       AtoD2 AtoD_4000A_NX   
+       AtoD3 AtoD_4000A      
+       AtoD4 AtoD_4000A_NX   
+       DtoA1 DtoA_4000A      
+       DtoA2 DtoA_4000A      
+       DtoA3 DtoA_4000A      
+       DtoA4 DtoA_4000A      
+    DIGPOWER CD4000_PWR      
+      TSWHL1    7.070000E-09 
+      TSWHL2    6.940000E-09 
+      TSWHL3    9.330000E-09 
+      TSWHL4    9.180000E-09 
+      TSWLH1    8.580000E-09 
+      TSWLH2    8.370000E-09 
+      TSWLH3   10.730000E-09 
+      TSWLH4   10.590000E-09 
+       TPWRT  100.000000E+03 
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM PERIOD =    1.0500E-03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA)     .0583  (   VB)     .7133  (  +5V)    5.0000  (  VIN)    0.0000      
+
+( VOUT) 3.847E-06  (N03040)     .4948 (N03080)     .4948 (X_U3.1)    5.0000     
+
+(X_U3.2)     .3567 (X_U3.3)-1381.4000 (X_U3.4)    4.2000 (X_U3.5)    -.6039     
+
+(X_U3.6)-2185.2000 (X_U3.7)    4.2000 (X_U3.8)    -.6158 (X_U3.9)    5.0000     
+
+(X_U3.10) 347.9E-12                   (X_U3.11)    5.0000                       
+
+(X_U3.12) 104.4E-12                   (X_U3.13)    5.0000                       
+
+(X_U3.14)    5.0000                   (X_U3.15)    5.0000                       
+
+(X_U3.16)    5.0000                   (X_U3.17) 104.4E-12                       
+
+(X_U3.18) 417.5E-12                   (X_U3.19) 208.8E-12                       
+
+(X_U3.20)    5.0000                   (X_U3.21)     .1842                       
+
+(X_U3.22)    4.8000                   (X_U3.23)     .1961                       
+
+(X_U3.24)    5.0000                   (X_U3.25) 104.4E-12                       
+
+(X_U3.VDD)    5.0000                  ($G_CD4000_VDD)    5.0000                 
+
+($G_CD4000_VSS)    0.0000             (X$VIN_AtoD1.NORM)   -1.2500              
+
+(X$VA_DtoA1.DRVGND)     .0582         (X$VA_DtoA1.DRVPWR)    4.9491             
+
+(X$VOUT_AtoD1.NORM)   -1.2500         (X$VA_DtoA1.X1.DRVN)     .0015            
+
+(X$VA_DtoA1.X1.DRVP)     .0012        (X$VIN_AtoD1.XNORM.THRESHOLD)    1.5000   
+
+(X$VOUT_AtoD1.XNORM.THRESHOLD)    1.5000                 
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+( VA$DtoA) : 0     (VOUT$AtoD) : 0    (VIN$AtoD) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.001E-08
+    V_V2        -2.261E-02
+    X_U3.V_U6_V2  -1.382E-04
+    X_U3.V_U7_V2  -2.186E-04
+    X$CD4000_PWR.VVDD  -6.623E-05
+    X$CD4000_PWR.VVSS   2.110E-05
+
+    TOTAL POWER DISSIPATION   1.14E-01  WATTS
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM PERIOD =    1.0250E-03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA)     .0583  (   VB)     .7133  (  +5V)    5.0000  (  VIN)    0.0000      
+
+( VOUT) 3.847E-06  (N03040)     .4948 (N03080)     .4948 (X_U3.1)    5.0000     
+
+(X_U3.2)     .3567 (X_U3.3)-1381.4000 (X_U3.4)    4.2000 (X_U3.5)    -.6039     
+
+(X_U3.6)-2185.2000 (X_U3.7)    4.2000 (X_U3.8)    -.6158 (X_U3.9)    5.0000     
+
+(X_U3.10) 347.9E-12                   (X_U3.11)    5.0000                       
+
+(X_U3.12) 104.4E-12                   (X_U3.13)    5.0000                       
+
+(X_U3.14)    5.0000                   (X_U3.15)    5.0000                       
+
+(X_U3.16)    5.0000                   (X_U3.17) 104.4E-12                       
+
+(X_U3.18) 417.5E-12                   (X_U3.19) 208.8E-12                       
+
+(X_U3.20)    5.0000                   (X_U3.21)     .1842                       
+
+(X_U3.22)    4.8000                   (X_U3.23)     .1961                       
+
+(X_U3.24)    5.0000                   (X_U3.25) 104.4E-12                       
+
+(X_U3.VDD)    5.0000                  ($G_CD4000_VDD)    5.0000                 
+
+($G_CD4000_VSS)    0.0000             (X$VIN_AtoD1.NORM)   -1.2500              
+
+(X$VA_DtoA1.DRVGND)     .0582         (X$VA_DtoA1.DRVPWR)    4.9491             
+
+(X$VOUT_AtoD1.NORM)   -1.2500         (X$VA_DtoA1.X1.DRVN)     .0015            
+
+(X$VA_DtoA1.X1.DRVP)     .0012        (X$VIN_AtoD1.XNORM.THRESHOLD)    1.5000   
+
+(X$VOUT_AtoD1.XNORM.THRESHOLD)    1.5000                 
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+( VA$DtoA) : 0     (VOUT$AtoD) : 0    (VIN$AtoD) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.001E-08
+    V_V2        -2.261E-02
+    X_U3.V_U6_V2  -1.382E-04
+    X_U3.V_U7_V2  -2.186E-04
+    X$CD4000_PWR.VVDD  -6.623E-05
+    X$CD4000_PWR.VVSS   2.110E-05
+
+    TOTAL POWER DISSIPATION   1.14E-01  WATTS
+
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM PERIOD =    1.0000E-03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA)     .0583  (   VB)     .7133  (  +5V)    5.0000  (  VIN)    0.0000      
+
+( VOUT) 3.847E-06  (N03040)     .4948 (N03080)     .4948 (X_U3.1)    5.0000     
+
+(X_U3.2)     .3567 (X_U3.3)-1381.4000 (X_U3.4)    4.2000 (X_U3.5)    -.6039     
+
+(X_U3.6)-2185.2000 (X_U3.7)    4.2000 (X_U3.8)    -.6158 (X_U3.9)    5.0000     
+
+(X_U3.10) 347.9E-12                   (X_U3.11)    5.0000                       
+
+(X_U3.12) 104.4E-12                   (X_U3.13)    5.0000                       
+
+(X_U3.14)    5.0000                   (X_U3.15)    5.0000                       
+
+(X_U3.16)    5.0000                   (X_U3.17) 104.4E-12                       
+
+(X_U3.18) 417.5E-12                   (X_U3.19) 208.8E-12                       
+
+(X_U3.20)    5.0000                   (X_U3.21)     .1842                       
+
+(X_U3.22)    4.8000                   (X_U3.23)     .1961                       
+
+(X_U3.24)    5.0000                   (X_U3.25) 104.4E-12                       
+
+(X_U3.VDD)    5.0000                  ($G_CD4000_VDD)    5.0000                 
+
+($G_CD4000_VSS)    0.0000             (X$VIN_AtoD1.NORM)   -1.2500              
+
+(X$VA_DtoA1.DRVGND)     .0582         (X$VA_DtoA1.DRVPWR)    4.9491             
+
+(X$VOUT_AtoD1.NORM)   -1.2500         (X$VA_DtoA1.X1.DRVN)     .0015            
+
+(X$VA_DtoA1.X1.DRVP)     .0012        (X$VIN_AtoD1.XNORM.THRESHOLD)    1.5000   
+
+(X$VOUT_AtoD1.XNORM.THRESHOLD)    1.5000                 
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+( VA$DtoA) : 0     (VOUT$AtoD) : 0    (VIN$AtoD) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         5.001E-08
+    V_V2        -2.261E-02
+    X_U3.V_U6_V2  -1.382E-04
+    X_U3.V_U7_V2  -2.186E-04
+    X$CD4000_PWR.VVDD  -6.623E-05
+    X$CD4000_PWR.VVSS   2.110E-05
+
+    TOTAL POWER DISSIPATION   1.14E-01  WATTS
+
+
+          JOB ABORTED
+
+**** 08/02/23 20:25:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ d:\orcad projects\digi_elec_final9_v2\digi_elec_final9_v2-pspicefiles\schematic1\freq_sweep.s
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM PERIOD =    1.0000E-03
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =      104.06
+

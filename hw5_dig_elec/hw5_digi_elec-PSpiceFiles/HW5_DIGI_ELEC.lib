@@ -1,0 +1,7 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.model Mbreakn NMOS
+.model nmos_q4a_1 NMOS (Level=1 VTO=1 W=20u L=5u KP=50e-6 GAMMA=0 PHI=0.6)
+.model nmos_q4a_2 NMOS (Level=1 VTO=1 W=20u L=5u KP=50e-6 GAMMA=0.5 PHI=0.6)
+*$

@@ -1,0 +1,147 @@
+
+**** 03/17/23 13:37:55 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ D:\Orcad Projects\Analog_Lab2\Analog_Lab2-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bode.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 50 3Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG_LAB2
+V_V1         N00308 0 20V
+R_R1         N00324 N00308  7.5k TC=0,0 
+R_R2         N00373 N00377  0.1k TC=0,0 
+R_R3         0 N00373  0.68k TC=0,0 
+R_R4         N00285 N00308  150k TC=0,0 
+R_R5         0 N00285  20k TC=0,0 
+R_R6         0 N00338  0.68k TC=0,0 
+C_C1         N00278 N00285  2u  TC=0,0 
+C_C2         N00324 N00338  1u  TC=0,0 
+C_C3         0 N00373  47u  TC=0,0 
+V_V2         N00278 0 DC 0Vdc AC 150m 
+Q_Q1         N00324 N00285 N00377 Q2N3904
+
+**** RESUMING bode.cir ****
+.END
+
+**** 03/17/23 13:37:55 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ D:\Orcad Projects\Analog_Lab2\Analog_Lab2-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/17/23 13:37:55 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ D:\Orcad Projects\Analog_Lab2\Analog_Lab2-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00278)    0.0000 (N00285)    2.1346 (N00308)   20.0000 (N00324)    6.1126     
+
+(N00338)    0.0000 (N00373)    1.2675 (N00377)    1.4539 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.971E-03
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.94E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/17/23 13:37:55 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ D:\Orcad Projects\Analog_Lab2\Analog_Lab2-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

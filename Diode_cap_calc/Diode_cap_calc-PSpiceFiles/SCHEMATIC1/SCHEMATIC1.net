@@ -1,0 +1,5 @@
+* source DIODE_CAP_CALC
+C_C1         N00141 N00148  1u  TC=0,0 
+V_V1         N00141 0  AC 170
++SIN 0 170 60 0 0 0
+X_D2         0 N00148 LED PARAMS: IS=1.7603e-27 RS=2  BV=200 IBV=10e-6         

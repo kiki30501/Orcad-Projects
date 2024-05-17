@@ -1,0 +1,123 @@
+
+**** 08/03/22 13:37:26 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q6_A"  [ D:\Orcad Projects\hw6_dig_elec\digital_electronics_hw4_q6-PSpiceFiles\SCHEMATIC1\q6_A.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "q6_A.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../digital_electronics_hw4_q6-pspicefiles/digital_electronics_hw4_q6.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 5 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGITAL_ELECTRONICS_HW4_Q6
+M_M1         VO N00188 0 0 Mbreakn           
+M_M2         VO N00188 N00177 N00177 Mbreakp           
+V_V1         N00188 0 0Vdc
+V_V2         N00177 0 5V
+M_M4         VO1 N01766 0 0 Mbreakn           
+M_M8         N01932 N01766 0 0 Mbreakn           
+M_M9         VO2 N01766 N01784 N01694 MbreakP           
+V_V3         N01694 0 5V
+V_V4         N01766 0 0Vdc
+M_M10         VO2 N01766 N01932 0 MbreakN           
+M_M6         N01784 N01766 N01694 N01694 Mbreakp           
+M_M3         VO1 N01766 N01694 N01694 Mbreakp           
+M_M15         VO4 N04880 N05030 0 MbreakN           
+M_M16         N05030 N04880 0 0 Mbreakn           
+M_M13         VO4 N04880 N04894 N04812 MbreakP           
+M_M12         N04894 N04880 N04812 N04812 Mbreakp           
+V_V5         N04812 0 5V
+M_M14         VO3 N04880 0 0 Mbreakn           
+M_M11         VO3 N04880 N04812 N04812 Mbreakp           
+V_V6         N04880 0  
++PULSE 0 5 15n 10p 10p 10n 20n
+C_C1         0 VO3  1n  TC=0,0 
+C_C2         0 VO4  1n  TC=0,0 
+
+**** RESUMING q6_A.cir ****
+.END
+
+**** 08/03/22 13:37:26 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q6_A"  [ D:\Orcad Projects\hw6_dig_elec\digital_electronics_hw4_q6-PSpiceFiles\SCHEMATIC1\q6_A.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakn         Mbreakp         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L    5.000000E-06    5.000000E-06 
+           W   10.000000E-06   25.000000E-06 
+         VTO    1              -1            
+          KP   50.000000E-06   20.000000E-06 
+       GAMMA     .5              .5          
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+
+          JOB CONCLUDED
+
+**** 08/03/22 13:37:26 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q6_A"  [ D:\Orcad Projects\hw6_dig_elec\digital_electronics_hw4_q6-PSpiceFiles\SCHEMATIC1\q6_A.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

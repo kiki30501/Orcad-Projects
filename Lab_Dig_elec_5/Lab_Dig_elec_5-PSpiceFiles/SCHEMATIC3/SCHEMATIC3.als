@@ -1,0 +1,16 @@
+.ALIASES
+X_U3            U3(GND=0 TRIGGER=VCLK OUTPUT=OUT RESET=+5V CONTROL=MOD_SIG THRESHOLD=CAP DISCHARGE=CAP VCC=+5V ) CN
++@LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS12794@ANL_MISC.555alt.Normal(chips)
+R_RL            RL(1=+5V 2=OUT ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS12924@ANALOG.R.Normal(chips)
+C_C3            C3(1=0 2=CAP ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS13076@ANALOG.C.Normal(chips)
+V_V1            V1(+=+5V -=0 ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS12720@SOURCE.VDC.Normal(chips)
+R_R3            R3(1=CAP 2=+5V ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS13044@ANALOG.R.Normal(chips)
+V_V2            V2(+=VCLK -=0 ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS13485@SOURCE.VPULSE.Normal(chips)
+V_V3            V3(+=MOD_SIG -=0 ) CN @LAB_DIG_ELEC_5.SCHEMATIC3(sch_1):INS13752@SOURCE.VSIN.Normal(chips)
+_    _(+5V=+5V)
+_    _(cap=CAP)
+_    _(mod_sig=MOD_SIG)
+_    _(out=OUT)
+_    _(Vclk=VCLK)
+_    _(clksig=VCLK)
+.ENDALIASES

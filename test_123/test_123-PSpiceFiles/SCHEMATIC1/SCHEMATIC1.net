@@ -1,0 +1,6 @@
+* source TEST_123
+V_V1         N01839 0 20V
+R_Rs         0 N01855  150 TC=0,0 
+R_Rd         N01851 N01839  2k TC=0,0 
+R_Rb         0 N01859  1Meg TC=0,0 
+J_J1         N01851 N01859 N01855 J2N3819 

@@ -1,0 +1,165 @@
+
+**** 10/18/22 12:32:12 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Originall_values"  [ d:\orcad projects\digital_logic_probe_v5\digital_logic_probe_v5-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Originall_values.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN Vin 0 5.44 1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGITAL_LOGIC_PROBE_V5
+R_R1         N00653 VDD  2.2Meg TC=0,0 
+R_R2         N00644 N00653  680k TC=0,0 
+R_R3         0 N00644  560k TC=0,0 
+R_R4         N01455 N02893  820 TC=0,0 
+R_R5         N01625 N00751  820 TC=0,0 
+R_R6         N01477 N02561  820 TC=0,0 
+R_R7         N01542 VDD  2.2Meg TC=0,0 
+R_R8         0 N01689  220k TC=0,0 
+C_C1         N00644 N00653  100p  TC=0,0 
+C_C2         N01542 N01477  100p  TC=0,0 
+C_C3         N01685 N01689  100n  TC=0,0 
+R_R9         VIN N00644  1k TC=0,0 
+D_D2         VDD N02893 LS_3336-TYP 
+D_D3         VDD N02561 LT_3333-TYP 
+D_D4         VDD N00751 LY_3336-TYP 
+X_U1A         N01689 N01625 $G_CD4000_VDD $G_CD4000_VSS CD4049UB PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1B         N01542 N01685 $G_CD4000_VDD $G_CD4000_VSS CD4049UB PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1C         N00644 N01477 $G_CD4000_VDD $G_CD4000_VSS CD4049UB PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1E         N00653 N01451 $G_CD4000_VDD $G_CD4000_VSS CD4049UB PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1F         N01451 N01455 $G_CD4000_VDD $G_CD4000_VSS CD4049UB PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+D_D5         N01542 N01625 D1N4001 
+V_V1         VDD 0 5.44V
+
+**** RESUMING Originall_values.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node N00653
+*
+* Moving X_U1E.U1:IN1 from analog node N00653 to new digital node N00653$AtoD
+X$N00653_AtoD1
++ N00653
++ N00653$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000UB
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N00644
+*
+* Moving X_U1C.U1:IN1 from analog node N00644 to new digital node N00644$AtoD
+X$N00644_AtoD1
++ N00644
++ N00644$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000UB
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01455
+*
+* Moving X_U1F.U1:OUT1 from analog node N01455 to new digital node N01455$DtoA
+X$N01455_DtoA1
++ N01455$DtoA
++ N01455
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000UB
++       PARAMS: DRVH= 721    DRVL= 721    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01625
+*
+* Moving X_U1A.U1:OUT1 from analog node N01625 to new digital node N01625$DtoA
+X$N01625_DtoA1
++ N01625$DtoA
++ N01625
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000UB
++       PARAMS: DRVH= 721    DRVL= 721    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01477
+*
+* Moving X_U1C.U1:OUT1 from analog node N01477 to new digital node N01477$DtoA
+X$N01477_DtoA1
++ N01477$DtoA
++ N01477
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000UB
++       PARAMS: DRVH= 721    DRVL= 721    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01542
+*
+* Moving X_U1B.U1:IN1 from analog node N01542 to new digital node N01542$AtoD
+X$N01542_AtoD1
++ N01542
++ N01542$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000UB
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01689
+*
+* Moving X_U1A.U1:IN1 from analog node N01689 to new digital node N01689$AtoD
+X$N01689_AtoD1
++ N01689
++ N01689$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000UB
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01685
+*
+* Moving X_U1B.U1:OUT1 from analog node N01685 to new digital node N01685$DtoA
+X$N01685_DtoA1
++ N01685$DtoA
++ N01685
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000UB
++       PARAMS: DRVH= 721    DRVL= 721    CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$CD4000_PWR 0 CD4000_PWR
+
+
+ERROR(ORPSIM-15090): DC device Vin is undefined
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VIN.
+

@@ -1,0 +1,67 @@
+
+**** 12/24/22 11:20:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-VDC_Check"  [ D:\Orcad Projects\Analog1_CAD_exp7\Analog1_CAD_exp7-PSpiceFiles\SCHEMATIC1\VDC_Check.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "VDC_Check.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG1_CAD_EXP7
+R_Re1         N00265 N00272  {Re} TC=0,0 
+R_Re2         N00272 N00276  {Re} TC=0,0 
+R_R3         0 N00222  100k TC=0,0 
+R_R4         0 N00348  100k TC=0,0 
+R_Rc         VOUT1 +12V  {Rc} TC=0,0 
+Q_Q1         +12V N00222 N00265 Q2N3904
+Q_Q2         VOUT1 N00348 N00276 Q2N3904
+C_C1         VIN N00222  1u  TC=0,0 
+C_C2         N00348 {VMODE}  1u  TC=0,0 
+V_V1         +12V 0 12V
+V_V2         -12V 0 -12V
+V_V3         VIN 0  AC 50m
++SIN 0 {Vamp} 10k 0 0 0
+R_R6         0 N01409  100k TC=0,0 
+R_Re4         N01493 N01453  {Re} TC=0,0 
+C_C4         N01409 {VMODE}  1u  TC=0,0 
+R_Re3         N01449 N01493  {Re} TC=0,0 
+C_C3         VIN N01397  1u  TC=0,0 
+R_Rc1         VOUT2 +12V  {Rc} TC=0,0 
+Q_Q3         +12V N01397 N01449 Q2N3904
+Q_Q4         VOUT2 N01409 N01453 Q2N3904
+R_R7         0 N01397  100k TC=0,0 
+R_Rt1         -12V N00272  {Rt} TC=0,0 
+R_R8         -12V N02322  4.7k TC=0,0 
+R_R9         -12V N02326  10k TC=0,0 
+R_R10         0 N02326  10k TC=0,0 
+Q_Q5         N01493 N02326 N02322 Q2N3904
+.PARAM  rc=10k rt=10k vamp=50m re=0.1k vmode=0
+
+**** RESUMING VDC_Check.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node {VMODE} is floating
+

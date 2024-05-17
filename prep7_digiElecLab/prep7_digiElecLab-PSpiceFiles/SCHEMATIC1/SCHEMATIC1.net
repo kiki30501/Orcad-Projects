@@ -1,0 +1,63 @@
+* source PREP7_DIGIELECLAB
+X_U1         0 N00304 +15V -15V VOUT1 uA741
+V_V1         +15V 0 15V
+V_V2         0 -15V 15V
+R_R1         N00304 VOUT1 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R2         N00738 N00304 R_R2 2k TC=0,0 
+.model        R_R2 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R3         N00721 N00304 R_R3 4k TC=0,0 
+.model        R_R3 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R4         N00705 N00304 R_R4 8k TC=0,0 
+.model        R_R4 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_V3         N00705 0  
++PULSE 0 5 0 1n 1n 0.5m 1m
+V_V4         N00721 0  
++PULSE 0 5 0 1n 1n 1m 2m
+V_V5         N00738 0  
++PULSE 0 5 0 1n 1n 2m 4m
+R_R5         N02125 VOUT2 R_R5 3k TC=0,0 
+.model        R_R5 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_V8         N02341 0  
++PULSE 0 5 0 1n 1n 2m 4m
+R_R6         N02329 N02199 R_R6 2k TC=0,0 
+.model        R_R6 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_V6         N02329 0  
++PULSE 0 5 0 1n 1n 0.5m 1m
+R_R7         N02335 N02203 R_R7 2k TC=0,0 
+.model        R_R7 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U2         0 N02125 +15V -15V VOUT2 uA741
+R_R8         N02341 N02211 R_R8 2k TC=0,0 
+.model        R_R8 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+V_V7         N02335 0  
++PULSE 0 5 0 1n 1n 1m 2m
+R_R9         N02199 N02203 R_R9 1k TC=0,0 
+.model        R_R9 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R10         N02203 N02211 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R11         N02211 N02125 R_R11 2k TC=0,0 
+.model        R_R11 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+R_R12         0 N02199 R_R12 2k TC=0,0 
+.model        R_R12 RES R=1     DEV/UNIFORM 5%/5% TC1=0 TC2=0
+X_U3         N03790 +5V 0 0 N04183 0 0 0 0 N03592 N03580 N03565 N03561 M_UN0001
++  VDD 0 CD4029A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U4         N03503 +5V 0 
++ N03561 N03565 N03580 N03592 0 0 0 0 $G_DPWR $G_DGND DAC8break 
++PARAMS: MNTYMXDLY=0 IO_LEVEL=0
+R_R13         0 N03503  1k TC=0,0 
+V_V9         +5V 0 5V
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N03790 IO_STM IO_LEVEL=0 
++ 0 0
++ +0 1
++REPEAT FOREVER
++ +0.5m 0
++  +0.5m 1
++ ENDREPEAT
+X_U5         N04183 0 Sw_tClose PARAMS: tClose=0.1m ttran=1n Rclosed=0.01
++  Ropen=1Meg
+R_R14         +5V N04183  1 TC=0,0 
+X_U6         N05880 +5V 0 
++ 0 0 0 0 N03561 N03565 N03580 N03592 $G_DPWR $G_DGND DAC8break 
++PARAMS: MNTYMXDLY=0 IO_LEVEL=0
+R_R15         0 N05880  1k TC=0,0 

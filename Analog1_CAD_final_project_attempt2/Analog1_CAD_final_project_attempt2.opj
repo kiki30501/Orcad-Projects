@@ -1,0 +1,45 @@
+(ExpressProject "Analog1_CAD_final_project_attempt2"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[01/10/23]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\analog1_cad_final_project_attempt2.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (MPSSessionName "sixsi")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Orcad Projects\Analog1_CAD_final_project_attempt2\analog1_cad_final_project_attempt2.dsn")
+      (Path "Design Resources"
+         "D:\Orcad Projects\Analog1_CAD_final_project_attempt2\analog1_cad_final_project_attempt2.dsn"
+         "SCHEMATIC1")
+      (Select "Design Resources"
+         "D:\Orcad Projects\Analog1_CAD_final_project_attempt2\analog1_cad_final_project_attempt2.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 868"))
+      (Tab 0)))
+  (PartMRUSelector))

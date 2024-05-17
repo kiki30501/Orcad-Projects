@@ -1,0 +1,53 @@
+* source PREP6_ANALOG2
+X_U1A         N00887 N00760 +15V -15V LPFO LM324
+R_R1         LPFI N01053  10k TC=0,0 
+R_R2         N01053 N00887  10k TC=0,0 
+R_R3         0 N00760  10k TC=0,0 
+R_R4         N00760 LPFO  1.5k TC=0,0 
+C_C1         N01053 LPFO  .01u  TC=0,0 
+C_C2         0 N00887  .01u  TC=0,0 
+V_V1         +15V 0 15V
+V_V2         0 -15V 15V
+V_V3         LPFI 0  AC 1
++SIN 0 5 1k 0 0 0
+X_U1B         N01790 N01816 +15V -15V HPFO LM324
+V_V4         HPFI 0  AC 1
++SIN 0 5 1k 0 0 0
+R_R5         N01690 HPFO  10k TC=0,0 
+R_R6         N01816 HPFO  1k TC=0,0 
+R_R7         0 N01816  27k TC=0,0 
+R_R8         0 N01790  10k TC=0,0 
+C_C3         N01690 N01790  .01u  TC=0,0 
+C_C4         HPFI N01690  .01u  TC=0,0 
+X_U2A         N07907 A +15V -15V A LM324
+X_U2B         B N08871 +15V -15V VOUT LM324
+X_U2C         N08562 B +15V -15V B LM324
+X_U2D         A N07650 +15V -15V N07650 LM324
+R_R9         0 N08871  10k TC=0,0 
+R_R10         N08871 VOUT  220? TC=0,0 
+R_R11         VIN N07835  15k TC=0,0 
+R_R12         N07835 N07907  15k TC=0,0 
+C_C5         N07907 0  1n  TC=0,0 
+C_C6         N07835 A  1n  TC=0,0 
+C_C7         N07650 N08566  1n  TC=0,0 
+C_C8         N08566 N08562  1n  TC=0,0 
+R_R15         N08566 B  17.2k TC=0,0 
+R_R16         0 N08562  17.2k TC=0,0 
+V_V5         VIN 0  AC 1
++SIN 0 1 10k 0 0 0
+V_V6         N11470 0  AC 1
++SIN 0 1 1k 0 0 0
+R_R18         N11358 N11490  {MYR} TC=0,0 
+C_C10         0 N11490  1n  TC=0,0 
+C_C9         N11358 N11370  1n  TC=0,0 
+X_U3A         N11490 N11370 +15V -15V N11370 LM324
+R_R17         N11470 N11358  {MYR} TC=0,0 
+C_C11         N12135 VOUT_4TH  1n  TC=0,0 
+C_C12         0 N12267  1n  TC=0,0 
+R_R21         N12297 VOUT_4TH  10k TC=0,0 
+R_R19         N11370 N12135  {MYR} TC=0,0 
+R_R22         0 N12297  10k TC=0,0 
+R_R20         N12135 N12267  {MYR} TC=0,0 
+X_U3B         N12267 N12297 +15V -15V VOUT_4TH LM324
+V_V7         +30V 0 30V
+.PARAM  myr=20k

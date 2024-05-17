@@ -1,0 +1,137 @@
+
+**** 04/15/23 20:42:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_3stg"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\time_3stg.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time_3stg.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 1u SKIPBP 
+.STEP LIN PARAM pot_sweep 0 1.1 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PREP5_ANALOG2_LAB
+V_V1         VP GND 15V
+V_V2         GND VN 15V
+X_R5         N06010 N06010 N06122 POT PARAMS: SET={pot_sweep} VALUE=1Meg
+X_U1         VIN1 N05995 VP VN N00480 uA741
+X_U2         N06247 N06264 VP VN VOUT uA741
+X_U3         0 N06010 VP VN N05857 uA741
+R_R6         N06122 N05995  1k TC=0,0 
+R_R7         N05995 N00480  10k TC=0,0 
+R_R8         N05857 N06010  10k TC=0,0 
+R_R9         N06247 N05857  20k TC=0,0 
+R_R10         N06264 N00480  20k TC=0,0 
+R_R11         VOUT N06264  20k TC=0,0 
+R_R12         0 N06247  20k TC=0,0 
+V_V3         VIN1 0  AC 0.5
++SIN 0 0.5 1k 0 0 0
+.PARAM  pot_sweep=1
+
+**** RESUMING time_3stg.cir ****
+.END
+
+**** 04/15/23 20:42:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_3stg"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\time_3stg.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3.dx         X_U3.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 04/15/23 20:42:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_3stg"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\time_3stg.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         X_U3.qx         
+               NPN             NPN             NPN             
+       LEVEL    1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75         
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+
+          JOB CONCLUDED
+
+**** 04/15/23 20:42:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time_3stg"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\time_3stg.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM POT_SWEEP =    1     
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        2.95
+  Total job time (using Solver 1)   =         .47
+

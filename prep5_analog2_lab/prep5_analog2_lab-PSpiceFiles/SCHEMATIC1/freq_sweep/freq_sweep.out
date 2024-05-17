@@ -1,0 +1,198 @@
+
+**** 04/15/23 20:30:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\freq_sweep.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "freq_sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 1Meg
+.STEP LIN PARAM pot_sweep 0 1 1.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PREP5_ANALOG2_LAB
+V_V1         VP GND 15V
+V_V2         GND VN 15V
+R_R1         N00382 N00386  1Meg TC=0,0 
+R_R2         N00386 VOUT  10k TC=0,0 
+R_R3         N00424 N00382  19k TC=0,0 
+X_R5         N00386 N00386 N03204 POT PARAMS: SET={pot_sweep} VALUE=1Meg
+R_R6         N00424 N03204  1k TC=0,0 
+X_U1         VIN- N00424 VP VN N00382 uA741
+X_U2         0 N00386 VP VN VOUT uA741
+V_V3         VIN- 0 DC 0Vdc AC 0.5Vac 
+.PARAM  pot_sweep=1
+
+**** RESUMING freq_sweep.cir ****
+.END
+
+**** 04/15/23 20:30:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\freq_sweep.sim ]
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/15/23 20:30:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\freq_sweep.sim ]
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 04/15/23 20:30:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\freq_sweep.sim ]
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT_SWEEP =    0     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VN)  -17.7410  (   VP)   12.2590  (  GND)   -2.7409  ( VIN-)    0.0000      
+
+( VOUT) 711.7E-06  (N00382)     .0015 (N00386)-80.58E-06 (N00424)-80.59E-06     
+
+(N03204)-80.58E-06 (X_U1.6)-258.5E-06 (X_U1.7)     .0015 (X_U1.8)     .0015     
+
+(X_U1.9)    0.0000 (X_U2.6)-258.4E-06 (X_U2.7) 715.7E-06 (X_U2.8) 715.7E-06     
+
+(X_U2.9)    0.0000 (X_U1.10)    -.6083                   (X_U1.11)   12.2190    
+
+(X_U1.12)   12.2190                   (X_U1.13)    -.5942                       
+
+(X_U1.14)    -.5942                   (X_U1.53)   11.2590                       
+
+(X_U1.54)  -16.7410                   (X_U1.90) 82.30E-06                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)   -2.7409                   (X_U2.10)    -.6083                       
+
+(X_U2.11)   12.2190                   (X_U2.12)   12.2190                       
+
+(X_U2.13)    -.5942                   (X_U2.14)    -.5942                       
+
+(X_U2.53)   11.2590                   (X_U2.54)  -16.7410                       
+
+(X_U2.90) 79.23E-06                   (X_U2.91)   40.0000                       
+
+(X_U2.92)  -40.0000                   (X_U2.99)   -2.7409                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.334E-03
+    V_V2        -3.334E-03
+    V_V3        -8.092E-08
+    X_U1.vb     -2.585E-09
+    X_U1.vc      1.126E-11
+    X_U1.ve      1.903E-11
+    X_U1.vlim    8.230E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U2.vb     -2.584E-09
+    X_U2.vc      1.126E-11
+    X_U2.ve      1.903E-11
+    X_U2.vlim    7.923E-08
+    X_U2.vlp    -4.000E-11
+    X_U2.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.00E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/15/23 20:30:24 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-freq_sweep"  [ D:\Orcad Projects\prep5_analog2_lab\prep5_analog2_lab-PSpiceFiles\SCHEMATIC1\freq_sweep.sim ]
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM POT_SWEEP =    0     
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .66
+  Total job time (using Solver 1)   =         .11
+

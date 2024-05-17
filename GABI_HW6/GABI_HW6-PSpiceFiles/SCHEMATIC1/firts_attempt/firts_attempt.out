@@ -1,0 +1,122 @@
+
+**** 02/06/23 14:53:43 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "firts_attempt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 0.1u SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source GABI_HW6
+C_C1         N00456 N00362  1n  TC=0,0 
+C_C2         N00358 N00362  1n  TC=0,0 
+R_R1         0 N00362  10k TC=0,0 
+R_R2         N00340 N00358  10k TC=0,0 
+R_R3         N00340 N00323  60k TC=0,0 
+R_R4         N00323 0  10k TC=0,0 
+V_V1         N00456 0  
++PULSE 1v 0V 2u 1u 1u 20u 30
+X_U1         N00362 N00323 0 N03818 N00340 uA741
+V_V2         0 N03818 12Vdc
+
+**** RESUMING firts_attempt.cir ****
+.END
+
+**** 02/06/23 14:53:43 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 02/06/23 14:53:43 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+
+          JOB CONCLUDED
+
+**** 02/06/23 14:53:43 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-firts_attempt"  [ D:\Orcad Projects\GABI_HW6\GABI_HW6-PSpiceFiles\SCHEMATIC1\firts_attempt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =      103.71
+  Total job time (using Solver 1)   =         .38
+
