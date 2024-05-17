@@ -1,0 +1,128 @@
+
+**** 03/13/23 09:27:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AC_SWEEP"  [ C:\Cadence\My projects\LAB_ANALOG_2\NEW_START-PSpiceFiles\SCHEMATIC1\AC_SWEEP.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AC_SWEEP.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10000 1 10G
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NEW_START
+R_R8         0 N02140  2k TC=0,0 
+V_V3         N02074 0 20V
+R_RG         0 N02216  1Meg TC=0,0 
+R_RS         0 N02230  150 TC=0,0 
+C_C3         N02212 N02216  0.01u  TC=0,0 
+V_V4         N02212 0 DC 0Vdc AC 1Vac 
+R_RD         N02110 N02074  2k TC=0,0 
+C_C5         N02140 N02110  1u  TC=0,0 
+C_C4         0 N02230  100u  TC=0,0 
+J_J1         N02110 N02216 N02230 J2N3819 
+
+**** RESUMING AC_SWEEP.cir ****
+.END
+
+**** 03/13/23 09:27:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AC_SWEEP"  [ C:\Cadence\My projects\LAB_ANALOG_2\NEW_START-PSpiceFiles\SCHEMATIC1\AC_SWEEP.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N3819         
+               NJF             
+         VTO   -3            
+        BETA    1.304000E-03 
+      LAMBDA    2.250000E-03 
+          IS   33.570000E-15 
+         ISR  322.400000E-15 
+       ALPHA  311.700000E-06 
+          VK  243.6          
+          RD    1            
+          RS    1            
+         CGD    1.600000E-12 
+         CGS    2.414000E-12 
+           M     .3622       
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF    9.882000E-18 
+
+
+**** 03/13/23 09:27:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AC_SWEEP"  [ C:\Cadence\My projects\LAB_ANALOG_2\NEW_START-PSpiceFiles\SCHEMATIC1\AC_SWEEP.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N02074)   20.0000 (N02110)    8.2044 (N02140)    0.0000 (N02212)    0.0000     
+
+(N02216) 1.194E-06 (N02230)     .8847 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -5.898E-03
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.18E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/13/23 09:27:47 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AC_SWEEP"  [ C:\Cadence\My projects\LAB_ANALOG_2\NEW_START-PSpiceFiles\SCHEMATIC1\AC_SWEEP.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .81
+  Total job time (using Solver 1)   =        1.74
+

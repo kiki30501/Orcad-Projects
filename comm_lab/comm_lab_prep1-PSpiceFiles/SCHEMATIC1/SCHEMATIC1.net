@@ -1,0 +1,8 @@
+* source COMM_LAB_PREP1
+R_R1         N00245 N00155  1k TC=0,0 
+R_R2         GND N00155  100k TC=0,0 
+R_R3         GND N00169  1MEG TC=0,0 
+V_V1         N00245 GND  
++PULSE 0 0.1 0 1n 1n 1.11u 2.22u
+E_BPASS1         N00169 0 CHEBYSHEV {V(N00155)} BP (440kHz 445kHz 455kHz
++  460kHz) 0.1dB 0.2dB

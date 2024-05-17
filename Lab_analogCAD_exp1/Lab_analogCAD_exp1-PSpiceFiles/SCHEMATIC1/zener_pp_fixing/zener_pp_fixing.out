@@ -1,0 +1,173 @@
+
+**** 11/06/22 17:33:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-zener_pp_fixing"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-pspicefiles\schematic1\zene
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "zener_pp_fixing.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lab_analogcad_exp1-pspicefiles/lab_analogcad_exp1.lib" 
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP1
+R_R1         0 N00158  1k TC=0,0 
+D_D1         N00149 N00158 Dbreak 
+V_V1         N00149 0  AC 5
++SIN 0 5 1k 0 0 0
+D_D2         N00579 N00572 D1N754 
+D_D3         N00579 0 D1N754 
+R_R2         N00563 N00572  1k TC=0,0 
+V_V2         N00563 0  AC 10
++SIN 0 10 1k 0 0 0
+R_R3         N00891 N00901  300 TC=0,0 
+D_D4         0 N00901 D1N754 
+R_R4         0 N00901  {RVAL} TC=0,0 
+V_V3         N00891 0 7.75
+R_R5         N01933 N01943  300 TC=0,0 
+V_V4         N01933 0 1V
+D_D5         N01943 0 D1N4007 
+D_D6         N03085 0 D1N4007 
+R_R6         N03075 N03085  315 TC=0,0 
+V_V5         N03075 0 1.6
+V_V6         N03297 0 1V
+D_D7         0 N03307 D1N4007 
+R_R7         N03297 N03307  1Meg TC=0,0 
+V_V7         N03561 0 7
+D_D8         N03561 N03571 D1N4007 
+R_R8         0 N03571  1k TC=0,0 
+D_D9         N03904 N03914 D1N4007 
+R_R9         0 N03914  1k TC=0,0 
+V_V8         N03904 0 1V
+C_C1         N03914 0  10u  TC=0,0 
+R_R10         N04491 N04501  301.3 TC=0,0 
+D_D10         0 N04501 D1N754 
+D_D11         N05044 N04978 D1N754 
+R_R11         N04968 N04978  1k TC=0,0 
+V_V10         N04968 0  AC 10
++SIN 0 10 1k 0 0 0
+D_D12         N05044 0 D1N754 
+R_R12         0 N04501  {RL} TC=0,0 
+V_V11         N04491 0  AC 0
++SIN 8 0.25 1k 0 0 0
+.PARAM  rval=5.1k rl=19.64k
+
+**** RESUMING zener_pp_fixing.cir ****
+.END
+
+**** 11/06/22 17:33:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-zener_pp_fixing"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-pspicefiles\schematic1\zene
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4007         Dbreak          D1N754          D1N4001         
+          IS   14.110000E-09   10.000000E-15    1.616000E-15   14.110000E-09 
+           N    1.984                                           1.984        
+         ISR                                    1.698000E-09                 
+         IKF   94.81                                           94.81         
+          BV    1.500000E+03                    6.8            75            
+         IBV   10.000000E-06                    2.8814         10.000000E-06 
+         NBV                                     .28248                      
+        IBVL                                    1.942600E-06                 
+        NBVL                                     .27168                      
+          RS     .03389          .1             1.818            .03389      
+          TT    5.700000E-06                                    5.700000E-06 
+         CJO   25.890000E-12  100.000000E-15  120.000000E-12   25.890000E-12 
+          VJ     .3245                           .75             .3245       
+           M     .44                             .5117           .44         
+        TBV1                                  485.290000E-06                 
+
+
+**** 11/06/22 17:33:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-zener_pp_fixing"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-pspicefiles\schematic1\zene
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 16.18E-27     
+
+(N00579) 1.653E-15 (N00891)    7.7500 (N00901)    6.7505 (N01933)    1.0000     
+
+(N01943)     .5893 (N03075)    1.6000 (N03085)     .6309 (N03297)    1.0000     
+
+(N03307)     .9859 (N03561)    7.0000 (N03571)    6.3320 (N03904)    1.0000     
+
+(N03914)     .4660 (N04491)    8.0000 (N04501)    6.7584 (N04968)    0.0000     
+
+(N04978) 11.71E-27 (N05044) 1.647E-15 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.618E-29
+    V_V3        -3.332E-03
+    V_V4        -1.369E-03
+    V_V5        -3.077E-03
+    V_V6        -1.411E-08
+    V_V7        -6.332E-03
+    V_V8        -4.660E-04
+    V_V10        1.171E-29
+    V_V11       -4.121E-03
+
+    TOTAL POWER DISSIPATION   1.10E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/06/22 17:33:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-zener_pp_fixing"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-pspicefiles\schematic1\zene
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .86
+

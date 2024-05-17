@@ -1,0 +1,10 @@
+* source COMMLAB_EXP4
+D_D1         N00131 VOUT D1N4001 
+R_R1         0 VOUT  1k TC=0,0 
+R_R2         N00131 N00262  1k TC=0,0 
+R_R3         N00131 N00258  1k TC=0,0 
+R_R4         N00131 0  100k TC=0,0 
+V_V1         N00262 0  AC 1
++SIN 0 2.5 500k 0 0 0
+V_V2         N00258 0  AC 1
++SIN 0 0.25 20k 0 0 0

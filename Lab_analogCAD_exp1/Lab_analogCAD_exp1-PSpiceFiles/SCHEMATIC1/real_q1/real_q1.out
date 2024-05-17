@@ -1,0 +1,106 @@
+
+**** 10/25/22 15:16:42 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-real_q1"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-PSpiceFiles\SCHEMATIC1\real_q1.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "real_q1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V4 0.4 1.6 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP1
+R_R1         0 N00158  1k TC=0,0 
+D_D1         N00149 N00158 Dbreak 
+V_V1         N00149 0  AC 5
++SIN 0 5 1k 0 0 0
+D_D2         N00579 N00572 D1N754 
+D_D3         N00579 0 D1N754 
+R_R2         N00563 N00572  1k TC=0,0 
+V_V2         N00563 0  AC 10
++SIN 0 10 1k 0 0 0
+R_R3         N00891 N00901  300 TC=0,0 
+D_D4         0 N00901 D1N754 
+R_R4         0 N00901  {RVAL} TC=0,0 
+V_V3         N00891 0 7.75
+R_R5         VIN VD  300 TC=0,0 
+V_V4         VIN 0 1V
+D_D5         VD 0 D1N4007 
+E_ABM1         N024010 0 VALUE { v(Vd)/(1.984*25e-3)    }
+E_EXP1         N024201 0 VALUE {EXP(V(N024010))}
+E_ABM2         N024411 0 VALUE { 14.11e-9*(V(N024201)-1)    }
+R_R6         0 N024411  1Meg TC=0,0 
+.PARAM  rval=5.1k
+
+**** RESUMING real_q1.cir ****
+.END
+
+**** 10/25/22 15:16:42 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-real_q1"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-PSpiceFiles\SCHEMATIC1\real_q1.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          D1N754          D1N4007         D1N4001         
+          IS   10.000000E-15    1.616000E-15   14.110000E-09   14.110000E-09 
+           N                                    1.984           1.984        
+         ISR                    1.698000E-09                                 
+         IKF                                   94.81           94.81         
+          BV                    6.8             1.500000E+03   75            
+         IBV                    2.8814         10.000000E-06   10.000000E-06 
+         NBV                     .28248                                      
+        IBVL                    1.942600E-06                                 
+        NBVL                     .27168                                      
+          RS     .1             1.818            .03389          .03389      
+          TT                                    5.700000E-06    5.700000E-06 
+         CJO  100.000000E-15  120.000000E-12   25.890000E-12   25.890000E-12 
+          VJ                     .75             .3245           .3245       
+           M                     .5117           .44             .44         
+        TBV1                  485.290000E-06                                 
+
+
+
+          JOB CONCLUDED
+
+**** 10/25/22 15:16:42 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-real_q1"  [ c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-PSpiceFiles\SCHEMATIC1\real_q1.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

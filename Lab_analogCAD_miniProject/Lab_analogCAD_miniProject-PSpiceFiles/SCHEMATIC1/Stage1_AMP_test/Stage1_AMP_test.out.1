@@ -1,0 +1,83 @@
+
+**** 01/04/23 12:54:58 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Stage1_AMP_test"  [ c:\cadence\my projects\lab_analogcad_miniproject\lab_analogcad_miniproject-pspicefiles\s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Stage1_AMP_test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_MINIPROJECT
+Q_Q1         VCC1 N00267 N08141 Q2N3904
+Q_Q2         N00212 N00226 N08137 Q2N3904
+R_R1         N00212 VCC1  10k TC=0,0 
+C_C1         N00212 N18161  2.2u  TC=0,0 
+C_C2         N00504 N00267  2.2u  TC=0,0 
+R_R2         N00267 VCC1  150k TC=0,0 
+R_R3         0 N00267  150k TC=0,0 
+R_R4         N00226 VCC1  150k TC=0,0 
+R_R5         0 N00226  150k TC=0,0 
+V_V2         N00504 0  AC 1m
++SIN 0 8m 1k 0 0 0
+C_C3         N00226 0  2.2u  TC=0,0 
+V_V3         VCC1 0 12V
+R_R10         N08124 N08137  250 TC=0,0 
+R_R11         N08141 N08124  250 TC=0,0 
+X_M1         N08548 0 N09928 BS170/PLP
+R_R12         N08548 VCC1  4k TC=0,0 
+R_R14         0 VCC1  100k TC=0,0 
+R_R15         0 0  100k TC=0,0 
+C_C4         N08548 N10788  2.2u  TC=0,0 
+R_R17         ISRC1 N09928  150 TC=0,0 
+C_C5         0 ISRC1  10u  TC=0,0 
+R_R19         N11122 VCC1  1k TC=0,0 
+C_C6         N11122 N11160  10u  TC=0,0 
+R_R20         0 N10788  200k TC=0,0 
+R_R18         N10788 VCC1  200k TC=0,0 
+X_M2         N11122 N10788 ISRC2 BS170/PLP
+R_R22         0 N11160  1k TC=0,0 
+C_C7         0 ISRC2  10u  TC=0,0 
+Q_Q3         IDIFF N14931 0 Q2N3904
+Q_Q4         N14931 N14931 0 Q2N3904
+R_R24         N14931 VCC1  24k TC=0,0 
+Q_Q5         ISRC1 N14931 0 Q2N3904
+Q_Q6         ISRC2 N14931 0 Q2N3904
+Q_Q7         ISRC2 N14931 0 Q2N3904
+Q_Q8         ISRC2 N14931 0 Q2N3904
+C_C8         0 N08124  10u  TC=0,0 
+R_R25         N18161 0  50k TC=0,0 
+R_R9         0 N18533  27k TC=0,0 
+Q_Q9         N08124 N18533 N185112 Q2N3904
+R_R8         VCC_ARROW N18533  155k TC=0,0 
+R_R26         0 N185112  2k TC=0,0 
+
+**** RESUMING Stage1_AMP_test.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node IDIFF.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VCC_ARROW.
+

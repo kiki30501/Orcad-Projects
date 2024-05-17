@@ -1,0 +1,53 @@
+
+**** 08/16/22 19:08:36 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Verify_led_model"  [ c:\cadence\my projects\logic_probe_with_tristate-PSpiceFiles\SCHEMATIC1\Verify_led_mode
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Verify_led_model.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 5 0.1m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LOGIC_PROBE_WITH_TRISTATE
+R_R1         N01099 VIN  680 TC=0,0 
+V_V1         VDD 0 5V
+X_D1         N01486 N01099 LED PARAMS: IS=1.8525e-17 RS=2  BV=5 IBV=10e-6      
++    
+X_D2         VA 0 LED PARAMS: IS=3.9573e-19 RS=2  BV=5 IBV=10e-6         
+X_D3         VIN N01095 LED PARAMS: IS=8.4534e-21 RS=2  BV=5 IBV=10e-6         
+V_V2         VIN 0 5V
+R_R2         VDD VA  680 TC=0,0 
+R_R3         N01095 N01493  680 TC=0,0 
+R_R4         N01939 0  680 TC=0,0 
+
+**** RESUMING Verify_led_model.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N01493.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N01939.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N01486.
+

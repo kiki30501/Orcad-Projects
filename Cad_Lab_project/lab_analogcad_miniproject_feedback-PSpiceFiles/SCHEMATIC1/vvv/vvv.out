@@ -1,0 +1,249 @@
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "vvv.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_MINIPROJECT_FEEDBACK
+C_C2         N54844 N26805  2.2u  TC=0,0 
+Q_Q3         IDIFF N27239 0 Q2N3904
+X_M1         N27475 N26847 N27663 BS170/PLP
+C_C6         N27513 N27523  10u  TC=0,0 
+R_R5         0 N26811  390k TC=0,0 
+Q_Q1         VCC1 N26805 N27023 Q2N3904
+V_V2         N26947 0  AC 8m
++SIN 0 5m 1k 0 0 0
+R_R11         N27023 IDIFF  390 TC=0,0 
+R_R17         0 N27663  3.9k TC=0,0 
+Q_Q2         N26817 N26811 N27041 Q2N3904
+C_C1         N26817 N26847  2.2u  TC=0,0 
+R_R15         0 N26847  330k TC=0,0 
+R_R14         N26847 VCC1  470k TC=0,0 
+C_C4         N27475 N44932  2.2u  TC=0,0 
+R_R2         N26805 VCC1  390k TC=0,0 
+Q_Q4         N27239 N27239 0 Q2N3904
+C_C5         0 N27663  2.2u  TC=0,0 
+V_V3         VCC1 0 12V
+R_R12         N27475 VCC1  6.8k TC=0,0 
+R_R4         N26811 VCC1  390k TC=0,0 
+R_R1         N26817 VCC1  10k TC=0,0 
+R_R10         IDIFF N27041  390 TC=0,0 
+C_C3         N26811 0  2.2u  TC=0,0 
+R_R24         N27239 VCC1  47k TC=0,0 
+R_R3         0 N26805  390k TC=0,0 
+R_R22         0 N27523  1k TC=0,0 
+R_Rsig         N54844 N26947  50 TC=0,0 
+R_R25         N44932 VCC1  400k TC=0,0 
+R_R26         N27513 VCC1  1k TC=0,0 
+X_M2         N27513 N44932 N53386 BS170/PLP
+R_R27         0 N44932  250k TC=0,0 
+R_R28         0 N53386  470 TC=0,0 
+R_Rsig1         N54844 0  50 TC=0,0 
+
+**** RESUMING vvv.cir ****
+.END
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.Dbody      X_M2.Dbody      
+          IS  125.000000E-15  125.000000E-15 
+           N    1.023           1.023        
+         IKF   18.01           18.01         
+          BV   60              60            
+         IBV   10.000000E-06   10.000000E-06 
+          RS    1.281           1.281        
+          TT  161.600000E-09  161.600000E-09 
+         CJO   46.300000E-12   46.300000E-12 
+          VJ     .4519           .4519       
+           M     .3423           .3423       
+
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MOST1      X_M1.MOST2      X_M2.MOST1      X_M2.MOST2      
+               NMOS            NMOS            NMOS            NMOS            
+       LEVEL    3               1               3               1            
+           L    2.000000E-06    2.000000E-06    2.000000E-06    2.000000E-06 
+           W    9.700000E-03    9.700000E-03    9.700000E-03    9.700000E-03 
+         VTO    2              -4.73            2              -4.73         
+          KP   20.780000E-06   20.780000E-06   20.780000E-06   20.780000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA    0               0               0               0            
+          RD    1.186                           1.186                        
+          RS     .02             .02             .02             .02         
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX  100.000000E-09    0             100.000000E-09    0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VCC1)   12.0000  (IDIFF)    5.1092  (N26805)    5.7683 (N26811)    5.7678     
+
+(N26817)   10.7600 (N26847)    4.9500 (N26947)    0.0000 (N27023)    5.1587     
+
+(N27041)    5.1581 (N27239)     .6283 (N27475)    7.0657 (N27513)    7.0991     
+
+(N27523)    0.0000 (N27663)    2.8300 (N44932)    4.6154 (N53386)    2.3034     
+
+(N54844)    0.0000 (X_M1.4)    7.0657 (X_M2.4)    7.0991 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         0.000E+00
+    V_V3        -6.184E-03
+
+    TOTAL POWER DISSIPATION   7.42E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/12/23 18:24:06 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-vvv"  [ c:\cadence\my projects\cad_lab_project\lab_analogcad_miniproject_feedback-pspicefiles\schematic1\vvv
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        2.11
+  Total job time (using Solver 1)   =        2.06
+

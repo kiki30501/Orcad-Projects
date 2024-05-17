@@ -1,0 +1,122 @@
+
+**** 10/23/22 18:53:21 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q1"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q1.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "prep_q1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP1
+R_R1         0 N00158  1k TC=0,0 
+D_D1         N00149 N00158 Dbreak 
+V_V1         N00149 0  AC 5
++SIN 0 5 1k 0 0 0
+D_D2         N00579 N00572 D1N754 
+D_D3         N00579 0 D1N754 
+R_R2         N00563 N00572  1k TC=0,0 
+V_V2         N00563 0  AC 0.25
++SIN 8 0.25 1k 0 0 0
+
+**** RESUMING prep_q1.cir ****
+.END
+
+**** 10/23/22 18:53:21 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q1"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q1.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          D1N754          
+          IS   10.000000E-15    1.616000E-15 
+         ISR                    1.698000E-09 
+          BV                    6.8          
+         IBV                    2.8814       
+         NBV                     .28248      
+        IBVL                    1.942600E-06 
+        NBVL                     .27168      
+          RS     .1             1.818        
+         CJO  100.000000E-15  120.000000E-12 
+          VJ                     .75         
+           M                     .5117       
+        TBV1                  485.290000E-06 
+
+
+**** 10/23/22 18:53:21 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q1"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q1.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    8.0000 (N00572)    7.4132     
+
+(N00579)     .6742 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -5.868E-04
+
+    TOTAL POWER DISSIPATION   4.69E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/23/22 18:53:21 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q1"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q1.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,2820 @@
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "prep_q3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 10u 
+.STEP LIN PARAM RVAL 50 4k 50 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP1
+R_R1         0 N00158  1k TC=0,0 
+D_D1         N00149 N00158 Dbreak 
+V_V1         N00149 0  AC 5
++SIN 0 5 1k 0 0 0
+D_D2         N00579 N00572 D1N754 
+D_D3         N00579 0 D1N754 
+R_R2         N00563 N00572  1k TC=0,0 
+V_V2         N00563 0  AC 10
++SIN 0 10 1k 0 0 0
+V_V3         N00891 0  AC 0.25
++SIN 8 0.25 1k 0 0 0
+R_R3         N00891 N00901  1k TC=0,0 
+D_D4         0 N00901 D1N754 
+R_R4         0 N00901  {RVAL} TC=0,0 
+.PARAM  rval=10
+
+**** RESUMING prep_q3.cir ****
+.END
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          D1N754          
+          IS   10.000000E-15    1.616000E-15 
+         ISR                    1.698000E-09 
+          BV                    6.8          
+         IBV                    2.8814       
+         NBV                     .28248      
+        IBVL                    1.942600E-06 
+        NBVL                     .27168      
+          RS     .1             1.818        
+         CJO  100.000000E-15  120.000000E-12 
+          VJ                     .75         
+           M                     .5117       
+        TBV1                  485.290000E-06 
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =   50    
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)     .3810 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -7.619E-03
+
+    TOTAL POWER DISSIPATION   6.10E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  100   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)     .7273 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -7.273E-03
+
+    TOTAL POWER DISSIPATION   5.82E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  150   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    1.0435 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -6.957E-03
+
+    TOTAL POWER DISSIPATION   5.57E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  200   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    1.3333 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -6.667E-03
+
+    TOTAL POWER DISSIPATION   5.33E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  250   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    1.6000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -6.400E-03
+
+    TOTAL POWER DISSIPATION   5.12E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  300   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    1.8462 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -6.154E-03
+
+    TOTAL POWER DISSIPATION   4.92E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  350   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    2.0741 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.926E-03
+
+    TOTAL POWER DISSIPATION   4.74E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  400   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    2.2857 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.714E-03
+
+    TOTAL POWER DISSIPATION   4.57E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  450   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    2.4828 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.517E-03
+
+    TOTAL POWER DISSIPATION   4.41E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  500   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    2.6667 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.333E-03
+
+    TOTAL POWER DISSIPATION   4.27E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  550   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    2.8387 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.161E-03
+
+    TOTAL POWER DISSIPATION   4.13E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  600   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -5.000E-03
+
+    TOTAL POWER DISSIPATION   4.00E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  650   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.1515 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.848E-03
+
+    TOTAL POWER DISSIPATION   3.88E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  700   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.2941 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.706E-03
+
+    TOTAL POWER DISSIPATION   3.76E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  750   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.4286 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.571E-03
+
+    TOTAL POWER DISSIPATION   3.66E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  800   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.5556 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.444E-03
+
+    TOTAL POWER DISSIPATION   3.56E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  850   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.6757 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.324E-03
+
+    TOTAL POWER DISSIPATION   3.46E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  900   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.7895 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.211E-03
+
+    TOTAL POWER DISSIPATION   3.37E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =  950   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    3.8974 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.103E-03
+
+    TOTAL POWER DISSIPATION   3.28E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -4.000E-03
+
+    TOTAL POWER DISSIPATION   3.20E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.0500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.0976 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.902E-03
+
+    TOTAL POWER DISSIPATION   3.12E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.1000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.1905 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.810E-03
+
+    TOTAL POWER DISSIPATION   3.05E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.1500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.2791 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.721E-03
+
+    TOTAL POWER DISSIPATION   2.98E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.3636 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.636E-03
+
+    TOTAL POWER DISSIPATION   2.91E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.2500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.4444 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.556E-03
+
+    TOTAL POWER DISSIPATION   2.84E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.3000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.5217 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.478E-03
+
+    TOTAL POWER DISSIPATION   2.78E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.3500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.5957 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.404E-03
+
+    TOTAL POWER DISSIPATION   2.72E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.6667 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.333E-03
+
+    TOTAL POWER DISSIPATION   2.67E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.4500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.7347 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.265E-03
+
+    TOTAL POWER DISSIPATION   2.61E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.5000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.8000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.200E-03
+
+    TOTAL POWER DISSIPATION   2.56E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.5500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.8627 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.137E-03
+
+    TOTAL POWER DISSIPATION   2.51E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.9231 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.077E-03
+
+    TOTAL POWER DISSIPATION   2.46E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.6500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    4.9811 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -3.019E-03
+
+    TOTAL POWER DISSIPATION   2.42E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.7000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.0370 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.963E-03
+
+    TOTAL POWER DISSIPATION   2.37E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.7500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.0909 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.909E-03
+
+    TOTAL POWER DISSIPATION   2.33E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.1429 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.857E-03
+
+    TOTAL POWER DISSIPATION   2.29E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.8500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.1930 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.807E-03
+
+    TOTAL POWER DISSIPATION   2.25E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.9000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.2414 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.759E-03
+
+    TOTAL POWER DISSIPATION   2.21E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    1.9500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.2881 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.712E-03
+
+    TOTAL POWER DISSIPATION   2.17E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.3333 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.667E-03
+
+    TOTAL POWER DISSIPATION   2.13E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.0500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.3770 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.623E-03
+
+    TOTAL POWER DISSIPATION   2.10E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.1000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.4194 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.581E-03
+
+    TOTAL POWER DISSIPATION   2.06E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.1500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.4603 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.540E-03
+
+    TOTAL POWER DISSIPATION   2.03E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.5000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.500E-03
+
+    TOTAL POWER DISSIPATION   2.00E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.2500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.5385 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.462E-03
+
+    TOTAL POWER DISSIPATION   1.97E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.3000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.5758 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.424E-03
+
+    TOTAL POWER DISSIPATION   1.94E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.3500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.6119 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.388E-03
+
+    TOTAL POWER DISSIPATION   1.91E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.6471 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.353E-03
+
+    TOTAL POWER DISSIPATION   1.88E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.4500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.6812 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.319E-03
+
+    TOTAL POWER DISSIPATION   1.86E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.5000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.7143 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.286E-03
+
+    TOTAL POWER DISSIPATION   1.83E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.5500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.7465 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.254E-03
+
+    TOTAL POWER DISSIPATION   1.80E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.7778 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.222E-03
+
+    TOTAL POWER DISSIPATION   1.78E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.6500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.8082 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.192E-03
+
+    TOTAL POWER DISSIPATION   1.75E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.7000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.8378 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.162E-03
+
+    TOTAL POWER DISSIPATION   1.73E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.7500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.8667 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.133E-03
+
+    TOTAL POWER DISSIPATION   1.71E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.8947 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.105E-03
+
+    TOTAL POWER DISSIPATION   1.68E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.8500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.9221 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.078E-03
+
+    TOTAL POWER DISSIPATION   1.66E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.9000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.9487 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.051E-03
+
+    TOTAL POWER DISSIPATION   1.64E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    2.9500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    5.9747 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.025E-03
+
+    TOTAL POWER DISSIPATION   1.62E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -2.000E-03
+
+    TOTAL POWER DISSIPATION   1.60E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.0500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.0247 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.975E-03
+
+    TOTAL POWER DISSIPATION   1.58E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.1000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.0488 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.951E-03
+
+    TOTAL POWER DISSIPATION   1.56E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.1500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.0723 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.928E-03
+
+    TOTAL POWER DISSIPATION   1.54E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.0952 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.905E-03
+
+    TOTAL POWER DISSIPATION   1.52E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.2500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.1176 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.882E-03
+
+    TOTAL POWER DISSIPATION   1.51E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.3000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.1395 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.860E-03
+
+    TOTAL POWER DISSIPATION   1.49E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.3500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.1609 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.839E-03
+
+    TOTAL POWER DISSIPATION   1.47E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.1818 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.818E-03
+
+    TOTAL POWER DISSIPATION   1.45E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.4500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2022 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.798E-03
+
+    TOTAL POWER DISSIPATION   1.44E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.5000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2222 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.778E-03
+
+    TOTAL POWER DISSIPATION   1.42E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.5500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2418 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.758E-03
+
+    TOTAL POWER DISSIPATION   1.41E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2609 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.739E-03
+
+    TOTAL POWER DISSIPATION   1.39E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.6500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2796 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.720E-03
+
+    TOTAL POWER DISSIPATION   1.38E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.7000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.2979 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.702E-03
+
+    TOTAL POWER DISSIPATION   1.36E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.7500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.3158 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.684E-03
+
+    TOTAL POWER DISSIPATION   1.35E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.3333 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.667E-03
+
+    TOTAL POWER DISSIPATION   1.33E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.8500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.3505 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.649E-03
+
+    TOTAL POWER DISSIPATION   1.32E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.9000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.3673 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.633E-03
+
+    TOTAL POWER DISSIPATION   1.31E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    3.9500E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.3838 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.616E-03
+
+    TOTAL POWER DISSIPATION   1.29E-02  WATTS
+
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM RVAL =    4.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00149)    0.0000 (N00158)-639.9E-30 (N00563)    0.0000 (N00572) 11.71E-27     
+
+(N00579) 1.647E-15 (N00891)    8.0000 (N00901)    6.4000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         1.171E-29
+    V_V3        -1.600E-03
+
+    TOTAL POWER DISSIPATION   1.28E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/23/22 19:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM RVAL =    4.0000E+03
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.73
+

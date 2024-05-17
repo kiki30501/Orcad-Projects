@@ -1,0 +1,182 @@
+
+**** 11/13/22 15:08:22 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-asfda"  [ c:\cadence\my projects\lab_analogcad_exp3\lab_analogcad_exp3-PSpiceFiles\SCHEMATIC1\asfda.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "asfda.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP3
+Q_Q1         N00216 N00224 N00238 Q2N3904
+Q_Q2         N02591 0 N02504 Q2N3904
+R_R1         N00216 VCC1  1k TC=0,0 
+R_R2         N00224 VCC1  15k TC=0,0 
+R_R3         0 N00224  4.7k TC=0,0 
+R_R4         0 N00238  510 TC=0,0 
+R_R5         0 N00256  1k TC=0,0 
+C_C1         N00216 N00256  1u  TC=0,0 
+C_C2         N00422 N00224  1u  TC=0,0 
+V_V1         VCC1 0 12V
+V_V2         N00422 0  
++SIN 0 {Vamp} 10k 0 0 0
+R_R7         N00863 VCC1  1k TC=0,0 
+R_R6         N00859 VCC1  15k TC=0,0 
+R_R8         0 N00891  1k TC=0,0 
+V_V3         N00933 0  
++SIN 0 34m 10k 0 0 0
+C_C4         N00933 N00859  1u  TC=0,0 
+R_R9         0 N00859  4.7k TC=0,0 
+C_C3         N00863 N00891  1u  TC=0,0 
+Q_Q4         N00863 N00859 N00969 Q2N3904
+R_R10         0 N00969  510 TC=0,0 
+C_C5         0 N00969  47u  TC=0,0 
+V_V5         VEE1 0 -6
+C_C8         N02591 N02584  1u  TC=0,0 
+R_R15         N02591 VCC1  10k TC=0,0 
+R_R16         VEE1 N02504  10k TC=0,0 
+C_C9         N02495 N02504  1u  TC=0,0 
+V_V6         N02495 0  
++SIN 0 1 10k 0 0 0
+R_R17         0 N02584  1k TC=0,0 
+R_R20         0 N03938  4.7k TC=0,0 
+R_R21         0 N03984  510 TC=0,0 
+R_R19         N03942 VCC1  1k TC=0,0 
+Q_Q5         N03942 N03938 N03984 Q2N3904
+R_R18         N03938 VCC1  15k TC=0,0 
+.PARAM  vamp=1
+
+**** RESUMING asfda.cir ****
+.END
+
+**** 11/13/22 15:08:22 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-asfda"  [ c:\cadence\my projects\lab_analogcad_exp3\lab_analogcad_exp3-PSpiceFiles\SCHEMATIC1\asfda.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/13/22 15:08:22 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-asfda"  [ c:\cadence\my projects\lab_analogcad_exp3\lab_analogcad_exp3-PSpiceFiles\SCHEMATIC1\asfda.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VCC1)   12.0000  ( VEE1)   -6.0000  (N00216)    7.9595 (N00224)    2.7746     
+
+(N00238)    2.0732 (N00256)    0.0000 (N00422)    0.0000 (N00859)    2.7746     
+
+(N00863)    7.9595 (N00891)    0.0000 (N00933)    0.0000 (N00969)    2.0732     
+
+(N02495)    0.0000 (N02504)    -.6470 (N02584)    0.0000 (N02591)    6.6873     
+
+(N03938)    2.7746 (N03942)    7.9595 (N03984)    2.0732 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.450E-02
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V5         5.353E-04
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.77E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/13/22 15:08:22 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-asfda"  [ c:\cadence\my projects\lab_analogcad_exp3\lab_analogcad_exp3-PSpiceFiles\SCHEMATIC1\asfda.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.06
+  Total job time (using Solver 1)   =         .14
+

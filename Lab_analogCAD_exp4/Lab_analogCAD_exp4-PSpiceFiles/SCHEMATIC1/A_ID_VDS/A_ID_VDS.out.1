@@ -1,0 +1,66 @@
+
+**** 11/27/22 12:55:02 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-A_ID_VDS"  [ c:\cadence\my projects\lab_analogcad_exp4\lab_analogcad_exp4-PSpiceFiles\SCHEMATIC1\A_ID_VDS.si
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "A_ID_VDS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V6 0 15 0.1 
++ LIN V_V1 0 5 0.5 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP4
+X_M1         VDS N00248 0 BS170/PLP
+X_M2         N00507 N00499 N00503 BS170/PLP
+X_M3         N00720 0 N00728 BS170/PLP
+V_V1         N00248 0 {Vgs1}
+V_V2         VDD_12V 0 12Vdc
+R_RD         N00507 VDD_12V  1k TC=0,0 
+R_RG1         N00499 VDD_12V  100k TC=0,0 
+R_RG2         0 N00499  70k TC=0,0 
+R_RS         0 N00503  1.5k TC=0,0 
+R_R5         VCC_ARROW N00720  1k TC=0,0 
+R_R6         N00728 VSS_-5V  1k TC=0,0 
+X_M4         N00991 0 N01029 BS170/PLP
+R_R7         VDD_-5V N00991  1k TC=0,0 
+R_R8         N01029 VSS_-5V  1k TC=0,0 
+V_V3         VSS_-5V 0 -5Vdc
+V_V4         VDD_5V 0 5Vdc
+C_C1         N01473 N01029  1u  TC=0,0 
+C_C2         N00991 N01497  1u  TC=0,0 
+R_Rsig         N01473 N01737  1k TC=0,0 
+R_RL         0 N01497  1k TC=0,0 
+V_V5         N01737 0  
++SIN 0 1 1k 0 0 0
+V_V6         VDS 0 1Vdc
+.PARAM  vgs1=1
+
+**** RESUMING A_ID_VDS.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VCC_ARROW.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VDD_-5V.
+

@@ -1,0 +1,8 @@
+* source ANALOG2_PROJECT
+V_V1         +10V 0 10V
+V_V2         0 -10V 10V
+X_U1         VIN N00375 +10V -10V N00393 uA741
+R_R1         N00375 VOUT  1k TC=0,0 
+R_R2         N00393 VOUT  1k TC=0,0 
+C_C1         N00375 N00393  1n  TC=0,0 
+V_V3         VIN 0 DC 0Vdc AC 1Vac 

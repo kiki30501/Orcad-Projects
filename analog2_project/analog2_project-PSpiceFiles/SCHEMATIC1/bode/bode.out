@@ -1,0 +1,249 @@
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bode.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 1 10Meg
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG2_PROJECT
+V_V1         +10V 0 10V
+V_V2         0 -10V 10V
+X_U1         VIN N00375 +10V -10V N00393 uA741
+R_R1         N00375 VOUT  1k TC=0,0 
+R_R2         N00393 VOUT  1k TC=0,0 
+C_C1         N00375 N00393  1n  TC=0,0 
+V_V3         VIN 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING bode.cir ****
+.END
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( +10V)   10.0000  ( -10V)  -10.0000  ( VOUT) 99.02E-06      
+
+(N00375) 19.25E-06 (N00393) 178.8E-06 (X_U1.6)-18.34E-09 (X_U1.7) 182.8E-06     
+
+(X_U1.8) 182.8E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6077                       
+
+(X_U1.11)    9.9603                   (X_U1.12)    9.9603                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)    9.0000                   (X_U1.54)   -9.0000                       
+
+(X_U1.90) 79.77E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.116E-03
+    V_V2        -1.116E-03
+    V_V3        -7.973E-08
+    X_U1.vb     -1.834E-13
+    X_U1.vc      9.001E-12
+    X_U1.ve      1.023E-11
+    X_U1.vlim    7.977E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   2.23E-02  WATTS
+
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.ga     X_U1.gcm  
+I-SOURCE    -3.622E-09  -3.622E-09
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.egnd 
+V-SOURCE     0.000E+00
+I-SOURCE    -1.258E-07
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.fb   
+I-SOURCE    -1.797E-06
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.hlim 
+V-SOURCE     7.977E-05
+I-SOURCE    -1.596E-16
+
+
+**** DIODES
+
+
+NAME         X_U1.dc     X_U1.de     X_U1.dlp    X_U1.dln    X_U1.dp   
+MODEL        X_U1.dy     X_U1.dy     X_U1.dx     X_U1.dx     X_U1.dx   
+ID          -9.00E-12   -9.00E-12   -4.00E-11   -4.00E-11   -2.00E-11 
+VD          -9.00E+00   -9.00E+00   -4.00E+01   -4.00E+01   -2.00E+01 
+REQ          1.00E+12    1.00E+12    1.00E+12    1.00E+12    1.00E+12 
+CAP          3.16E-12    3.16E-12    0.00E+00    0.00E+00    0.00E+00 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1.q1     X_U1.q2   
+MODEL        X_U1.qx     X_U1.qx   
+IB           7.98E-08    7.97E-08 
+IC           7.48E-06    7.48E-06 
+VBE          5.94E-01    5.94E-01 
+VBC         -9.96E+00   -9.96E+00 
+VCE          1.06E+01    1.06E+01 
+BETADC       9.38E+01    9.38E+01 
+GM           2.89E-04    2.89E-04 
+RPI          3.24E+05    3.24E+05 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       9.38E+01    9.38E+01 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       4.60E+15    4.60E+15 
+
+
+
+          JOB CONCLUDED
+
+**** 05/22/23 08:50:56 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.20
+  Total job time (using Solver 1)   =         .11
+

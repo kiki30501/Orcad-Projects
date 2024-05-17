@@ -1,0 +1,227 @@
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bodefinal.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 50 1Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC3.net" 
+
+
+
+**** INCLUDING SCHEMATIC3.net ****
+* source PREP5_ANALOG2_LAB
+R_R7         N11677 N11815  19k TC=0,0 
+R_R6         N11677 N11685  1k TC=0,0 
+R_R8         N11815 N11691  1Meg TC=0,0 
+X_U6A         0 N11677 VP VN N11815 LM324
+X_R5         N11691 N11691 N11685 POT PARAMS: SET={pot_sweep} VALUE=1Meg
+R_R9         N11691 VOUT  10k TC=0,0 
+V_V2         GND VN 15V
+X_U6B         VIN+ N11691 VP VN VOUT LM324
+V_V3         VIN+ 0 DC 0Vdc AC 1Vac 
+V_V1         VP GND 15V
+.PARAM  pot_sweep=1
+
+**** RESUMING bodefinal.cir ****
+.END
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U6A.dx        X_U6A.dy        X_U6B.dx        X_U6B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U6A.qx        X_U6B.qx        
+               PNP             PNP             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7          
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.2          
+           D     .52             .52         
+
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U6A.sw2       X_U6A.sw1       X_U6A.sw3       X_U6A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U6B.sw2       X_U6B.sw1       X_U6B.sw3       X_U6B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VN)  -15.6260  (   VP)   14.3740  (  GND)    -.6256  ( VIN+)    0.0000      
+
+( VOUT)-838.4E-06  (N11677)-397.7E-06 (N11685)-397.7E-06 (N11691)-397.7E-06     
+
+(N11815)    -.0013 (X_U6A.6)-117.7E-06                   (X_U6A.7)    -.0013    
+
+(X_U6A.8)    -.0013                   (X_U6A.9)    0.0000                       
+
+(X_U6A.a)   14.3740                   (X_U6A.b)-1.851E-06                       
+
+(X_U6B.6)-117.8E-06                   (X_U6B.7)-840.6E-06                       
+
+(X_U6B.8)-840.6E-06                   (X_U6B.9)    0.0000                       
+
+(X_U6B.a)   14.3740                   (X_U6B.b)-1.827E-06                       
+
+(X_U6A.10)     .6074                  (X_U6A.11)  -15.5860                      
+
+(X_U6A.12)  -15.5860                  (X_U6A.13)     .5934                      
+
+(X_U6A.14)     .5936                  (X_U6A.53)   12.8740                      
+
+(X_U6A.54)  -14.8040                  (X_U6A.90)-45.77E-06                      
+
+(X_U6A.91)   40.0000                  (X_U6A.92)  -40.0000                      
+
+(X_U6A.99)    -.6256                  (X_U6B.10)     .6074                      
+
+(X_U6B.11)  -15.5860                  (X_U6B.12)  -15.5860                      
+
+(X_U6B.13)     .5934                  (X_U6B.14)     .5936                      
+
+(X_U6B.53)   12.8740                  (X_U6B.54)  -14.8040                      
+
+(X_U6B.90)-44.07E-06                  (X_U6B.91)   40.0000                      
+
+(X_U6B.92)  -40.0000                  (X_U6B.99)    -.6256                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -6.640E-03
+    V_V3         4.447E-08
+    V_V1        -6.640E-03
+    X_U6A.vb    -1.177E-09
+    X_U6A.vc     1.288E-11
+    X_U6A.ve     1.683E-11
+    X_U6A.vlim  -4.577E-08
+    X_U6A.vlp   -4.000E-11
+    X_U6A.vln   -4.000E-11
+    X_U6B.vb    -1.178E-09
+    X_U6B.vc     1.288E-11
+    X_U6B.ve     1.683E-11
+    X_U6B.vlim  -4.407E-08
+    X_U6B.vlp   -4.000E-11
+    X_U6B.vln   -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.99E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/08/23 10:28:41 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC3-bodefinal"  [ C:\Cadence\My projects\prep5_analog2_lab-PSpiceFiles\SCHEMATIC3\bodefinal.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .17
+

@@ -1,0 +1,44 @@
+
+**** 11/06/22 14:06:11 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Q_1"  [ C:\Cadence\My projects\Lab_analogCAD_exp2\CAD_EXP_2-PSpiceFiles\SCHEMATIC1\Q_1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Q_1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V6 0 10 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CAD_EXP_2
+R_R19         N05787 N05795  1k TC=0,0 
+V_V7         N05795 0 12V
+R_R20         N05837 N05845  51k TC=0,0 
+V_V6         N05837 0 1V
+Q_Q7         N05787 N05845 GND Q2N3904
+
+**** RESUMING Q_1.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node GND.
+

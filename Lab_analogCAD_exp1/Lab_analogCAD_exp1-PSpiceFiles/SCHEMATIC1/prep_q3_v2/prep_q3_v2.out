@@ -1,0 +1,100 @@
+
+**** 10/23/22 19:40:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3_v2"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3_v
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "prep_q3_v2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V3 8 8 1 
+.STEP LIN PARAM RVAL 100 10k 100 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP1
+R_R1         0 N00158  1k TC=0,0 
+D_D1         N00149 N00158 Dbreak 
+V_V1         N00149 0  AC 5
++SIN 0 5 1k 0 0 0
+D_D2         N00579 N00572 D1N754 
+D_D3         N00579 0 D1N754 
+R_R2         N00563 N00572  1k TC=0,0 
+V_V2         N00563 0  AC 10
++SIN 0 10 1k 0 0 0
+R_R3         N00891 N00901  300 TC=0,0 
+D_D4         0 N00901 D1N754 
+R_R4         0 N00901  {RVAL} TC=0,0 
+V_V3         N00891 0 8
+.PARAM  rval=388
+
+**** RESUMING prep_q3_v2.cir ****
+.END
+
+**** 10/23/22 19:40:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3_v2"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3_v
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          D1N754          
+          IS   10.000000E-15    1.616000E-15 
+         ISR                    1.698000E-09 
+          BV                    6.8          
+         IBV                    2.8814       
+         NBV                     .28248      
+        IBVL                    1.942600E-06 
+        NBVL                     .27168      
+          RS     .1             1.818        
+         CJO  100.000000E-15  120.000000E-12 
+          VJ                     .75         
+           M                     .5117       
+        TBV1                  485.290000E-06 
+
+
+
+          JOB CONCLUDED
+
+**** 10/23/22 19:40:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-prep_q3_v2"  [ C:\Cadence\My projects\Lab_analogCAD_exp1\Lab_analogCAD_exp1-PSpiceFiles\SCHEMATIC1\prep_q3_v
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM RVAL =   10.0000E+03
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        7.36
+  Total job time (using Solver 1)   =        1.66
+

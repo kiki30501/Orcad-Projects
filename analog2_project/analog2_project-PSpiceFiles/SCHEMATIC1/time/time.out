@@ -1,0 +1,174 @@
+
+**** 05/22/23 08:48:52 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500u 0 0.1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG2_PROJECT
+V_V1         +10V 0 10V
+V_V2         0 -10V 10V
+X_U1         VIN N00375 +10V -10V N00393 uA741
+R_R1         N00375 VOUT  1k TC=0,0 
+R_R2         N00393 VOUT  1k TC=0,0 
+C_C1         N00375 N00393  1n  TC=0,0 
+V_V3         VIN 0  
++PULSE 0 3 0 50u 50u 50u 100u
+
+**** RESUMING time.cir ****
+.END
+
+**** 05/22/23 08:48:52 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 05/22/23 08:48:52 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V3.
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V3.
+
+**** 05/22/23 08:48:52 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( +10V)   10.0000  ( -10V)  -10.0000  ( VOUT) 99.02E-06      
+
+(N00375) 19.25E-06 (N00393) 178.8E-06 (X_U1.6)-18.34E-09 (X_U1.7) 182.8E-06     
+
+(X_U1.8) 182.8E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6077                       
+
+(X_U1.11)    9.9603                   (X_U1.12)    9.9603                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)    9.0000                   (X_U1.54)   -9.0000                       
+
+(X_U1.90) 79.77E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.116E-03
+    V_V2        -1.116E-03
+    V_V3        -7.973E-08
+    X_U1.vb     -1.834E-13
+    X_U1.vc      9.001E-12
+    X_U1.ve      1.023E-11
+    X_U1.vlim    7.977E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   2.23E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/22/23 08:48:52 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-time"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\time.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        3.09
+  Total job time (using Solver 1)   =         .97
+

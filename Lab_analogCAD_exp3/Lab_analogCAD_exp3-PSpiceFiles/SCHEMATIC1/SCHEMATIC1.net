@@ -1,0 +1,38 @@
+* source LAB_ANALOGCAD_EXP3
+Q_Q1         N00216 N00224 N00238 Q2N3904
+Q_Q2         N02591 0 N02504 Q2N3904
+R_R1         N00216 VCC1  1k TC=0,0 
+R_R2         N00224 VCC1  15k TC=0,0 
+R_R3         0 N00224  4.7k TC=0,0 
+R_R4         0 N00238  510 TC=0,0 
+R_R5         0 VOUT  1k TC=0,0 
+C_C1         N00216 VOUT  1u  TC=0,0 
+C_C2         VIN N00224  1u  TC=0,0 
+V_V1         VCC1 0 12V
+V_V2         VIN 0  AC 100m
++SIN 0 100m 10k 0 0 0
+R_R7         N00863 VCC1  1k TC=0,0 
+R_R6         N00859 VCC1  15k TC=0,0 
+R_R8         0 N00891  1k TC=0,0 
+V_V3         N00933 0  AC 1m
++SIN 0 1m 10k 0 0 0
+C_C4         N00933 N00859  1u  TC=0,0 
+R_R9         0 N00859  4.7k TC=0,0 
+C_C3         N00863 N00891  1u  TC=0,0 
+Q_Q4         N00863 N00859 N00969 Q2N3904
+R_R10         0 N00969  510 TC=0,0 
+C_C5         0 N00969  47u  TC=0,0 
+V_V5         VEE1 0 -6
+C_C8         N02591 N02584  1u  TC=0,0 
+R_R15         N02591 VCC1  10k TC=0,0 
+R_R16         VEE1 N02504  10k TC=0,0 
+C_C9         N02495 N02504  1u  TC=0,0 
+V_V6         N02495 0  AC 1m
++SIN 0 {Vsrc} 10k 0 0 0
+R_R17         0 N02584  1k TC=0,0 
+R_R20         0 N03938  4.7k TC=0,0 
+R_R21         0 N03984  510 TC=0,0 
+R_R19         N03942 VCC1  1k TC=0,0 
+Q_Q5         N03942 N03938 N03984 Q2N3904
+R_R18         N03938 VCC1  15k TC=0,0 
+.PARAM  vamp=1 vsrc=1m

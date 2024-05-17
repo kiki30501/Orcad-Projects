@@ -1,0 +1,301 @@
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.5m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source PREP6_ANALOG2
+R_R32         0 N27049  17.2k TC=0,0 
+R_R30         IN N26677  15k TC=0,0 
+R_R34         0 N27243  10k TC=0,0 
+R_R33         N27243 OUT  220k TC=0,0 
+R_R29         N26729 N26739  17.2k TC=0,0 
+X_U1D         N26739 N27243 +30V 0 OUT LM324
+X_U1A         N26861 N26687 +30V 0 N26687 LM324
+R_R31         N26677 N26861  15k TC=0,0 
+C_C19         N26729 N27049  1n  TC=0,0 
+C_C18         N27029 N26729  1n  TC=0,0 
+V_V9         IN 0  AC 1
++SIN 0 1 10k 0 0 0
+X_U1B         N26687 N27029 +30V 0 N27029 LM324
+V_V7         +30V 0 30V
+C_C20         N26861 0  1n  TC=0,0 
+C_C17         N26677 N26687  1n  TC=0,0 
+X_U1C         N27049 N26739 +30V 0 N26739 LM324
+
+**** RESUMING time.cir ****
+.END
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1D.dx        X_U1D.dy        X_U1A.dx        X_U1A.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U1B.dx        X_U1B.dy        X_U1C.dx        X_U1C.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1D.qx        X_U1A.qx        X_U1B.qx        X_U1C.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1D.sw2       X_U1D.sw1       X_U1D.sw3       X_U1D.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1C.sw2       X_U1C.sw1       X_U1C.sw3       X_U1C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .3896  ( +30V)   30.0000  (N26677) 827.4E-06     
+
+(N26687)     .0134 (N26729)     .0129 (N26739)     .0129 (N26861)     .0017     
+
+(N27029)     .0230 (N27049) 950.3E-06 (N27243)     .0174 (X_U1A.6)     .1454    
+
+(X_U1A.7)   -1.4948                   (X_U1A.8)   -1.4948                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)     .0302                       
+
+(X_U1A.b)     .0302                   (X_U1B.6)     .1015                       
+
+(X_U1B.7)   -1.0211                   (X_U1B.8)   -1.0211                       
+
+(X_U1B.9)    0.0000                   (X_U1B.a)     .0209                       
+
+(X_U1B.b)     .0209                   (X_U1C.6)     .1485                       
+
+(X_U1C.7)   -1.5276                   (X_U1C.8)   -1.5276                       
+
+(X_U1C.9)    0.0000                   (X_U1C.a)     .0308                       
+
+(X_U1C.b)     .0308                   (X_U1D.6)     .0028                       
+
+(X_U1D.7)     .3897                   (X_U1D.8)     .3897                       
+
+(X_U1D.9)    0.0000                   (X_U1D.a)   30.0000                       
+
+(X_U1D.b)-1.677E-06                   (X_U1A.10)     .6179                      
+
+(X_U1A.11)     .0365                  (X_U1A.12)     .0488                      
+
+(X_U1A.13)     .6051                  (X_U1A.14)     .6008                      
+
+(X_U1A.53)   28.5000                  (X_U1A.54)     .8220                      
+
+(X_U1A.90)  -30.1650                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)   15.0000                      
+
+(X_U1B.10)     .6286                  (X_U1B.11)     .0377                      
+
+(X_U1B.12)     .0476                  (X_U1B.13)     .6154                      
+
+(X_U1B.14)     .6120                  (X_U1B.53)   28.5000                      
+
+(X_U1B.54)     .8220                  (X_U1B.90)  -20.8800                      
+
+(X_U1B.91)   40.0000                  (X_U1B.92)  -40.0000                      
+
+(X_U1B.99)   15.0000                  (X_U1C.10)     .6172                      
+
+(X_U1C.11)     .0364                  (X_U1C.12)     .0489                      
+
+(X_U1C.13)     .6045                  (X_U1C.14)     .6001                      
+
+(X_U1C.53)   28.5000                  (X_U1C.54)     .8220                      
+
+(X_U1C.90)  -30.8100                  (X_U1C.91)   40.0000                      
+
+(X_U1C.92)  -40.0000                  (X_U1C.99)   15.0000                      
+
+(X_U1D.10)     .6257                  (X_U1D.11)     .0403                      
+
+(X_U1D.12)     .0450                  (X_U1D.13)     .6116                      
+
+(X_U1D.14)     .6099                  (X_U1D.53)   28.5000                      
+
+(X_U1D.54)     .8220                  (X_U1D.90)     .0017                      
+
+(X_U1D.91)   40.0000                  (X_U1D.92)  -40.0000                      
+
+(X_U1D.99)   15.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V9         5.516E-08
+    V_V7        -1.329E-02
+    X_U1D.vb     2.754E-08
+    X_U1D.vc     2.811E-11
+    X_U1D.ve    -1.457E-08
+    X_U1D.vlim   1.677E-06
+    X_U1D.vlp   -4.000E-11
+    X_U1D.vln   -4.001E-11
+    X_U1A.vb     1.454E-06
+    X_U1A.vc     2.849E-11
+    X_U1A.ve    -3.017E-02
+    X_U1A.vlim  -3.017E-02
+    X_U1A.vlp   -7.017E-11
+    X_U1A.vln   -9.838E-12
+    X_U1B.vb     1.015E-06
+    X_U1B.vc     2.848E-11
+    X_U1B.ve    -2.088E-02
+    X_U1B.vlim  -2.088E-02
+    X_U1B.vlp   -6.088E-11
+    X_U1B.vln   -1.912E-11
+    X_U1C.vb     1.485E-06
+    X_U1C.vc     2.849E-11
+    X_U1C.ve    -3.081E-02
+    X_U1C.vlim  -3.081E-02
+    X_U1C.vlp   -7.081E-11
+    X_U1C.vln   -9.193E-12
+
+    TOTAL POWER DISSIPATION   4.66E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/28/23 22:48:44 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-time"  [ D:\Orcad Projects\prep6_analog2\prep6_analog2-PSpiceFiles\SCHEMATIC2\time.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.72
+  Total job time (using Solver 1)   =         .28
+

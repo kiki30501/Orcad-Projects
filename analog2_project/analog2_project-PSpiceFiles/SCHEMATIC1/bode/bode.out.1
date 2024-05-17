@@ -1,0 +1,47 @@
+
+**** 05/22/23 08:42:39 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bode"  [ C:\Cadence\My projects\analog2_project\analog2_project-PSpiceFiles\SCHEMATIC1\bode.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bode.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 1000 0 100k
+-------------$
+ERROR(ORPSIM-16103): Invalid value
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ANALOG2_PROJECT
+V_V1         +10V 0 10V
+V_V2         M_UN0001 -10V 10V
+V_V3         VIN 0 DC 0Vdc AC 1Vac 
+X_U1         VIN N00375 +10V -10V N00393 uA741
+R_R1         N00375 VOUT  1k TC=0,0 
+R_R2         N00393 VOUT  1k TC=0,0 
+C_C1         N00375 N00393  1n  TC=0,0 
+
+**** RESUMING bode.cir ****
+.END
+

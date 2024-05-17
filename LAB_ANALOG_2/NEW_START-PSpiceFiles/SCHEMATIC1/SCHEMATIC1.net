@@ -1,0 +1,11 @@
+* source NEW_START
+R_R8         0 N02140  2k TC=0,0 
+V_V3         N02074 0 20V
+R_RG         0 N02216  1Meg TC=0,0 
+R_RS         0 N02230  150 TC=0,0 
+C_C3         N02212 N02216  0.01u  TC=0,0 
+V_V4         N02212 0 DC 0Vdc AC 1Vac 
+R_RD         N02110 N02074  2k TC=0,0 
+C_C5         N02140 N02110  1u  TC=0,0 
+C_C4         0 N02230  100u  TC=0,0 
+J_J1         N02110 N02216 N02230 J2N3819 

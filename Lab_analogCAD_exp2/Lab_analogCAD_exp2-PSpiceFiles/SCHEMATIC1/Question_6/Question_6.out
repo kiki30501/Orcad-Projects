@@ -1,0 +1,173 @@
+
+**** 11/16/22 12:11:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Question_6"  [ c:\cadence\my projects\lab_analogcad_exp2\lab_analogcad_exp2-pspicefiles\schematic1\question_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Question_6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10u 0 10n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP2
+R_R17         N03260 N03268  51k TC=0,0 
+R_R18         0 N03222  1k TC=0,0 
+V_V5         N03194 N03222 12V
+V_V8         N03260 0  
++SIN 5V 5V 1k 0 0 0
+Q_Q6         N03194 N03268 0 Q2N3904
+R_R6         0 N03876  989 TC=0,0 
+R_R4         N03846 N03798  467.4k TC=0,0 
+R_R5         N03850 N03798  3.044k TC=0,0 
+Q_Q2         N03850 N03846 N03876 Q2N3904
+R_R10         N04156 N04108  32.69k TC=0,0 
+R_R13         0 N04190  1002 TC=0,0 
+R_R12         N04160 N04108  3.044k TC=0,0 
+Q_Q4         N04160 N04156 N04190 Q2N3904
+R_R11         0 N04156  6.667k TC=0,0 
+R_R16         N04430 N04480  197.7k TC=0,0 
+R_R15         0 N04484  499 TC=0,0 
+Q_Q5         N04430 N04480 N04484 Q2N3904
+R_R14         N04430 N04748  1004 TC=0,0 
+V_V9         N03798 0 12V
+V_V10         N04108 0 12V
+V_V11         N04748 0 12V
+R_R1         N06288 N06296  50.37k TC=0,0 
+V_V2         N06288 0 0Vdc
+Q_Q1         N06222 N06296 0 Q2N3904
+R_R2         N06222 N06230  990 TC=0,0 
+V_V1         N06230 0 12V
+
+**** RESUMING Question_6.cir ****
+.END
+
+**** 11/16/22 12:11:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Question_6"  [ c:\cadence\my projects\lab_analogcad_exp2\lab_analogcad_exp2-pspicefiles\schematic1\question_
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/16/22 12:11:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Question_6"  [ c:\cadence\my projects\lab_analogcad_exp2\lab_analogcad_exp2-pspicefiles\schematic1\question_
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N03194)     .2097 (N03222)  -11.7900 (N03260)    5.0000 (N03268)     .7344     
+
+(N03798)   12.0000 (N03846)    3.4193 (N03850)    3.6633 (N03876)    2.7268     
+
+(N04108)   12.0000 (N04156)    1.9837 (N04160)    8.0379 (N04190)    1.3131     
+
+(N04430)    7.8040 (N04480)    2.7877 (N04484)    2.0855 (N04748)   12.0000     
+
+(N06222)   12.0000 (N06230)   12.0000 (N06288)    0.0000 (N06296) 820.5E-09 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5        -1.179E-02
+    V_V8        -8.364E-05
+    V_V9        -2.757E-03
+    V_V10       -1.608E-03
+    V_V11       -4.179E-03
+    V_V2         1.629E-11
+    V_V1        -3.024E-11
+
+    TOTAL POWER DISSIPATION   2.44E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/16/22 12:11:05 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Question_6"  [ c:\cadence\my projects\lab_analogcad_exp2\lab_analogcad_exp2-pspicefiles\schematic1\question_
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .14
+

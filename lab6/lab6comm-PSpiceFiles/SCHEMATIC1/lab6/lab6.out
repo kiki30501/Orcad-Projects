@@ -1,0 +1,219 @@
+
+**** 02/05/24 09:47:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab6"  [ C:\Cadence\My projects\lab6\lab6comm-pspicefiles\schematic1\lab6.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 2m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB6COMM
+V_fc         N00137 0  
++SIN 0 0.1 510k 0 0 0
+V_fm         N00342 0  
++SIN 0 0.1 10k 0 0 0
+R_R2         N00920 V+  10k TC=0,0 
+R_R3         N01747 N00920  5.1k TC=0,0 
+R_R4         0 N01130  220 TC=0,0 
+C_C1         X_AM N00920  0.1u  TC=0,0 
+L_L1         V+ N00969  10u  
+X_U2         N01568 N01624 V+ V- N01657 LM741
+C_C2         N00969 V+  10n  TC=0,0 
+C_C3         0 N01130  0.1u  TC=0,0 
+C_C4         N00969 N01208  0.1u  TC=0,0 
+R_R5         0 N01208  2k TC=0,0 
+R_R6         0 N01250  10k TC=0,0 
+C_C5         0 N01250  1.4n  TC=0,0 
+R_R7         N01385 N01250  100k TC=0,0 
+C_C6         0 N01385  5u  TC=0,0 
+R_R8         N01568 N01385  1k TC=0,0 
+R_R9         N01624 0  1k TC=0,0 
+R_R10         N01657 N01624  50k TC=0,0 
+V_V1         V+ 0 12
+V_V2         0 V- 12
+R_R11         0 N01747  5.1k TC=0,0 
+Q_Q2         N00969 N00920 N01130 Q2N1711
+D_D3         N01250 N01208 D1N4001 
+D_D4         N03540 N01747 D1N4001 
+D_D5         N03590 N03540 D1N4001 
+D_D6         N01657 N03590 D1N4001 
+E_SUM1         X_AM 0 VALUE {V(N00451)+V(N00137)}
+E_MULT1         N00451 0 VALUE {V(N00137)*V(N00342)}
+
+**** RESUMING lab6.cir ****
+.END
+
+**** 02/05/24 09:47:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab6"  [ C:\Cadence\My projects\lab6\lab6comm-pspicefiles\schematic1\lab6.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4001         X_U2.x_lm741.dx X_U2.x_lm741.dy 
+          IS   14.110000E-09  800.000000E-18  800.000000E-18 
+           N    1.984                                        
+         IKF   94.81                                         
+          BV   75                                            
+         IBV   10.000000E-06                                 
+          RS     .03389         1               1.000000E-03 
+          TT    5.700000E-06                                 
+         CJO   25.890000E-12                   10.000000E-12 
+          VJ     .3245                                       
+           M     .44                                         
+
+
+**** 02/05/24 09:47:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab6"  [ C:\Cadence\My projects\lab6\lab6comm-pspicefiles\schematic1\lab6.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N1711         X_U2.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS   14.100000E-15  800.000000E-18 
+          BF  213.7            93.75         
+          NF    1               1            
+         VAF  100                            
+         IKF     .75                         
+          BR    4.96            1            
+          NR    1               1            
+         ISS    0               0            
+          RB   10                            
+          RE    0               0            
+          RC     .7             0            
+         CJE   55.060000E-12    0            
+         VJE     .75             .75         
+         MJE     .1553                       
+         CJC   15.690000E-12    0            
+         VJC     .75             .75         
+         MJC     .3603           .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  499.100000E-12                 
+         XTF   55                            
+         VTF    5                            
+         ITF    1                            
+          TR  815.200000E-12                 
+         XTB    1.5                          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 02/05/24 09:47:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab6"  [ C:\Cadence\My projects\lab6\lab6comm-pspicefiles\schematic1\lab6.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  ( X_AM)    0.0000  (N00137)    0.0000     
+
+(N00342)    0.0000 (N00451)    0.0000 (N00920)    5.5604 (N00969)   12.0000     
+
+(N01130)    4.8343 (N01208)-433.6E-09 (N01250)-795.0E-06 (N01385)    -.0088     
+
+(N01568)    -.0088 (N01624)    -.0088 (N01657)    -.4461 (N01747)    2.7802     
+
+(N03540)    1.7094 (N03590)     .6327 (X_U2.x_lm741.6) 42.17E-06                
+
+(X_U2.x_lm741.7)    -.4465            (X_U2.x_lm741.8)    -.4465                
+
+(X_U2.x_lm741.9)    0.0000            (X_U2.x_lm741.10)    -.6165               
+
+(X_U2.x_lm741.11)   11.9600           (X_U2.x_lm741.12)   11.9600               
+
+(X_U2.x_lm741.13)    -.6026           (X_U2.x_lm741.14)    -.6026               
+
+(X_U2.x_lm741.53)   11.0000           (X_U2.x_lm741.54)  -11.0000               
+
+(X_U2.x_lm741.90)    -.0088           (X_U2.x_lm741.91)   40.0000               
+
+(X_U2.x_lm741.92)  -40.0000           (X_U2.x_lm741.99)    0.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_fc         0.000E+00
+    V_fm         0.000E+00
+    V_V1        -2.386E-02
+    V_V2        -1.337E-03
+    X_U2.x_lm741.vb   4.217E-10
+    X_U2.x_lm741.vc   1.145E-11
+    X_U2.x_lm741.ve   1.206E-11
+    X_U2.x_lm741.vlim  -8.759E-06
+    X_U2.x_lm741.vlp  -4.001E-11
+    X_U2.x_lm741.vln  -3.999E-11
+
+    TOTAL POWER DISSIPATION   3.02E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/05/24 09:47:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab6"  [ C:\Cadence\My projects\lab6\lab6comm-pspicefiles\schematic1\lab6.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       81.31
+  Total job time (using Solver 1)   =        4.77
+

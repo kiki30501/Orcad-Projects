@@ -1,0 +1,90 @@
+
+**** 01/01/24 00:39:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mysim"  [ c:\cadence\my projects\comm_lab\comm_lab_prep1-pspicefiles\schematic1\mysim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mysim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1m 0 10n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source COMM_LAB_PREP1
+R_R1         VIN N00155  1k TC=0,0 
+R_R2         GND N00155  100k TC=0,0 
+V_V1         VIN GND  
++PULSE 50m -50m 5u 1n 1n 1.11u 2.22u
+E_BPASS1         VOUT 0 CHEBYSHEV {V(N00155)} BP (440k 445k 455k 460k) 0.1dB
++  0.2dB
+R_R3         GND VOUT  1Meg TC=0,0 
+
+**** RESUMING mysim.cir ****
+.END
+
+**** 01/01/24 00:39:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mysim"  [ c:\cadence\my projects\comm_lab\comm_lab_prep1-pspicefiles\schematic1\mysim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  GND)    0.0000  (  VIN)     .0500  ( VOUT)    0.0000  (N00155)     .0495 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.951E-07
+
+    TOTAL POWER DISSIPATION   2.48E-08  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/01/24 00:39:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mysim"  [ c:\cadence\my projects\comm_lab\comm_lab_prep1-pspicefiles\schematic1\mysim.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =       23.72
+  Total job time (using Solver 1)   =        4.19
+

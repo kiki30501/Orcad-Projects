@@ -1,0 +1,5 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.model D1N4007 ako:D1N4001 D(Bv=1500)	; use non-rep. peak voltage
+*$

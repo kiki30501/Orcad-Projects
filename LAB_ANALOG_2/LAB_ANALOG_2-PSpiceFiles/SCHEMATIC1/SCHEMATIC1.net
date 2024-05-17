@@ -1,0 +1,24 @@
+* source LAB_ANALOG_2
+Q_Q1         N00454 N00415 N00478 Q2N3904
+R_R1         N00454 N00448  7.5k TC=0,0 
+R_R2         N00482 N00478  0.1k TC=0,0 
+R_R3         0 N00415  19.2k TC=0,0 
+R_R4         N00415 N00448  150k TC=0,0 
+R_R6         N00468 0  0.68k TC=0,0 
+R_R7         N00482 0  0.68k TC=0,0 
+C_C1         0 N00482  47u  TC=0,0 
+C_C2         N00468 N00454  1u  TC=0,0 
+C_Cin         N00415 N00404  2u  TC=0,0 
+V_V1         N00404 0  AC 150m
++SIN 0 150m 1k 0 0 0
+V_V2         N00448 0 15V
+J_J1         N01361 N01354 N01365 J2N3819 
+R_RS         0 N01365  150 TC=0,0 
+R_RD         N01361 N01417  2k TC=0,0 
+R_RG         0 N01354  1Meg TC=0,0 
+V_V3         N01417 0 20V
+C_C3         N01786 N01354  0.01u  TC=0,0 
+C_C4         0 N01365  100u  TC=0,0 
+C_C5         N01703 N01361  1u  TC=0,0 
+R_R8         0 N01703  2k TC=0,0 
+V_V4         N01786 0 DC 0Vdc AC 1Vac 

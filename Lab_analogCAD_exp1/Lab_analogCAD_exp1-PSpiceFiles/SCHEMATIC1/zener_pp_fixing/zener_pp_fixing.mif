@@ -1,0 +1,4 @@
+ lib="c:\cadence\my projects\lab_analogcad_exp1\lab_analogcad_exp1-pspicefiles\lab_analogcad_exp1.lib", offset=43, size=68
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\breakout.lib, offset=431, size=44
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\diode.lib, offset=604799, size=304
+ lib=C:\Cadence\SPB_17.4\tools\PSpice\Library\diode.lib, offset=13913, size=211

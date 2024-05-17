@@ -1,0 +1,7 @@
+STATUS: PSpice Model Import Wizard for "Capture" (17.4.0.d001)
+STATUS:  
+   INFO: OLB driven flow
+   INFO: Input File: C:\CADENCE\MY PROJECTS\DIGITAL_LEVEL_PROBE_V2\DIGITAL_LEVEL_PROBE_V200.olb
+   INFO: Symbol Name: LED_0
+  ERROR: Symbol "LED_0" not found in symbol library "C:\CADENCE\MY PROJECTS\DIGITAL_LEVEL_PROBE_V2\DIGITAL_LEVEL_PROBE_V200.olb".
+STATUS: 1 Error messages, 0 Warning messages

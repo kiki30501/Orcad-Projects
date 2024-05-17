@@ -1,0 +1,66 @@
+
+**** 11/06/22 14:04:23 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-QUESTION_1"  [ c:\cadence\my projects\lab_analogcad_exp2\lab_analogcad_exp2-PSpiceFiles\SCHEMATIC1\QUESTION_
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "QUESTION_1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V6 0.1 10 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOGCAD_EXP2
+V_V6         N02158 0 1V
+V_V7         N02181 0 12V
+R_R19         N02654 N02181  1k TC=0,0 
+R_R20         N02158 N04919  51k TC=0,0 
+Q_Q7         N02654 N04919 GND Q2N3904
+R_R17         N03260 N03268  51k TC=0,0 
+R_R18         0 N03222  1k TC=0,0 
+V_V5         N03194 N03222 12V
+V_V8         N03260 0  
++SIN 5V 5V 1k 0 0 0
+Q_Q6         N03194 N03268 0 Q2N3904
+R_R6         0 N03876  1k TC=0,0 
+R_R4         N03846 N03798  470k TC=0,0 
+R_R5         N03850 N03798  3k TC=0,0 
+Q_Q2         N03850 N03846 N03876 Q2N3904
+R_R10         N04156 N04108  33k TC=0,0 
+R_R13         0 N04190  1k TC=0,0 
+R_R12         N04160 N04108  3k TC=0,0 
+Q_Q4         N04160 N04156 N04190 Q2N3904
+R_R11         0 N04156  6.8k TC=0,0 
+R_R16         N04430 N04480  200k TC=0,0 
+R_R15         0 N04484  510 TC=0,0 
+Q_Q5         N04430 N04480 N04484 Q2N3904
+R_R14         N04430 N04748  1k TC=0,0 
+V_V9         N03798 0 12V
+V_V10         N04108 0 12V
+V_V11         N04748 0 12V
+
+**** RESUMING QUESTION_1.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node GND.
+

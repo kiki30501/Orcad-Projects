@@ -1,0 +1,62 @@
+
+**** 01/01/24 08:00:34 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q1_new"  [ c:\cadence\my projects\comm_lab\comm_lab_prep1-pspicefiles\schematic1\q1_new.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "q1_new.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 70u 30u 1n SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source COMM_LAB_PREP1
+R_R1         N00245 N00155  1k TC=0,0 
+R_R2         GND N00155  100k TC=0,0 
+R_R3         GND N00169  1MEG TC=0,0 
+V_V1         N00245 GND  
++PULSE 0 0.1 0 1n 1n 1.11u 2.22u
+E_BPASS1         N00169 0 CHEBYSHEV {V(N00155)} BP (440kHz 445kHz 455kHz
++  460kHz) 0.1dB 0.2dB
+
+**** RESUMING q1_new.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+**** 01/01/24 08:00:34 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-q1_new"  [ c:\cadence\my projects\comm_lab\comm_lab_prep1-pspicefiles\schematic1\q1_new.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        2.61
+  Total job time (using Solver 1)   =        1.47
+

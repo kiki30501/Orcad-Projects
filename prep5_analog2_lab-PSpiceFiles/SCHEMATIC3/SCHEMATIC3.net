@@ -1,0 +1,12 @@
+* source PREP5_ANALOG2_LAB
+R_R7         N11677 N11815  19k TC=0,0 
+R_R6         N11677 N11685  1k TC=0,0 
+R_R8         N11815 N11691  1Meg TC=0,0 
+X_U6A         0 N11677 VP VN N11815 LM324
+X_R5         N11691 N11691 N11685 POT PARAMS: SET={pot_sweep} VALUE=1Meg
+R_R9         N11691 VOUT  10k TC=0,0 
+V_V2         GND VN 15V
+X_U6B         VIN+ N11691 VP VN VOUT LM324
+V_V3         VIN+ 0 DC 0Vdc AC 1Vac 
+V_V1         VP GND 15V
+.PARAM  pot_sweep=1

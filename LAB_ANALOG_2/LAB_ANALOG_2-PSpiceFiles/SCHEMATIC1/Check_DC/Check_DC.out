@@ -1,0 +1,188 @@
+
+**** 03/13/23 08:31:13 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Check_DC"  [ c:\cadence\my projects\lab_analog_2\lab_analog_2-pspicefiles\schematic1\check_dc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Check_DC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_ANALOG_2
+Q_Q1         N00454 N00415 N00478 Q2N3904
+R_R1         N00454 N00448  7.5k TC=0,0 
+R_R2         N00482 N00478  0.1k TC=0,0 
+R_R3         0 N00415  19.2k TC=0,0 
+R_R4         N00415 N00448  150k TC=0,0 
+R_R6         N00468 0  0.68k TC=0,0 
+R_R7         N00482 0  0.68k TC=0,0 
+C_C1         0 N00482  47u  TC=0,0 
+C_C2         N00468 N00454  1u  TC=0,0 
+C_Cin         N00415 N00404  2u  TC=0,0 
+V_V1         N00404 0  AC 150m
++SIN 0 150m 1k 0 0 0
+V_V2         N00448 0 15V
+J_J1         N01361 N01354 N01365 J2N3819 
+R_RS         0 N01365  150 TC=0,0 
+R_RD         N01361 N01417  2k TC=0,0 
+R_RG         0 N01354  1Meg TC=0,0 
+V_V3         N01417 0 20V
+
+**** RESUMING Check_DC.cir ****
+.END
+
+**** 03/13/23 08:31:13 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Check_DC"  [ c:\cadence\my projects\lab_analog_2\lab_analog_2-pspicefiles\schematic1\check_dc.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/13/23 08:31:13 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Check_DC"  [ c:\cadence\my projects\lab_analog_2\lab_analog_2-pspicefiles\schematic1\check_dc.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               J2N3819         
+               NJF             
+         VTO   -3            
+        BETA    1.304000E-03 
+      LAMBDA    2.250000E-03 
+          IS   33.570000E-15 
+         ISR  322.400000E-15 
+       ALPHA  311.700000E-06 
+          VK  243.6          
+          RD    1            
+          RS    1            
+         CGD    1.600000E-12 
+         CGS    2.414000E-12 
+           M     .3622       
+       VTOTC   -2.500000E-03 
+     BETATCE    -.5          
+          KF    9.882000E-18 
+
+
+**** 03/13/23 08:31:13 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Check_DC"  [ c:\cadence\my projects\lab_analog_2\lab_analog_2-pspicefiles\schematic1\check_dc.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00404)    0.0000 (N00415)    1.5658 (N00448)   15.0000 (N00454)    6.4238     
+
+(N00468)    0.0000 (N00478)     .8982 (N00482)     .7830 (N01354) 1.194E-06     
+
+(N01361)    8.2044 (N01365)     .8847 (N01417)   20.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -1.233E-03
+    V_V3        -5.898E-03
+
+    TOTAL POWER DISSIPATION   1.36E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/13/23 08:31:13 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Check_DC"  [ c:\cadence\my projects\lab_analog_2\lab_analog_2-pspicefiles\schematic1\check_dc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

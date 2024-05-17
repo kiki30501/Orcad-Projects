@@ -1,0 +1,6 @@
+* source CAD_EXP_2
+Q_Q1         N06092 N06079 0 Q2N3904
+R_R1         N06072 N06079  51k TC=0,0 
+R_R2         N06092 N06099  1k TC=0,0 
+V_V1         N06099 0 12V
+V_V2         N06072 0 0Vdc
