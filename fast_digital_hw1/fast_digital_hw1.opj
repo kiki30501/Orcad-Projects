@@ -1,0 +1,96 @@
+(ExpressProject "fast_digital_hw1"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[05/23/24]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\fast_digital_hw1.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (File ".\fast_digi_hw1.vhd"
+      (Type "VHDL Source")))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\fast_digital_hw1-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OR3
+      (FullPartName "OR3.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (LT_OR3
+      (FullPartName "LT_OR3.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\LTSPICEDEVICES.OLB")
+      (DeviceIndex "0"))
+    (OR2
+      (FullPartName "OR2.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (AND2
+      (FullPartName "AND2.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (INV
+      (FullPartName "INV.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "sixsi")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn")
+      (Path "Design Resources"
+         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources"
+         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
+         "CELEMENT")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
+         "CELEMENT" "CELEMENT"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 868"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1468 24 886")
+        (Scroll "-148 0")
+        (Zoom "117")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\SIXSI\CODE PROJECTS\ORCAD PROJECTS\FAST_DIGITAL_HW1\FAST_DIGITAL_HW1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))
