@@ -1,0 +1,88 @@
+
+**** 05/27/24 15:42:23 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-digital_sim1"  [ c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1-PSpiceFiles\S
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "digital_sim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.OPTIONS DIGINITSTATE= 0
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FAST_DIGITAL_HW1
+X_U1         Z1 A N00849  $G_DPWR $G_DGND AND2
+X_U2         N00865 N00849 NS_1 $G_DPWR $G_DGND OR2
+X_U3         N00578 Y1  $G_DPWR $G_DGND INV
+X_U4         Z1 Z0 N00714 $G_DPWR $G_DGND XOR
+X_U6         N00714 Y0  $G_DPWR $G_DGND INV
+X_U7         Z0N X0 N00865  $G_DPWR $G_DGND AND2
+X_U8         X1 X0 A $G_DPWR $G_DGND OR2
+X_U13         Z1N N01790 N01465  $G_DPWR $G_DGND AND2
+X_U12         N01417 N01465 NS_0 $G_DPWR $G_DGND OR2
+X_U11         Z0 A N01417  $G_DPWR $G_DGND AND2
+X_U14         X1 X0 N01790 $G_DPWR $G_DGND XOR
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND X0 IO_STM IO_LEVEL=0 
++ 0 0
++ +<DELAY> 1
+----$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'DELAY' to double value. Token can be a constant or expression
++REPEAT FOREVER
++ +1ms 0
++  +1ms 1
++ ENDREPEAT
+-----------$
+ERROR(ORPSIM-16254): Expecting LABEL, FILE, REPEAT or < time>
+U_DSTM2         STIM(1,1) $G_DPWR $G_DGND X1 IO_STM IO_LEVEL=0 
++ 0 0
++ +<DELAY> 1
+----$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'DELAY' to double value. Token can be a constant or expression
++REPEAT FOREVER
++ +1ms 0
++  +1ms 1
++ ENDREPEAT
+-----------$
+ERROR(ORPSIM-16254): Expecting LABEL, FILE, REPEAT or < time>
+X_U17         Z1 Z1 N00578  $G_DPWR $G_DGND AND2
+X_U18         NS_1 N04156  $G_DPWR $G_DGND INV
+X_U19         NS_0 N01168  $G_DPWR $G_DGND INV
+X_Celem0_U5         Celem0_N00423 Z0N  $G_DPWR $G_DGND INV
+X_Celem0_U4         Celem0_N00338 Celem0_N00345 Celem0_N00349 Celem0_N00423
++  $G_DPWR $G_DGND OR3
+X_Celem0_U2         N01168 Celem0_N00423 Celem0_N00345  $G_DPWR $G_DGND AND2
+X_Celem0_U6         Celem0_N00423 Celem0_N00423 Z0  $G_DPWR $G_DGND AND2
+X_Celem0_U1         NS_0 M_UN0001 Celem0_N00338  $G_DPWR $G_DGND AND2
+X_Celem0_U3         Celem0_N00423 NS_0 Celem0_N00349  $G_DPWR $G_DGND AND2
+X_Celem1_U5         Celem1_N00423 Z1N  $G_DPWR $G_DGND INV
+X_Celem1_U4         Celem1_N00338 Celem1_N00345 Celem1_N00349 Celem1_N00423
++  $G_DPWR $G_DGND OR3
+X_Celem1_U2         N04156 Celem1_N00423 Celem1_N00345  $G_DPWR $G_DGND AND2
+X_Celem1_U6         Celem1_N00423 Celem1_N00423 Z1  $G_DPWR $G_DGND AND2
+X_Celem1_U1         NS_1 M_UN0002 Celem1_N00338  $G_DPWR $G_DGND AND2
+X_Celem1_U3         Celem1_N00423 NS_1 Celem1_N00349  $G_DPWR $G_DGND AND2
+
+**** RESUMING digital_sim1.cir ****
+.END
+

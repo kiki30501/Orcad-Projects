@@ -1,6 +1,6 @@
 (ExpressProject "fast_digital_hw1"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[05/23/24]")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[05/27/24]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -14,13 +14,20 @@
     (CompileFileAddedOrDeleted "x")
     (PSPICE_Regenerate_Netlist_Flag "FALSE")
     (File ".\fast_digi_hw1.vhd"
-      (Type "VHDL Source")))
+      (Type "VHDL Source"))
+    (Board_sim_option "VHDL_flow"))
   (Folder "Layout")
   (Folder "Outputs"
     (File ".\fast_digital_hw1-pspicefiles\schematic1\schematic1.net"
       (Type "Report")))
   (Folder "PSpice Resources"
-    (Folder "Simulation Profiles")
+    (Folder "Simulation Profiles"
+      (ActiveProfile
+         ".\fast_digital_hw1-pspicefiles\schematic1\digital_sim1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\fast_digital_hw1-pspicefiles\schematic1\digital_sim1.sim"
+        (DisplayName "SCHEMATIC1-digital_sim1")
+        (Type "PSpice Profile")))
     (Folder "Model Libraries"
       (Sort User))
     (Folder "Stimulus Files"
@@ -30,21 +37,20 @@
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector
-    (PORTLEFT-L
-      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (PORTRIGHT-R
-      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+    (BUF
+      (FullPartName "BUF.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
       (DeviceIndex "0"))
     (OR3
       (FullPartName "OR3.Normal")
       (LibraryName
          "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
       (DeviceIndex "0"))
-    (LT_OR3
-      (FullPartName "LT_OR3.Normal")
+    (INV
+      (FullPartName "INV.Normal")
       (LibraryName
-         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\LTSPICEDEVICES.OLB")
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
       (DeviceIndex "0"))
     (OR2
       (FullPartName "OR2.Normal")
@@ -56,27 +62,59 @@
       (LibraryName
          "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
       (DeviceIndex "0"))
-    (INV
-      (FullPartName "INV.Normal")
+    (NOR2
+      (FullPartName "NOR2.Normal")
       (LibraryName
          "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (NOR3
+      (FullPartName "NOR3.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\GATE.OLB")
+      (DeviceIndex "0"))
+    (DFF
+      (FullPartName "DFF.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (DigClock
+      (FullPartName "DigClock.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (STIM1
+      (FullPartName "STIM1.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (XOR
+      (FullPartName "XOR.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\DIG_PRIM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (LT_OR3
+      (FullPartName "LT_OR3.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\LTSPICEDEVICES.OLB")
       (DeviceIndex "0")))
   (MPSSessionName "sixsi")
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn")
+         "c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1.dsn")
       (Path "Design Resources"
-         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
+         "c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1.dsn"
          "SCHEMATIC1")
       (Path "Design Resources"
-         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
+         "c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1.dsn"
          "CELEMENT")
-      (Path "Outputs")
-      (Select "Design Resources"
-         "C:\Users\sixsi\Code Projects\Orcad Projects\fast_digital_hw1\fast_digital_hw1.dsn"
-         "CELEMENT" "CELEMENT"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -86,11 +124,12 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 5 1468 24 886")
-        (Scroll "-148 0")
-        (Zoom "117")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1393 24 886")
+        (Scroll "0 100")
+        (Zoom "204")
         (Occurrence "/"))
       (Path
          "C:\USERS\SIXSI\CODE PROJECTS\ORCAD PROJECTS\FAST_DIGITAL_HW1\FAST_DIGITAL_HW1.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+      (Page "PAGE1")))
+  (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_17.4\tools\capture\library"))

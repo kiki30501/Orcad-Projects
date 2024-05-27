@@ -1,0 +1,132 @@
+
+**** 05/27/24 18:20:00 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-digital_sim1"  [ c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1-PSpiceFiles\S
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "digital_sim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sixsi\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 30ms 0 
+.OPTIONS ADVCONV
+.OPTIONS DIGINITSTATE= 0
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FAST_DIGITAL_HW1
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND X0 IO_STM IO_LEVEL=0 
++ 0 0
++ +1ms 1
++REPEAT FOREVER
++ +1ms 0
++  +1ms 1
++ ENDREPEAT
+U_DSTM2         STIM(1,1) $G_DPWR $G_DGND X1 IO_STM IO_LEVEL=0 
++ 0 0
++ +1ms 1
++REPEAT FOREVER
++ +1.5ms 0
++  +1.5ms 1
++ ENDREPEAT
+X_U16         X1 X0 A $G_DPWR $G_DGND NOR2
+X_U17         Z1 Z0N N12821  $G_DPWR $G_DGND AND2
+X_U19         N12141 Z1N  $G_DPWR $G_DGND INV
+X_U22         N12211 Z0N  $G_DPWR $G_DGND INV
+X_U23         Z1N Z0 N12805  $G_DPWR $G_DGND AND2
+X_U24         Z0 X1N N12801  $G_DPWR $G_DGND AND2
+X_U25         Z1 X0N N12817  $G_DPWR $G_DGND AND2
+X_U26         X1 X1N  $G_DPWR $G_DGND INV
+X_U27         X0 X0N  $G_DPWR $G_DGND INV
+X_U28         N12821 N12817 A N12141 $G_DPWR $G_DGND OR3
+X_U29         N12805 N12801 A N12211 $G_DPWR $G_DGND OR3
+X_U32         Z1N Z0 EARLY_0  $G_DPWR $G_DGND AND2
+X_U33         Z1 Z0N EARLY_1  $G_DPWR $G_DGND AND2
+X_U34         Z1N Z0N SYNCHED  $G_DPWR $G_DGND AND2
+X_U35         Z1 Z0 WAITING  $G_DPWR $G_DGND AND2
+X_U37         N12211 Z0 $G_DPWR $G_DGND BUF
+X_U38         N12141 Z1 $G_DPWR $G_DGND BUF
+
+**** RESUMING digital_sim1.cir ****
+.END
+
+**** 05/27/24 18:20:00 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-digital_sim1"  [ c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1-PSpiceFiles\S
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_PLD_GATE      
+      TPLHMN    0            
+      TPLHTY    0            
+      TPLHMX    0            
+      TPHLMN    0            
+      TPHLTY    0            
+      TPHLMX    0            
+
+
+**** 05/27/24 18:20:00 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-digital_sim1"  [ c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1-PSpiceFiles\S
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_PLD          
+        DRVL    0                            
+        DRVH    0                            
+       DtoA1 DtoA_STM                        
+       DtoA2 DtoA_STM                        
+       DtoA3 DtoA_STM                        
+       DtoA4 DtoA_STM                        
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 05/27/24 18:20:00 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-digital_sim1"  [ c:\users\sixsi\code projects\orcad projects\fast_digital_hw1\fast_digital_hw1-PSpiceFiles\S
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        4.77
+  Total job time                    =         .03
+
